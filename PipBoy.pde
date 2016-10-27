@@ -20,26 +20,30 @@ void setup()
     
     PipBoy = loadFont("BodoniMTCondensed-Italic-48.vlw");
     
-    walkCycle  = new Animation("Vault-Boy_Walking_", 21, (int)(width*(.4)), (int)(height*(.45)));
-    Thumb    = new Animation("Vault-Boy_Thumb_"   , 1, (int)(width*(.15)), (int)(height*(.35)));
+    walkCycle = new Animation("Vault-Boy_Walking_", 21, (int)(width*(.4 )), (int)(height*(.45)) );
+    Thumb     = new Animation("Vault-Boy_Thumb_"  , 1 , (int)(width*(.15)), (int)(height*(.325)));
+    Hacker    = new Animation("Hacker_"           , 1 , (int)(width*(.25)), (int)(height*(.25)) );
+    killS     = new Animation("Killshot_"         , 1 , (int)(width*(.35)), (int)(height*(.3))  );
+    Berserk   = new Animation("Berserk_"          , 1 , (int)(width*(.3)) , (int)(height*(.3))  );
 }//end setup
 
 //Global Variables
-int     i, j; // Index variables for loops
-float   Ventx, Venty;  // Used to position the vents
-float   Radian = PI/2; // Quarter Circle
+int     i, j;              // Index variables for loops
+float   Ventx, Venty;      // Used to position the vents
+float   Radian = PI/2;     // Quarter Circle
 
-int     Light=0;  // Used for the small red light
-boolean Grad = true; // Used for the small red light
+int     Light=0;           // Used for the small red light
+boolean Grad = true;       // Used for the small red light
 
 PFont   globalFont, PipBoy;// Fonts Used for Text
 
-int     menu=1;   // Used to position the menu
-int     subM=2;
-float   menuPos;//Stores the current position of the menu
-int special = 2;
+int     menu    = 1;       // Used to position the menu
+int     subM    = 3;
+float   menuPos;           //Stores the current position of the menu
+int     special = 2;
+int     perks   = 3;
 
-Animation walkCycle, Thumb;
+Animation walkCycle, Thumb, Hacker, killS, Berserk;
 
 //Draw
 void draw()

@@ -26,7 +26,7 @@ void subMenu1_2(float xBound, float yBound)
       special++;
     }//end if
     
-    Thumb.display(xBound+width*(.45), yBound+height*(.1));
+    Thumb.display(xBound+width*(.45), yBound+height*(.115));
     
     switch(special)
     {

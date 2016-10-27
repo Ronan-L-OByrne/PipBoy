@@ -34,6 +34,8 @@ void Screen()
         {
             subMenu1_3(xBound, yBound);
         }//end else if(subM)
+        
+        
         // Hp/Level/AP/Name
         textAlign(CENTER, CENTER);
         fill(0, 100, 0);
