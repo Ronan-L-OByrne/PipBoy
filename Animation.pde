@@ -20,7 +20,10 @@ class Animation
     
     void display(float xpic, float ypic) 
     {
+        if(frameCount % 2 == 0)
+        {
         curFrame = (curFrame+1) % imgCount;
+        }
         image(imgs[curFrame], xpic, ypic);
         tint(40, 255, 40);
     }//end Display

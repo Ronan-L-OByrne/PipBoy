@@ -1,20 +1,20 @@
 void subMenu1_3(float xBound, float yBound)
 {
     fill(40, 255, 40);
-    text("Perks" ,  xBound + (width*(.84)/7)*1, yBound + height*(.07));
+    text("PERKS" ,  xBound + (width*(.84)/7)*1, yBound + height*(.07));
     fill(0, 170, 0);
-    text("Status",  xBound + (width*(.84)/8)*2, yBound + height*(.07));
+    text("STATUS",  xBound + (width*(.84)/8)*2, yBound + height*(.07));
     fill(0, 100, 0);
-    text("Special", xBound + (width*(.84)/9)*3, yBound + height*(.07));
+    text("SPECIAL", xBound + (width*(.84)/9)*3, yBound + height*(.07));
     
     
     fill(40, 255, 40);
     textAlign(LEFT, CENTER);
     text("Hacker"     ,  xBound + width*(.075), yBound + height*(.175));
     text("Killshot"   ,  xBound + width*(.075), yBound + height*(.25) );
-    text("Berserk"      ,  xBound + width*(.075), yBound + height*(.325));
+    text("Berserk"    ,  xBound + width*(.075), yBound + height*(.325));
     
-    switch(perks)
+    switch(subNav)
     {
         case 1:
         {

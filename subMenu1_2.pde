@@ -1,11 +1,11 @@
 void subMenu1_2(float xBound, float yBound)
 {
     fill(40, 255, 40);
-    text("Special" ,  xBound + (width*(.84)/7)*1, yBound + height*(.07));
+    text("SPECIAL" ,  xBound + (width*(.84)/7)*1, yBound + height*(.07));
     fill(0, 170, 0);
-    text("Perks",  xBound + (width*(.84)/8)*2, yBound + height*(.07));
+    text("PERKS",  xBound + (width*(.84)/8)*2, yBound + height*(.07));
     fill(0, 100, 0);
-    text("Status"  ,  xBound + (width*(.84)/9)*3, yBound + height*(.07));
+    text("STATUS"  ,  xBound + (width*(.84)/9)*3, yBound + height*(.07));
     
     fill(40, 255, 40);
     textAlign(LEFT, CENTER);
@@ -17,18 +17,9 @@ void subMenu1_2(float xBound, float yBound)
     text("Agility"      ,  xBound + width*(.075), yBound + height*(.55) );  text("10", xBound + width*(.3), yBound + height*(.55) );
     text("Luck"         ,  xBound + width*(.075), yBound + height*(.625));  text("10", xBound + width*(.3), yBound + height*(.625));
     
-    if(special == 7 && frameCount % 15 == 0)
-    {
-        special = 1;
-    }//end if
-    else if(frameCount % 15 == 0)
-    {
-      special++;
-    }//end if
-    
     Thumb.display(xBound+width*(.45), yBound+height*(.115));
     
-    switch(special)
+    switch(subNav)
     {
         case 1:
         {

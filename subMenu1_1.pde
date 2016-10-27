@@ -3,11 +3,11 @@ void subMenu1_1(float xBound, float yBound)
     walkCycle.display(xBound+width*(.17), yBound+height*(.08571));
     
     fill(40, 255, 40);
-    text("Status" ,  xBound + (width*(.84)/7)*1, yBound + height*(.07));
+    text("STATUS" ,  xBound + (width*(.84)/7)*1, yBound + height*(.07));
     fill(0, 170, 0);
-    text("Special",  xBound + (width*(.84)/8)*2, yBound + height*(.07));
+    text("SPECIAL",  xBound + (width*(.84)/8)*2, yBound + height*(.07));
     fill(0, 100, 0);
-    text("Perks"  ,  xBound + (width*(.84)/9)*3, yBound + height*(.07));
+    text("PERKS"  ,  xBound + (width*(.84)/9)*3, yBound + height*(.07));
     
     rect(xBound + width*(.25 ),  yBound + height*(.55), width*(.05) , height*(.07142));
     rect(xBound + width*(.305),  yBound + height*(.55), width*(.025), height*(.07142));
@@ -45,7 +45,7 @@ void subMenu1_1(float xBound, float yBound)
     triangle(xBound + width*(.265), yBound + height*(.56) , xBound + width*(.293), yBound + height*(.605) , xBound + width*(.29 ), yBound + height*(.56));
     triangle(xBound + width*(.285), yBound + height*(.605), xBound + width*(.293), yBound + height*(.605), xBound + width*(.273), yBound + height*(.565));
     rect(xBound + width*(.271), yBound + height*(.575) , width*(.007), height*(.01), 5);
-    fill(0, 75, 0);
+    fill(0, 100, 0);
     rect(xBound + width*(.2716), yBound + height*(.576), width*(.0065), height*(.009), 5);
     
     //Helmet

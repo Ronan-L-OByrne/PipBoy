@@ -56,4 +56,39 @@ void Screen()
         fill(40, 255, 40);
         text("AP 90/90",   xBound + width*(.69), yBound + height*(.72));
     }//end if(menu)
+    else if(menu == 2)
+    {
+        if(subM == 1)
+        {
+            subMenu2_1(xBound, yBound);
+        }//end if(subM)
+        else if(subM == 2)
+        {
+            //subMenu2_2(xBound, yBound);
+        }//end else if(subM)
+        else if(subM == 3)
+        {
+            //subMenu2_3(xBound, yBound);
+        }//end else if(subM)
+        
+        // Hp/Level/AP/Name
+        textAlign(CENTER, CENTER);
+        fill(0, 100, 0);
+        rect(xBound + width*(.02), yBound + height*(.7),  width*(.175), height*(.040714));
+        rect(xBound + width*(.2) , yBound + height*(.7),  width*(.355), height*(.040714));
+        rect(xBound + width*(.56), yBound + height*(.7),  width*(.175), height*(.040714));
+        
+        fill(40, 255, 40);
+        text("WEIGHT 100/125", xBound + width*(.07), yBound + height*(.72));
+        
+        text("LEVEL 3",    xBound + width*(.23), yBound + height*(.72));
+        stroke(40, 255, 40);
+        fill(0, 75, 0);
+        rect(xBound + width*(.27),  yBound + height*(.7075), width*(.275), height*(.027585));
+        fill(40, 255, 40);
+        rect(xBound + width*(.27),  yBound + height*(.7075), width*(.06) , height*(.027585));
+        
+        fill(40, 255, 40);
+        text("AP 90/90",   xBound + width*(.69), yBound + height*(.72));
+    }//end else if
 }//end Screen()

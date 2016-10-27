@@ -40,8 +40,7 @@ PFont   globalFont, PipBoy;// Fonts Used for Text
 int     menu    = 1;       // Used to position the menu
 int     subM    = 3;
 float   menuPos;           //Stores the current position of the menu
-int     special = 2;
-int     perks   = 3;
+int     subNav = 2;
 
 Animation walkCycle, Thumb, Hacker, killS, Berserk;
 
