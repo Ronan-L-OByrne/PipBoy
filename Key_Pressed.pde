@@ -1,21 +1,29 @@
 void keyPressed()
 {
     //Navigating the sub tabs
-    if(     keyCode == LEFT  && subM > 1  && menu == 1)
+    if(keyCode == LEFT)
     {
-        subM--;
+        if     (subM > 1  && menu == 1)
+        {
+            subM--;
+        }//end if
+        else if(subM == 1 && menu == 1)
+        {
+            subM = 3;
+        }//end else if
+        subNav = 1;
     }//end if
-    else if(keyCode == RIGHT && subM < 3  && menu == 1)
+    else if(keyCode == RIGHT)
     {
-        subM++;
-    }//end else if
-    else if(keyCode == RIGHT && subM == 3 && menu == 1)
-    {
-        subM = 1;
-    }//end else if
-    else if(keyCode == LEFT  && subM == 1 && menu == 1)
-    {
-        subM = 3;
+        if     (subM < 3  && menu == 1)
+        {
+            subM++;
+        }//end if
+        else if(subM == 3 && menu == 1)
+        {
+            subM = 1;
+        }//end else if
+        subNav = 1;
     }//end else if
     
     // Navigating the Main tabs
@@ -29,6 +37,7 @@ void keyPressed()
         {
             menu = 5;
         }//end else
+        subNav = 1;
         subM = 1;
         topRightMenu();
     }//end else if
@@ -42,6 +51,7 @@ void keyPressed()
         {
             menu = 1;
         }//end else
+        subNav = 1;
         subM = 1;
         topRightMenu();
     }//end else if

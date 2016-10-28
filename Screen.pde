@@ -85,14 +85,16 @@ void Screen()
         text("WEIGHT 100/125", xBound + width*(.0875), yBound + height*(.72));
         
         text("CAPS 1000",    xBound + width*(.27), yBound + height*(.72));
-        ellipse(xBound + width*(.215), yBound + height*(.72), 20, 20);
+        ellipse(xBound + width*(.215), yBound + height*(.72), width*(.02), height*(.0285714));
         fill(0, 100, 0);
         textFont(PipBoy, height*(.035));
         textAlign(CENTER,CENTER);
         text("C  ", xBound + width*(.218), yBound + height*(.72));
         
         textFont(globalFont, width*(.025));
+        drawGun(.7, .78);
+        drawCrosshair(.775, .795);
         fill(40, 255, 40);
-        text("AP 90/90",   xBound + width*(.69), yBound + height*(.72));
+        text("20",   xBound + width*(.722), yBound + height*(.72));
     }//end else if
 }//end Screen()

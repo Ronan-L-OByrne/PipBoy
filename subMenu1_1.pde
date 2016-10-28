@@ -16,12 +16,7 @@ void subMenu1_1(float xBound, float yBound)
     rect(xBound + width*(.445),  yBound + height*(.55), width*(.025), height*(.07142));
     
     // Crosshair
-    fill(40, 255, 40);
-    ellipse(xBound + width*(.3175), yBound + height*(.5675), width*(.012) , height*(.017142) );
-    rect   (xBound + width*(.316) , yBound + height*(.555) , width*(.003) , height*(.025714) );
-    rect   (xBound + width*(.3085), yBound + height*(.565) , width*(.018) , height*(.004285) );
-    fill(0, 100, 0);
-    ellipse(xBound + width*(.3175), yBound + height*(.5675), width*(.0075), height*(.0107142));
+    drawCrosshair(.3923, .6425);
     
     // Lightning Bolt
     fill(40, 255, 40);
