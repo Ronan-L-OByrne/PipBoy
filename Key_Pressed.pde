@@ -29,6 +29,8 @@ void keyPressed()
         {
             menu = 5;
         }//end else
+        subM = 1;
+        topRightMenu();
     }//end else if
     else if(key == 'x' || key == 'X')
     {
@@ -40,6 +42,8 @@ void keyPressed()
         {
             menu = 1;
         }//end else
+        subM = 1;
+        topRightMenu();
     }//end else if
     
     //Navigating within the sub tabs
@@ -90,4 +94,5 @@ void keyPressed()
             }//end if
         }//end else if
     }//end else if
+    
 }//end keyPressed()

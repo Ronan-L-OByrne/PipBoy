@@ -47,7 +47,7 @@ void subMenu1_3(float xBound, float yBound)
             fill(0, 0, 0);
             textAlign(LEFT, CENTER);
             text("Berserk", xBound + width*(.075), yBound + height*(.325));
-            Berserk.display(xBound+width*(.4), yBound+height*(.125));
+            Berserk.display(xBound+width*(.4), yBound+height*(.095));
             fill(40, 255, 40);
             text("You have reached maximum affinity with \nStrong and some of his FEV seems to \nhave rubbed off, +20% Melee Damage."
             , xBound + width*(.365), yBound + height*(.55));

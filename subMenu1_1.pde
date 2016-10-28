@@ -41,12 +41,7 @@ void subMenu1_1(float xBound, float yBound)
     text("20", xBound + width*(.4575), yBound + height*(.602));
     
     //Gun
-    rect(xBound + width*(.255), yBound + height*(.56), width*(.04), height*(.01428), 3);
-    triangle(xBound + width*(.265), yBound + height*(.56) , xBound + width*(.293), yBound + height*(.605) , xBound + width*(.29 ), yBound + height*(.56));
-    triangle(xBound + width*(.285), yBound + height*(.605), xBound + width*(.293), yBound + height*(.605), xBound + width*(.273), yBound + height*(.565));
-    rect(xBound + width*(.271), yBound + height*(.575) , width*(.007), height*(.01), 5);
-    fill(0, 100, 0);
-    rect(xBound + width*(.2716), yBound + height*(.576), width*(.0065), height*(.009), 5);
+    drawGun(.33, .6375);
     
     //Helmet
     fill(40, 255, 40);

@@ -10,5 +10,5 @@ void subMenu2_1(float xBound, float yBound)
     fill(40, 255, 40);
     textAlign(LEFT, CENTER);
     text("Baseball Bat",  xBound + width*(.075), yBound + height*(.175));
-    text("Fatman"      ,  xBound + width*(.075), yBound + height*(.25) );
+    text("Fatman"      ,  xBound + width*(.075), yBound + height*(.225) );
 }//end subMenu2_1()
