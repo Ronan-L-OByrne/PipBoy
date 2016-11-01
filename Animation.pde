@@ -26,5 +26,6 @@ class Animation
         }
         image(imgs[curFrame], xpic, ypic);
         tint(40, 255, 40);
+        
     }//end Display
 }//end Animation
