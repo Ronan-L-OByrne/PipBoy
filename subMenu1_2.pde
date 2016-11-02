@@ -1,3 +1,4 @@
+// Draws the contents of menu 1 sub-menu 2
 void subMenu1_2(float xBound, float yBound)
 {
     fill(40, 255, 40);

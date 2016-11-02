@@ -1,3 +1,4 @@
+// Draws the contents of the screen (ie. the different menues and contents)
 void Screen()
 {
     float xBound = width *(.075);

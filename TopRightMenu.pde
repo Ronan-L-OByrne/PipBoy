@@ -1,3 +1,4 @@
+// Draws the simple menu in the top right of the screen
 void topRightMenu()
 {
     menuPos = (menu*(height*(.028871428)))+(height*(.043057143));

@@ -1,3 +1,4 @@
+// Checks what to do if a mouse button is pressed
 void mousePressed()
 {
     // Conditions for changing the Menu location

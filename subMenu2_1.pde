@@ -1,3 +1,4 @@
+// Draws the contents of menu 1 sub-menu 2
 void subMenu2_1(float xBound, float yBound)
 {
     fill(40, 255, 40);
@@ -19,11 +20,7 @@ void subMenu2_1(float xBound, float yBound)
             rect(width*(.14), height*(.225), width*(.2575), height*(.05));
             fill(0, 0, 0);
             textAlign(LEFT, CENTER);
-            text("BaseBall Bat", xBound + width*(.075), yBound + height*(.175));
-            Hacker.display(xBound+width*(.4), yBound+height*(.175));
-            fill(40, 255, 40);
-            text("Knowledge of cutting-edge computer \nencryption allows you to hack\n Advanced terminals"
-            , xBound + width*(.365), yBound + height*(.55));
+            weaponData(1);
             break;
             
         }//end case 1

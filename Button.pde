@@ -1,3 +1,4 @@
+// Calculates if the mouse is in a given area of the screen
 boolean Button(float x1, float y1, float x2, float y2)
 {
     if(mouseX > x1 && mouseY > y1 && mouseX < x2 && mouseY < y2)

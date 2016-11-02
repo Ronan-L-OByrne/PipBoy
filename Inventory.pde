@@ -1,3 +1,4 @@
+// Contains weapon_Ranged and weapon_Melee classes
 class weapon_Ranged
 {
     String name;

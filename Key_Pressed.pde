@@ -1,3 +1,4 @@
+// Checks what to do if certain keys have been pressed
 void keyPressed()
 {
     //Navigating the sub tabs

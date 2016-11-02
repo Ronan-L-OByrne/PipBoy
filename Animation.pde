@@ -1,3 +1,4 @@
+// Displays every frame of the animation
 class Animation
 {
     PImage[] imgs; //Array will store the images in the Animation

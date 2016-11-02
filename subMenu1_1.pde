@@ -1,3 +1,4 @@
+// Draws the contents of menu 1 sub-menu 1
 void subMenu1_1(float xBound, float yBound)
 {
     walkCycle.display(xBound+width*(.17), yBound+height*(.08571));

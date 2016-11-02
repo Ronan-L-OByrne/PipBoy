@@ -1,3 +1,5 @@
+// Holds the draw functions used to draw simple images that are used several times
+// Draws a Gun
 void drawGun(float x, float y, float scalar)
 {
     // Draws a gun based off an x and y variable passed into the function
@@ -10,6 +12,7 @@ void drawGun(float x, float y, float scalar)
     rect    (width*(x+.0166)*scalar, height*(y+.014)*scalar, width*(.006)  *scalar, height*(.0085) *scalar, 5);
 }//end drawGun()
 
+// Draws a Crosshair
 void drawCrosshair(float x,float y)
 {
     // Draws a Crosshair based off an x and y variable passed into the function
