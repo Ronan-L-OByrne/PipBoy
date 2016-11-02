@@ -92,7 +92,7 @@ void Screen()
         text("C  ", xBound + width*(.218), yBound + height*(.72));
         
         textFont(globalFont, width*(.025));
-        drawGun(.7, .78);
+        drawGun(.805, .863, .9);
         drawCrosshair(.775, .795);
         fill(40, 255, 40);
         text("20",   xBound + width*(.722), yBound + height*(.72));

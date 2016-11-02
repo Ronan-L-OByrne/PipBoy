@@ -11,4 +11,33 @@ void subMenu2_1(float xBound, float yBound)
     textAlign(LEFT, CENTER);
     text("Baseball Bat",  xBound + width*(.075), yBound + height*(.175));
     text("Fatman"      ,  xBound + width*(.075), yBound + height*(.225) );
+    
+    switch(subNav)
+    {
+        case 1:
+        {
+            rect(width*(.14), height*(.225), width*(.2575), height*(.05));
+            fill(0, 0, 0);
+            textAlign(LEFT, CENTER);
+            text("BaseBall Bat", xBound + width*(.075), yBound + height*(.175));
+            Hacker.display(xBound+width*(.4), yBound+height*(.175));
+            fill(40, 255, 40);
+            text("Knowledge of cutting-edge computer \nencryption allows you to hack\n Advanced terminals"
+            , xBound + width*(.365), yBound + height*(.55));
+            break;
+            
+        }//end case 1
+        case 2:
+        {
+            rect(width*(.14), height*(.275), width*(.2575), height*(.05));
+            fill(0, 0, 0);
+            textAlign(LEFT, CENTER);
+            text("Fatmat", xBound + width*(.075), yBound + height*(.225));
+            killS.display(xBound+width*(.35), yBound+height*(.125));
+            fill(40, 255, 40);
+            text("Due to your close friendship with Robert \nMacCready you now get a 20% greater \nchance to hit enemy's heads in V.A.T.S."
+            , xBound + width*(.365), yBound + height*(.55));
+            break;
+        }//end case 2
+    }//end switch subNav
 }//end subMenu2_1()

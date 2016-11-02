@@ -36,7 +36,7 @@ void subMenu1_1(float xBound, float yBound)
     text("20", xBound + width*(.4575), yBound + height*(.602));
     
     //Gun
-    drawGun(.33, .6375);
+    drawGun(.33, .6375, 1);
     
     //Helmet
     fill(40, 255, 40);

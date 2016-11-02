@@ -40,10 +40,10 @@ boolean Grad = true;       // Used for the small red light
 
 PFont   globalFont, PipBoy;// Fonts Used for Text
 
-int     menu    = 2;       // Used to position the menu
-int     subM    = 1;
-float   menuPos;           //Stores the current position of the menu
+int     menu   = 2;       // Used to position the menu
+int     subM   = 1;
 int     subNav = 2;
+float   menuPos;           //Stores the current position of the menu
 
 Animation walkCycle, Thumb, Hacker, killS, Berserk;
 

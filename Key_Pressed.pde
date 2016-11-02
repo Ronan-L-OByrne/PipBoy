@@ -79,6 +79,14 @@ void keyPressed()
                 subNav = 3;
             }//end if
         }//end if
+        else if(subM == 1 && menu == 2)
+        {
+            subNav--;
+            if(subNav < 1)
+            {
+                subNav = 2;
+            }//end if
+        }//end if
     }//end else if
     
     else if(keyCode == DOWN)
@@ -99,6 +107,14 @@ void keyPressed()
         {
             subNav++;
             if (subNav > 3) 
+            {
+                subNav = 1;
+            }//end if
+        }//end else if
+        else if(subM == 1 && menu == 2)
+        {
+            subNav++;
+            if (subNav > 2) 
             {
                 subNav = 1;
             }//end if
