@@ -1,4 +1,4 @@
-// Draws the contents of menu 1 sub-menu 2
+// Draws the contents of menu 2 sub-menu 1
 void subMenu2_1(float xBound, float yBound)
 {
     fill(40, 255, 40);
@@ -19,10 +19,14 @@ void subMenu2_1(float xBound, float yBound)
         {
             rect(width*(.14), height*(.225), width*(.2575), height*(.05));
             fill(0, 0, 0);
-            textAlign(LEFT, CENTER);
-            weaponData(1);
+            for(i=0; i<Weapons.size(); i++)
+            {
+                if(Weapons.get(i).qty > 0)
+                {
+                    weaponData(Weapons.get(i));
+                }//end if
+            }//end for
             break;
-            
         }//end case 1
         case 2:
         {

@@ -28,6 +28,13 @@ void setup()
     
     Outliner();
     topRightMenu();
+    
+    loadData("WeaponsFile.csv");
+    for(int i=0; i<Weapons.size(); i++)
+    {
+        weapon_List c = Weapons.get(i);
+        println(c);
+    }//end for
 }//end setup
 
 //Global Variables
@@ -47,8 +54,7 @@ float   menuPos;           //Stores the current position of the menu
 
 Animation walkCycle, Thumb, Hacker, killS, Berserk;
 
-weapon_Ranged[] Ranged = new weapon_Ranged[10];
-weapon_Melee[]  Melee  = new weapon_Melee [10];
+ArrayList<weapon_List> Weapons = new ArrayList<weapon_List>();
 
 //Draw
 void draw()
