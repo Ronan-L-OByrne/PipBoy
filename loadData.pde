@@ -14,7 +14,7 @@ void loadData(String table)
         }//end if
         else if(cur.type.equals("A"))
         {
-            Apperal.add(cur);
+            Apparel.add(cur);
         }//end else
     }//end for
 }//end loadData()

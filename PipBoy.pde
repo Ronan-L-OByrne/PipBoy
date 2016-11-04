@@ -36,9 +36,9 @@ void setup()
         inventory_List disp1 = Weapons.get(i);
         println(disp1);
     }//end for
-    for(int i=0; i<Apperal.size(); i++)
+    for(int i=0; i<Apparel.size(); i++)
     {
-        inventory_List disp2 = Apperal.get(i);
+        inventory_List disp2 = Apparel.get(i);
         println(disp2);
     }//end for
     
@@ -46,26 +46,27 @@ void setup()
 }//end setup
 
 //Global Variables
-int     i, j;              // Index variables for loops
-int     inv = 0;
-float   Ventx, Venty;      // Used to position the vents
-float   Radian = PI/2;     // Quarter Circle
+int     i, j;                 // Index variables for loops
+int     invApp, invWea;
+float   Ventx, Venty;         // Used to position the vents
+float   Radian = PI/2;        // Quarter Circle
 
-int     Light=0;           // Used for the small red light
-boolean Grad = true;       // Used for the small red light
-boolean Start = false;     //
+int     Light=0;              // Used for the small red light
+boolean Grad = true;          // Used for the small red light
+boolean Start = false;        //
 
-PFont   globalFont, PipBoy;// Fonts Used for Text
+PFont   globalFont, PipBoy;   // Fonts Used for Text
 
-int     menu   = 2;       // Used to position the menu
+int     menu   = 5;           // Used to position the menu
 int     subM   = 1;
 int     subNav = 2;
-float   menuPos;           //Stores the current position of the menu
+float   menuPos;              //Stores the current position of the menu
 
 Animation walkCycle, Thumb, Hacker, killS, Berserk;
 
 ArrayList<inventory_List> Weapons = new ArrayList<inventory_List>();
-ArrayList<inventory_List> Apperal = new ArrayList<inventory_List>();
+ArrayList<inventory_List> Apparel = new ArrayList<inventory_List>();
+sineWave Sine = new sineWave();
 
 //Draw
 void draw()

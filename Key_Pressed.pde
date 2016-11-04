@@ -13,7 +13,6 @@ void keyPressed()
             subM = 3;
         }//end else if
         subNav = 1;
-        subNav = 1;
     }//end if
     else if(keyCode == RIGHT)
     {
@@ -86,7 +85,23 @@ void keyPressed()
             subNav--;
             if(subNav < 1)
             {
-                subNav = inv;
+                subNav = invWea;
+            }//end if
+        }//end else if
+        else if(subM == 2 && menu == 2)
+        {
+            subNav--;
+            if(subNav < 1)
+            {
+                subNav = invApp;
+            }//end if
+        }//end else if
+        else if(menu == 5)
+        {
+            subNav--;
+            if (subNav < 1) 
+            {
+                subNav = 2;
             }//end if
         }//end else if
     }//end else if
@@ -116,7 +131,23 @@ void keyPressed()
         else if(subM == 1 && menu == 2)
         {
             subNav++;
-            if (subNav > inv) 
+            if (subNav > invWea) 
+            {
+                subNav = 1;
+            }//end if
+        }//end else if
+        else if(subM == 2 && menu == 2)
+        {
+            subNav++;
+            if (subNav > invApp) 
+            {
+                subNav = 1;
+            }//end if
+        }//end else if
+        else if(menu == 5)
+        {
+            subNav++;
+            if (subNav > 2) 
             {
                 subNav = 1;
             }//end if

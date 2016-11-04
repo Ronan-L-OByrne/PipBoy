@@ -14,21 +14,21 @@ void subMenu2_1(float xBound, float yBound)
     fill(40, 255, 40);
     textAlign(LEFT, CENTER);
     
-    inv=0;
+    invWea=0;
     for(i=0; i<Weapons.size(); i++)
     {
         if(Weapons.get(i).qty != 0)
         {
             fill(40, 255, 40);
             textAlign(LEFT, CENTER);
-            text(Weapons.get(i).name, xBound + width*(.075), yBound + height*(.175+(.05*inv)));
+            text(Weapons.get(i).name, xBound + width*(.075), yBound + height*(.175+(.05*invWea)));
             
-            inv++;
+            invWea++;
         }//end if
     }//end for
     
     skip = 0;
-    highLight = checkVal(subNav-1, skip);
+    highLight = checkVal(subNav-1, skip, invWea, "W");
     skip = 0;
     
     rect(width*(.14), height*(.225+(.05*(subNav-1))), width*(.2575), height*(.05));
@@ -95,19 +95,31 @@ void subMenu2_1(float xBound, float yBound)
     
 }//end subMenu2_1()
 
-int checkVal(int check, int skip)
+int checkVal(int check, int skip, int inv, String type)
 {
+  
     if(check > inv)
     {
-        return checkVal(0, skip);
+        return checkVal(0, skip, inv, type);
     }
-    else if(Weapons.get(check+skip).qty != 0)
+    else if(type.equals("W"))
     {
-        return (check+skip);
+        if(Weapons.get(check+skip).qty != 0)
+        {
+            
+            return (check+skip);
+        }//end else if
     }//end else if
-    else
+    else if(type.equals("A"))
     {
+        if(Apparel.get(check+skip).qty != 0)
+        {
+            
+            return (check+skip);
+        }//end else if
+    }//end else if
         skip++;
-        return checkVal(check+skip, skip);
-    }//end else
-}//end checkVal
+        return checkVal(check+skip, skip, inv, type);
+        
+    
+}//end checkVal()
