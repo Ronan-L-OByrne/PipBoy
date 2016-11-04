@@ -6,8 +6,15 @@ void loadData(String table)
     {
         TableRow row = t.getRow(i);
         
-        weapon_List cur = new weapon_List(row);
+        inventory_List cur = new inventory_List(row);
         
-        Weapons.add(cur);
+        if(cur.type.equals("R") || cur.type.equals("M"))
+        {
+            Weapons.add(cur);
+        }//end if
+        else if(cur.type.equals("A"))
+        {
+            Apperal.add(cur);
+        }//end else
     }//end for
 }//end loadData()

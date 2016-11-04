@@ -13,9 +13,9 @@ void merge(int low, int mid, int high)
     int li = low;
     int ri = mid+1;
     int ci = low;
-    ArrayList<weapon_List> Temp;
+    ArrayList<inventory_List> Temp;
     
-    Temp = new ArrayList<weapon_List>();
+    Temp = new ArrayList<inventory_List>();
     
     while(li <= mid && ri <= high)
     {

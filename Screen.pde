@@ -75,7 +75,7 @@ void Screen()
             subMenu2_3(xBound, yBound);
         }//end else if(subM)
         
-        // Hp/Level/AP/Name
+        // Weight/Caps/Damage
         textAlign(CENTER, CENTER);
         fill(0, 100, 0);
         rect(xBound + width*(.02), yBound + height*(.7),  width*(.175), height*(.040714));
@@ -93,7 +93,7 @@ void Screen()
         text("C  ", xBound + width*(.218), yBound + height*(.72));
         
         textFont(globalFont, width*(.025));
-        drawGun(.805, .863, .9);
+        drawGun(.855, .913, .85);
         drawCrosshair(.775, .795);
         fill(40, 255, 40);
         text("20",   xBound + width*(.722), yBound + height*(.72));

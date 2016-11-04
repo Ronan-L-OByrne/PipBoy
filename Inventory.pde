@@ -1,5 +1,5 @@
-// Contains weapon_List class, This will read and store data on all weapons from a file
-class weapon_List
+// Contains inventory_List class, This will read and store data on all weapons from a file
+class inventory_List
 {
     String type    ;
     String name    ;
@@ -8,11 +8,16 @@ class weapon_List
     String speed   ;
     int    range   ;
     int    accuracy;
+    
+    int radRes     ;
+    int engRes     ;
+    int dmgRes     ;
+    
     float  weight  ;
     int    value   ;
     int    qty     ;
     
-    weapon_List(TableRow row)
+    inventory_List(TableRow row)
     {
         type = row.getString(0);
         
@@ -36,6 +41,16 @@ class weapon_List
                 this.value    = row.getInt(5)   ;
                 this.qty      = row.getInt(6)   ;
         }//end else if
+        else if(type.equals("A"))
+        {
+                this.name     = row.getString(1);
+                this.dmgRes   = row.getInt(2)   ;
+                this.radRes   = row.getInt(3)   ;
+                this.engRes   = row.getInt(4)   ;
+                this.weight   = row.getInt(5)   ;
+                this.value    = row.getInt(6)   ;
+                this.qty      = row.getInt(7)   ;
+        }//end else if
         else
         {
             println("ERROR");
@@ -51,6 +66,10 @@ class weapon_List
         else if(type.equals("M"))
         {
             return name + "\t" + damage + "\t" + speed + "\t" + weight + "\t" + value + "\t" + qty;
+        }//end else if
+        else if(type.equals("A"))
+        {
+            return name + "\t" + dmgRes + "\t" + radRes + "\t" + engRes + "\t" + weight + "\t" + value + "\t" + qty;
         }//end else if
         else
         {

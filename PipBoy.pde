@@ -29,12 +29,17 @@ void setup()
     Outliner();
     topRightMenu();
     
-    loadData("WeaponsFile.csv");
+    loadData("Inventory.csv");
     
     for(int i=0; i<Weapons.size(); i++)
     {
-        weapon_List c = Weapons.get(i);
-        println(c);
+        inventory_List disp1 = Weapons.get(i);
+        println(disp1);
+    }//end for
+    for(int i=0; i<Apperal.size(); i++)
+    {
+        inventory_List disp2 = Apperal.get(i);
+        println(disp2);
     }//end for
     
     //Split(0, (Weapons.size()-1)/2, Weapons.size()-1);
@@ -59,7 +64,8 @@ float   menuPos;           //Stores the current position of the menu
 
 Animation walkCycle, Thumb, Hacker, killS, Berserk;
 
-ArrayList<weapon_List> Weapons = new ArrayList<weapon_List>();
+ArrayList<inventory_List> Weapons = new ArrayList<inventory_List>();
+ArrayList<inventory_List> Apperal = new ArrayList<inventory_List>();
 
 //Draw
 void draw()
