@@ -18,23 +18,23 @@ class weapon_List
         
         if(type.equals("R"))
         {
-            name     = row.getString(1);
-            damage   = row.getInt(2)   ;
-            fireRate = row.getInt(3)   ;
-            range    = row.getInt(4)   ;
-            accuracy = row.getInt(5)   ;
-            weight   = row.getFloat(6) ;
-            value    = row.getInt(7)   ;
-            qty      = row.getInt(8)   ;
+                this.name     = row.getString(1);
+                this.damage   = row.getInt(2)   ;
+                this.fireRate = row.getInt(3)   ;
+                this.range    = row.getInt(4)   ;
+                this.accuracy = row.getInt(5)   ;
+                this.weight   = row.getFloat(6) ;
+                this.value    = row.getInt(7)   ;
+                this.qty      = row.getInt(8)   ;
         }//end if
         else if(type.equals("M"))
         {
-            name     = row.getString(1);
-            damage   = row.getInt(2)   ;
-            speed    = row.getString(3);
-            weight   = row.getInt(4)   ;
-            value    = row.getInt(5)   ;
-            qty      = row.getInt(6)   ;
+                this.name     = row.getString(1);
+                this.damage   = row.getInt(2)   ;
+                this.speed    = row.getString(3);
+                this.weight   = row.getInt(4)   ;
+                this.value    = row.getInt(5)   ;
+                this.qty      = row.getInt(6)   ;
         }//end else if
         else
         {
@@ -54,7 +54,7 @@ class weapon_List
         }//end else if
         else
         {
-            return "\0";
+            return "ERROR";
         }//end else
     }//end String toString
 }//end class weapon_Ranged

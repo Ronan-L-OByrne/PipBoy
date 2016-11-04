@@ -6,10 +6,8 @@ void loadData(String table)
     {
         TableRow row = t.getRow(i);
         
-        if(table.equals("WeaponsFile.csv"))
-        {
-            weapon_List cur = new weapon_List(row);
-            Weapons.add(cur);
-        }//end if
+        weapon_List cur = new weapon_List(row);
+        
+        Weapons.add(cur);
     }//end for
 }//end loadData()

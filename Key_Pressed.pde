@@ -4,23 +4,24 @@ void keyPressed()
     //Navigating the sub tabs
     if(keyCode == LEFT)
     {
-        if     (subM > 1  && menu == 1)
+        if     (subM > 1)//  && menu == 1)
         {
             subM--;
         }//end if
-        else if(subM == 1 && menu == 1)
+        else if(subM == 1)// && menu == 1)
         {
             subM = 3;
         }//end else if
         subNav = 1;
+        subNav = 1;
     }//end if
     else if(keyCode == RIGHT)
     {
-        if     (subM < 3  && menu == 1)
+        if     (subM < 3)//  && menu == 1)
         {
             subM++;
         }//end if
-        else if(subM == 3 && menu == 1)
+        else if(subM == 3)// && menu == 1)
         {
             subM = 1;
         }//end else if
@@ -71,7 +72,7 @@ void keyPressed()
             {
                 subNav = 7;
             }//end if
-        }//end if
+        }//end else if
         else if(subM == 3 && menu == 1)
         {
             subNav--;
@@ -79,15 +80,15 @@ void keyPressed()
             {
                 subNav = 3;
             }//end if
-        }//end if
+        }//end else if
         else if(subM == 1 && menu == 2)
         {
             subNav--;
             if(subNav < 1)
             {
-                subNav = 2;
+                subNav = inv;
             }//end if
-        }//end if
+        }//end else if
     }//end else if
     
     else if(keyCode == DOWN)
@@ -115,7 +116,7 @@ void keyPressed()
         else if(subM == 1 && menu == 2)
         {
             subNav++;
-            if (subNav > 2) 
+            if (subNav > inv) 
             {
                 subNav = 1;
             }//end if

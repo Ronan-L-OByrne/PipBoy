@@ -68,11 +68,11 @@ void Screen()
         }//end if(subM)
         else if(subM == 2)
         {
-            //subMenu2_2(xBound, yBound);
+            subMenu2_2(xBound, yBound);
         }//end else if(subM)
         else if(subM == 3)
         {
-            //subMenu2_3(xBound, yBound);
+            subMenu2_3(xBound, yBound);
         }//end else if(subM)
         
         // Hp/Level/AP/Name
@@ -97,5 +97,9 @@ void Screen()
         drawCrosshair(.775, .795);
         fill(40, 255, 40);
         text("20",   xBound + width*(.722), yBound + height*(.72));
+    }//end else if
+    else if(menu == 5)
+    {
+        subMenu5(xBound, yBound);
     }//end else if
 }//end Screen()

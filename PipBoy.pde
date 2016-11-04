@@ -1,6 +1,6 @@
 /*Pip_Boy UI, Object Oriented Programming Assignment: Year 2-Semester 1
   
-  This Program is meant to create a User Interface based of the Pip-Boy 400 from the 
+  This Program is meant to create a User Interface based of the Pip-Boy 4000 from the 
   game Fallout 4.
 
   Date Begun: 10/10/2016;    Date Finished: xx/xx/xxxx
@@ -30,20 +30,25 @@ void setup()
     topRightMenu();
     
     loadData("WeaponsFile.csv");
+    
     for(int i=0; i<Weapons.size(); i++)
     {
         weapon_List c = Weapons.get(i);
         println(c);
     }//end for
+    
+    //Split(0, (Weapons.size()-1)/2, Weapons.size()-1);
 }//end setup
 
 //Global Variables
 int     i, j;              // Index variables for loops
+int     inv = 0;
 float   Ventx, Venty;      // Used to position the vents
 float   Radian = PI/2;     // Quarter Circle
 
 int     Light=0;           // Used for the small red light
 boolean Grad = true;       // Used for the small red light
+boolean Start = false;     //
 
 PFont   globalFont, PipBoy;// Fonts Used for Text
 
