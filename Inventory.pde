@@ -85,6 +85,10 @@ class inventory_List
         {
             return name + "\t" + dmgRes + "\t" + radRes + "\t" + engRes + "\t" + weight + "\t" + value + "\t" + qty;
         }//end else if
+        else if(type.equals("O"))
+        {
+            return name + "\t" + weight + "\t" + value + "\t" + qty;
+        }//end else if
         else
         {
             return "ERROR";

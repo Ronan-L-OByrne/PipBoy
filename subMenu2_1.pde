@@ -15,14 +15,9 @@ void subMenu2_1(float xBound, float yBound)
     invWea=0;
     for(i=0; i<Weapons.size(); i++)
     {
-        if(Weapons.get(i).qty != 0)
-        {
-            fill(40, 255, 40);
-            textAlign(LEFT, CENTER);
-            text(Weapons.get(i).name +" ("+ Weapons.get(i).qty+")", xBound + width*(.075), yBound + height*(.175+(.05*invWea)));
-            
-            invWea++;
-        }//end if
+        text(Weapons.get(i).name +" ("+ Weapons.get(i).qty+")", xBound + width*(.075), yBound + height*(.175+(.05*invWea)));
+        
+        invWea++;
     }//end for
     
     

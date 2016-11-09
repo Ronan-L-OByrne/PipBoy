@@ -103,6 +103,22 @@ void Screen()
         fill(40, 255, 40);
         text("20",   xBound + width*(.722), yBound + height*(.72));
     }//end else if
+    // Display the Data subMenus
+    else if(menu == 3)
+    {
+        if(subM == 1)
+        {
+            subMenu3_1(xBound, yBound);
+        }//end if
+        if(subM == 2)
+        {
+            subMenu3_2(xBound, yBound);
+        }//end if
+        if(subM == 3)
+        {
+            subMenu3_3(xBound, yBound);
+        }//end if
+    }//end else if
     // Displays the Radio Screen
     else if(menu == 5)
     {

@@ -11,6 +11,7 @@
 //Setup
 void setup()
 { 
+    int i;
     // fullScreen();
      size(1000, 700);
     // size(500, 350);
@@ -31,15 +32,19 @@ void setup()
     
     loadData("Inventory.csv");
     
-    for(int i=0; i<Weapons.size(); i++)
+    for(i=0; i<Weapons.size(); i++)
     {
         inventory_List disp1 = Weapons.get(i);
-        println(disp1);
+        println(Weapons.get(i));
     }//end for
-    for(int i=0; i<Apparel.size(); i++)
+    for(i=0; i<Apparel.size(); i++)
     {
         inventory_List disp2 = Apparel.get(i);
-        println(disp2);
+        println(Apparel.get(i));
+    }//end for
+    for(i=0; i<Miscellaneous.size(); i++)
+    {
+         println(Miscellaneous.get(i));
     }//end for
     
     //Split(0, (Weapons.size()-1)/2, Weapons.size()-1);
@@ -47,7 +52,7 @@ void setup()
 
 //Global Variables
 int     i, j;                 // Index variables for loops
-int     invApp, invWea;
+int     invApp, invWea, invMisc;
 float   Ventx, Venty;         // Used to position the vents
 float   Radian = PI/2;        // Quarter Circle
 
