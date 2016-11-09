@@ -1,6 +1,7 @@
 // Draws the contents of menu 5, the Radio
 void subMenu5(float xBound, float yBound)
 {
+    // Displays the radio options and draws a Sine wave
     waveCal();
     drawWave();
     
@@ -29,6 +30,7 @@ void subMenu5(float xBound, float yBound)
     }//end else
 }//end subMenu5
 
+// Calculates the current status of the wave
 void waveCal() 
 {
   
@@ -54,6 +56,7 @@ void waveCal()
     
 }//end waveCal()
 
+//Draws the wave using a series of Ellipses
 void drawWave()
 {
     noStroke();

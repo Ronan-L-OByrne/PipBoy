@@ -8,4 +8,5 @@ void subMenu2_3(float xBound, float yBound)
     fill(0, 100, 0);
     text("APPAREL"   , xBound + (width*(.88)/9)*4, yBound + height*(.07));
     
+    // Displays the users Miscilaneous items
 }//end subMenu2_3

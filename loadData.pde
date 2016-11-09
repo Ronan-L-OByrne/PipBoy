@@ -1,3 +1,4 @@
+// Function to load data from a table
 void loadData(String table)
 {
     Table t = loadTable(table);
@@ -8,13 +9,33 @@ void loadData(String table)
         
         inventory_List cur = new inventory_List(row);
         
-        if(cur.type.equals("R") || cur.type.equals("M"))
+        if(cur.type.equals("R"))
         {
-            Weapons.add(cur);
+            if(row.getInt(8) > 0)
+            {
+                Weapons.add(cur);
+            }//end if
         }//end if
+        else if(cur.type.equals("M"))
+        {
+            if(row.getInt(6) > 0)
+            {
+                Weapons.add(cur);
+            }//end if
+        }//end else if
         else if(cur.type.equals("A"))
         {
-            Apparel.add(cur);
-        }//end else
+            if(row.getInt(7)>0)
+            {
+                Apparel.add(cur);
+            }//end if
+        }//end else if
+        else if(cur.type.equals("O"))
+        {
+            if(row.getInt(4)>0)
+            {
+                Miscellaneous.add(cur);
+            }//end if
+        }//end else if
     }//end for
 }//end loadData()

@@ -8,6 +8,7 @@ void subMenu1_2(float xBound, float yBound)
     fill(0, 100, 0);
     text("STATUS"  ,  xBound + (width*(.84)/9)*3, yBound + height*(.07));
     
+    // Displays the users S.P.E.C.I.A.L stats
     fill(40, 255, 40);
     textAlign(LEFT, CENTER);
     text("Strength"     ,  xBound + width*(.075), yBound + height*(.175));  text("10", xBound + width*(.3), yBound + height*(.175));

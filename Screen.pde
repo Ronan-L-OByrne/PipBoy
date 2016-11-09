@@ -24,6 +24,9 @@ void Screen()
     text("MAP"  , xBound + (width*(.84)/7)*4, yBound + height*(.0259));
     text("RADIO", xBound + (width*(.84)/7)*5, yBound + height*(.0259));
     rect(xBound + (width*(.2)/6), height*(.075928571) + height*(.047), width*(.67), 3);
+    
+    // Checks what menu the user is currently in
+    // Displays Status screen
     if(menu == 1)
     {
         if(subM == 1)
@@ -39,7 +42,7 @@ void Screen()
             subMenu1_3(xBound, yBound);
         }//end else if(subM)
         
-        
+        // Constant throughout all sub menus
         // Hp/Level/AP/Name
         textAlign(CENTER, CENTER);
         fill(0, 100, 0);
@@ -60,6 +63,7 @@ void Screen()
         fill(40, 255, 40);
         text("AP 90/90",   xBound + width*(.69), yBound + height*(.72));
     }//end if(menu)
+    // Displays Inventory sceen
     else if(menu == 2)
     {
         if(subM == 1)
@@ -75,6 +79,7 @@ void Screen()
             subMenu2_3(xBound, yBound);
         }//end else if(subM)
         
+        // Constant throughout all sub menus
         // Weight/Caps/Damage
         textAlign(CENTER, CENTER);
         fill(0, 100, 0);
@@ -98,6 +103,7 @@ void Screen()
         fill(40, 255, 40);
         text("20",   xBound + width*(.722), yBound + height*(.72));
     }//end else if
+    // Displays the Radio Screen
     else if(menu == 5)
     {
         subMenu5(xBound, yBound);

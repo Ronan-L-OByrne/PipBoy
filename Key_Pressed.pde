@@ -13,6 +13,8 @@ void keyPressed()
             subM = 3;
         }//end else if
         subNav = 1;
+        
+        return;
     }//end if
     else if(keyCode == RIGHT)
     {
@@ -25,6 +27,7 @@ void keyPressed()
             subM = 1;
         }//end else if
         subNav = 1;
+        return;
     }//end else if
     
     // Navigating the Main tabs
@@ -41,6 +44,8 @@ void keyPressed()
         subNav = 1;
         subM = 1;
         topRightMenu();
+        
+        return;
     }//end else if
     else if(key == 'x' || key == 'X')
     {
@@ -55,6 +60,9 @@ void keyPressed()
         subNav = 1;
         subM = 1;
         topRightMenu();
+        
+        
+        return;
     }//end else if
     
     //Navigating within the sub tabs
@@ -71,6 +79,8 @@ void keyPressed()
             {
                 subNav = 7;
             }//end if
+            
+            return;
         }//end else if
         else if(subM == 3 && menu == 1)
         {
@@ -79,6 +89,8 @@ void keyPressed()
             {
                 subNav = 3;
             }//end if
+            
+            return;
         }//end else if
         else if(subM == 1 && menu == 2)
         {
@@ -87,6 +99,8 @@ void keyPressed()
             {
                 subNav = invWea;
             }//end if
+            
+            return;
         }//end else if
         else if(subM == 2 && menu == 2)
         {
@@ -95,6 +109,8 @@ void keyPressed()
             {
                 subNav = invApp;
             }//end if
+            
+            return;
         }//end else if
         else if(menu == 5)
         {
@@ -103,6 +119,8 @@ void keyPressed()
             {
                 subNav = 2;
             }//end if
+            
+            return;
         }//end else if
     }//end else if
     
@@ -119,6 +137,8 @@ void keyPressed()
             {
                 subNav = 1;
             }//end if
+            
+            return;
         }//end else if
         else if(subM == 3 && menu == 1)
         {
@@ -127,6 +147,8 @@ void keyPressed()
             {
                 subNav = 1;
             }//end if
+            
+            return;
         }//end else if
         else if(subM == 1 && menu == 2)
         {
@@ -135,6 +157,8 @@ void keyPressed()
             {
                 subNav = 1;
             }//end if
+            
+            return;
         }//end else if
         else if(subM == 2 && menu == 2)
         {
@@ -143,6 +167,8 @@ void keyPressed()
             {
                 subNav = 1;
             }//end if
+            
+            return;
         }//end else if
         else if(menu == 5)
         {
@@ -151,7 +177,11 @@ void keyPressed()
             {
                 subNav = 1;
             }//end if
+            
+            return;
         }//end else if
     }//end else if
     
+    
+    return;
 }//end keyPressed()

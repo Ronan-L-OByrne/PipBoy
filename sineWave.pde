@@ -1,3 +1,4 @@
+// Class to store the data associated with drawing a sine wave
 class sineWave
 {  
     float xSpace   = .2;                           // How far apart should each horizontal location be spaced

@@ -1,6 +1,7 @@
 // Draws the contents of menu 1 sub-menu 1
 void subMenu1_1(float xBound, float yBound)
 {
+    // Draws the animated walking Vault-Boy
     walkCycle.display(xBound+width*(.17), yBound+height*(.08571));
     
     fill(40, 255, 40);

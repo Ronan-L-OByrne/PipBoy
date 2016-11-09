@@ -64,8 +64,9 @@ float   menuPos;              //Stores the current position of the menu
 
 Animation walkCycle, Thumb, Hacker, killS, Berserk;
 
-ArrayList<inventory_List> Weapons = new ArrayList<inventory_List>();
-ArrayList<inventory_List> Apparel = new ArrayList<inventory_List>();
+ArrayList<inventory_List> Weapons       = new ArrayList<inventory_List>();
+ArrayList<inventory_List> Apparel       = new ArrayList<inventory_List>();
+ArrayList<inventory_List> Miscellaneous = new ArrayList<inventory_List>();
 sineWave Sine = new sineWave();
 
 //Draw

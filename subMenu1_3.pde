@@ -8,12 +8,13 @@ void subMenu1_3(float xBound, float yBound)
     fill(0, 100, 0);
     text("SPECIAL", xBound + (width*(.84)/9)*3, yBound + height*(.07));
     
-    
+    // Dispalys the users Perks
     fill(40, 255, 40);
     textAlign(LEFT, CENTER);
     text("Hacker"     ,  xBound + width*(.075), yBound + height*(.175));
     text("Killshot"   ,  xBound + width*(.075), yBound + height*(.25) );
     text("Berserk"    ,  xBound + width*(.075), yBound + height*(.325));
+    
     
     switch(subNav)
     {
