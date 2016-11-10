@@ -14,7 +14,7 @@ import processing.sound.*;
 //Setup
 void setup()
 { 
-    int i;
+    int i=0;
     // fullScreen();
      size(1000, 700);
     // size(500, 350);
@@ -23,12 +23,12 @@ void setup()
     globalFont = loadFont("AgencyFB-Bold-48.vlw");
     
     PipBoy     = loadFont("BodoniMTCondensed-Italic-48.vlw");
-    
     walkCycle = new Animation("Vault-Boy_Walking_", 21, (int)(width*(.4 )), (int)(height*(.45)) );
     Thumb     = new Animation("Vault-Boy_Thumb_"  , 1 , (int)(width*(.15)), (int)(height*(.325)));
     Hacker    = new Animation("Hacker_"           , 1 , (int)(width*(.25)), (int)(height*(.25)) );
     killS     = new Animation("Killshot_"         , 1 , (int)(width*(.35)), (int)(height*(.3))  );
     Berserk   = new Animation("Berserk_"          , 1 , (int)(width*(.3) ), (int)(height*(.35)) );
+    Map       = new Animation("Map_"              , 1 , (int)(width*(.6) ), (int)(height*(.645))  );          
     
     Classic = new SoundFile(this, "Nocturne.mp3");
     //Classic.play();
@@ -53,6 +53,8 @@ void setup()
          println(Miscellaneous.get(i));
     }//end for
     
+    Sine = new sineWave();
+    
     //Split(0, (Weapons.size()-1)/2, Weapons.size()-1);
 }//end setup
 
@@ -68,13 +70,13 @@ boolean Start = false;        //
 
 PFont   globalFont, PipBoy;   // Fonts Used for Text
 
-int     menu   = 3;           // Used to position the menu
+int     menu   = 5;           // Used to position the menu
 int     subM   = 1;
 int     subNav = 2;
 float   menuPos;              //Stores the current position of the menu
 
-Animation walkCycle, Thumb, Hacker, killS, Berserk;
-sineWave Sine = new sineWave();
+Animation walkCycle, Thumb, Hacker, killS, Berserk, Map;
+sineWave Sine;
 
 ArrayList<inventory_List> Weapons       = new ArrayList<inventory_List>();
 ArrayList<inventory_List> Apparel       = new ArrayList<inventory_List>();
@@ -85,9 +87,21 @@ SoundFile Diamond;
 boolean ClassicB = false;
 boolean DiamondB = false;
 
+boolean Splash = true;
+
 //Draw
 void draw()
 {
-    Screen();
-    Light();
+        Light(); //Draws the Red Light below the screen on the outliner
+        Screen();//Draws most of the important stuff on the screen that the user interacts with
 }//end void draw
+
+// The splash screen at the begining of the program
+void SplashScrn()
+{
+    background(0);
+    
+    textFont(PipBoy, height*(.1));
+    textAlign(CENTER,CENTER);
+    text("Welcome to your very own PipBoy 4000!", width*(.5), height*(.1));
+}//end Splash()

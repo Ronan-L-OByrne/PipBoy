@@ -10,24 +10,24 @@ void Outliner()
     fill(0, 0, 0);
     rect(width*(.84),   height*(.355857142), width*(.06),  height*(.178428571));
     rect(width*(.0415), height*(.071428571), width*(.815), height*(.829), 50);
-    rect(width*(.06),   height*(.025428571), width*(.821), height*(.900142857), 50);
+    rect(width*(.06),   height*(.025428571), width*(.821), height*(.900142857), ((width+height)/2)*(.058823529));
     fill(135, 92, 42);
-    rect(width*(.06),  height*(.021428571), width*(.82), height*(.897142857), 50);
+    rect(width*(.06),  height*(.021428571), width*(.82), height*(.897142857), ((width+height)/2)*(.058823529));
     fill(0, 0, 0);
-    rect(width*(.045), height*(.071428571), width*(.8165), height*(.825), 50);
+    rect(width*(.045), height*(.071428571), width*(.8165), height*(.825), ((width+height)/2)*(.058823529));
     fill(135, 92, 42);
-    rect(width*(.04),  height*(.051428571), width*(.82), height*(.84), 50);
+    rect(width*(.04),  height*(.051428571), width*(.82), height*(.84), ((width+height)/2)*(.058823529));
     
     fill(30, 30, 30); 
-    rect(width*(.05),  height*(.007142857), width*(.8),  height*(.2), 50);
+    rect(width*(.05),  height*(.007142857), width*(.8),  height*(.2), ((width+height)/2)*(.058823529));
     fill(50, 50, 50);
-    rect(width*(.06),  height*(.05),        width*(.78),  height*(.828571428), 50);
+    rect(width*(.06),  height*(.05),        width*(.78),  height*(.828571428), ((width+height)/2)*(.058823529));
     fill(255, 255, 255);
-    rect(width*(.075),  height*(.0714285714), width*(.753), height*(.790857142), 50);
+    rect(width*(.075),  height*(.0714285714), width*(.753), height*(.790857142), ((width+height)/2)*(.058823529));
     
     // Actual Screen
     fill(0, 0, 0);
-    rect(width*(.075), height*(.071428571), width*(.75), height*(.785714285), 50);
+    rect(width*(.075), height*(.071428571), width*(.75), height*(.785714285), ((width+height)/2)*(.058823529));
     
     fill(20, 20, 20);
     rect((width*(.06)+width*(.74))/2,  height*(.007142857), width*(.105),  height*(.043));
@@ -53,8 +53,8 @@ void Outliner()
     rect(width*(.84), height*(.352857142), width*(.06),  height*(.178428571));
     fill(135, 92, 42);
     rect(width*(.84), height*(.352857142), width*(.06),  height*(.171428571));
-    stroke(135, 92, 42);
-    rect(width*(.8405), height*(.252857142), width*(.019),  height*(.371428571));
+    noStroke();
+    rect(width*(.841), height*(.252857142), width*(.019),  height*(.371428571));
     stroke(0,0,0);
         
     fill(0, 0, 0);
@@ -107,17 +107,17 @@ void Outliner()
     
     // Bottom Vent
     fill(0, 0, 0);
-    rect(width*(.155) , height-(height*(.056142857)), width*(.5), height*(.678571428), width*(.1));
+    rect(width*(.155) , height-(height*(.056142857)), width*(.5), height*(.678571428), ((width+height)/2)*(.117647058));
     
     fill(115, 72, 22);
-    rect(width*(.15) , height-(height*(.058142857)), width*(.5), height*(.678571428), width*(.1));
+    rect(width*(.15) , height-(height*(.058142857)), width*(.5), height*(.678571428), ((width+height)/2)*(.117647058));
     
     fill(10, 10, 10);
       
     Ventx = width*(.19);
     for(i = 0; i < 9; i++)
     {
-        rect(Ventx+((i+1)*width*(.04)), height-(height*(.042857142)), width*(.015), height*(.071428571), 20);
+        rect(Ventx+((i+1)*width*(.04)), height-(height*(.042857142)), width*(.015), height*(.071428571), ((width+height)/2)*(.023529411));
     }//end for
     
     // Screws
@@ -126,6 +126,10 @@ void Outliner()
 
 void Light()
 {
+    noStroke();
+    fill(135, 92, 42);
+    rect(width*(.675), height*(.931), width*(.05), height*(.065));
+    
     stroke(0);
     // Red Light
     fill(70, 70, 70);

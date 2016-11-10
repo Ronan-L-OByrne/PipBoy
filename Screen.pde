@@ -7,13 +7,13 @@ void Screen()
     noStroke();
     
     fill(0, 0, 0);
-    rect(width*(.075), height*(.071428571), width*(.75), height*(.785714285), 50);
+    rect(width*(.075), height*(.071428571), width*(.75), height*(.785714285), ((width+height)/2)*(.058823529));
     
     fill(40, 255, 40);
     rect(xBound + (width*(.2)/6), yBound + height*(.042), width*(.67), 1);
-    rect(xBound + ((width*(.84)/7)*menu)-width*(.0275), yBound + height*(.005), width*(.055), height*(.044285), 10);
+    rect(xBound + ((width*(.84)/7)*menu)-width*(.0275), yBound + height*(.005), width*(.055), height*(.044285), ((width+height)/2)*(.011764705));
     fill(0, 0, 0);
-    rect(xBound + ((width*(.84)/7)*menu)-width*(.0255), yBound + height*(.004), width*(.051), height*(.044285), 10);
+    rect(xBound + ((width*(.84)/7)*menu)-width*(.0255), yBound + height*(.004), width*(.051), height*(.044285), ((width+height)/2)*(.011764705));
     
     fill(40, 255, 40);
     textAlign(CENTER,CENTER);
@@ -23,7 +23,7 @@ void Screen()
     text("DATA" , xBound + (width*(.84)/7)*3, yBound + height*(.0259));
     text("MAP"  , xBound + (width*(.84)/7)*4, yBound + height*(.0259));
     text("RADIO", xBound + (width*(.84)/7)*5, yBound + height*(.0259));
-    rect(xBound + (width*(.2)/6), height*(.075928571) + height*(.047), width*(.67), 3);
+    rect(xBound + (width*(.2)/6), height*(.075928571) + height*(.047), width*(.67), ((width+height)/2)*(.003529411));
     
     // Checks what menu the user is currently in
     // Displays Status screen
@@ -120,8 +120,8 @@ void Screen()
         }//end if
         
         // Constant throughout all sub menus
-        // Weight/Caps/Damage
-        textAlign(RIGHT, CENTER);
+        // Date/Time
+        textAlign(LEFT, CENTER);
         fill(0, 100, 0);
         rect(xBound + width*(.02), yBound + height*(.7),  width*(.175), height*(.040714));
         rect(xBound + width*(.2) , yBound + height*(.7),  width*(.155), height*(.040714));
@@ -139,11 +139,40 @@ void Screen()
         }//end else
         
         fill(40, 255, 40);
-        text(nf(month(), 2) +"."+ nf(day(),2 ) +"."+ (year()+271), xBound + width*(.102), yBound + height*(.72));
+        text(nf(month(), 2) +"."+ nf(day(),2 ) +"."+ (year()+271), xBound + width*(.028), yBound + height*(.72));
         
-        text(nf((hour()%12), 2) +":"+ nf(minute(),2) +" "+ period,    xBound + width*(.265), yBound + height*(.72));
+        text(nf((hour()%12), 2) +":"+ nf(minute(),2) +" "+ period,    xBound + width*(.205), yBound + height*(.72));
         fill(0, 100, 0);
     }//end else if
+    else if(menu == 4)
+    {
+        subMenu4(xBound, yBound);
+        
+        // Date/Time
+        textAlign(LEFT, CENTER);
+        fill(0, 100, 0);
+        rect(xBound + width*(.02), yBound + height*(.7),  width*(.175), height*(.040714));
+        rect(xBound + width*(.2) , yBound + height*(.7),  width*(.155), height*(.040714));
+        rect(xBound + width*(.36), yBound + height*(.7),  width*(.375), height*(.040714));
+        
+        String period;
+        
+        if(hour()>=12)
+        {
+            period = "PM";
+        }//end if
+        else
+        {
+            period = "AM";
+        }//end else
+        
+        fill(40, 255, 40);
+        text(nf(month(), 2) +"."+ nf(day(),2 ) +"."+ (year()+271), xBound + width*(.028), yBound + height*(.72));
+        
+        text(nf((hour()%12), 2) +":"+ nf(minute(),2) +" "+ period,    xBound + width*(.205), yBound + height*(.72));
+        fill(0, 100, 0);
+    }//end else if
+    
     // Displays the Radio Screen
     else if(menu == 5)
     {

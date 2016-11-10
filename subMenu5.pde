@@ -9,7 +9,7 @@ void subMenu5(float xBound, float yBound)
     stroke(40,255,40);
     strokeWeight(5);
     rect(xBound+width*(.695), yBound+height*(.091), width*(.001), height*(.375));
-    rect(xBound+width*(.43) , yBound+height*(.465), width*(.26), height*(.001));
+    rect(xBound+width*(.43) , yBound+height*(.465), width*(.2625), height*(.001));
     strokeWeight(1);
     
     noStroke();
@@ -35,21 +35,27 @@ void waveCal()
 {
   
     // Increment theta (try different values for 'angular velocity' here
-    Sine.theta += 0.5;
+    Sine.theta += ((width+height)/2)*(.000294117);
     // For every x value, calculate a y value with sine function
     float x = Sine.theta;
     
     for (i=0; i < Sine.yVal.length; i++) 
     {
-        Sine.Hei = Sine.Hei+random(-.2, .2);
-        if(Sine.Hei > 100)
+        if(!DiamondB && !ClassicB)
         {
-            Sine.Hei = Sine.Hei+random(-.2,0);
+            Sine.Hei = 0;
         }//end if
-        else if(Sine.Hei < 50)
+        
+        Sine.Hei = Sine.Hei+random(-(height*(.0005)), (height*(.0005)));
+        if(Sine.Hei > height*(.142857142))
         {
-            Sine.Hei = Sine.Hei+random(0 , .2);
+            Sine.Hei = Sine.Hei+random(-(height*(.0005)),0);
+        }//end if
+        else if(Sine.Hei < height*(.071428571))
+        {
+            Sine.Hei = Sine.Hei+random(0 , (height*(.0005)));
         }//end else if
+            
         Sine.yVal[i] = sin(x)*Sine.Hei;
         x+=Sine.dx;
     }//end for
@@ -61,9 +67,10 @@ void drawWave()
 {
     noStroke();
     fill(40, 255, 40);
+    
     // A simple way to draw the wave with an ellipse at each location
     for (j=0; j < Sine.yVal.length; j++)
     {
-      ellipse((width*(.5))+j*Sine.xSpace, height*(.35)+Sine.yVal[j], 5, 5);
+        ellipse((width*(.5))+j*Sine.xSpace, height*(.35)+Sine.yVal[j], ((width+height)/2)*(.005882352), ((width+height)/2)*(.005882352));
     }//end for
 }//end draw wave
