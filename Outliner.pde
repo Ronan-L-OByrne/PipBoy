@@ -84,30 +84,6 @@ void Outliner()
     ellipse( width*(.905), height*(.438571428), width*(.005), height*(.007142857));
     triangle(width*(.903), height*(.44),        width*(.906), height*(.437142857), width*(.905), height*(.49));
     
-    // Red Light
-    fill(70, 70, 70);
-    ellipse(width*(.7), height*(.964285714), width*(.04), height*(.057142857));
-    fill(Light, 0, 0);
-    if(Grad == true)
-    {
-        Light++;
-        
-        if(Light == 254)
-        {
-            Grad = false;
-        }// end if
-    }//end if
-    else
-    {
-        Light--;
-        
-        if(Light == 150)
-        {
-            Grad = true;
-        }//end else if
-    }//end else
-    ellipse(width*(.7), height*(.964285714), width*(.032), height*(.045714285));
-    
     // Bottom Right Dial
     fill(0, 0, 0);
     arc(width*(.97), height*(.857142857), width*(.15), height*(.214285714), Radian+.1, (Radian*2)+.1);
@@ -147,3 +123,32 @@ void Outliner()
     // Screws
     //ellipse();
 }//end Outliner()
+
+void Light()
+{
+    stroke(0);
+    // Red Light
+    fill(70, 70, 70);
+    ellipse(width*(.7), height*(.964285714), width*(.04), height*(.057142857));
+    fill(Light, 0, 0);
+    if(Grad == true)
+    {
+        Light++;
+        
+        if(Light == 254)
+        {
+            Grad = false;
+        }// end if
+    }//end if
+    else
+    {
+        Light--;
+        
+        if(Light == 150)
+        {
+            Grad = true;
+        }//end else if
+    }//end else
+    ellipse(width*(.7), height*(.964285714), width*(.032), height*(.045714285));
+    
+}//end Light()

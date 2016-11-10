@@ -202,6 +202,48 @@ void keyPressed()
         }//end else if
     }//end else if
     
-    
+    if(keyCode == ENTER)
+    {
+        if(menu == 5 && subNav == 1)
+        {
+            if(DiamondB && !ClassicB)
+            {
+                Diamond.stop();
+                Classic.play();
+                DiamondB = false;
+                ClassicB = true;
+            }
+            else if(!DiamondB && !ClassicB)
+            {
+                Classic.play();
+                ClassicB = true;
+            }//end else if
+            else if(!DiamondB && ClassicB)
+            {
+                Classic.stop();
+                ClassicB = false;
+            }//end else if
+        }//end if
+        else if(menu == 5 && subNav == 2)
+        {
+            if(DiamondB && !ClassicB)
+            {
+                Diamond.stop();
+                DiamondB = false;
+            }
+            else if(!DiamondB && !ClassicB)
+            {
+                Diamond.play();
+                DiamondB = true;
+            }//end else if
+            else if(!DiamondB && ClassicB)
+            {
+                Classic.stop();
+                Diamond.play();
+                DiamondB = true;
+                ClassicB = false;
+            }//end else if
+        }//end if
+    }//end if
     return;
 }//end keyPressed()

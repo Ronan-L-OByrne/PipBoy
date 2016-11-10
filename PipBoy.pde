@@ -8,6 +8,9 @@
   Author: Ronan O'Byrne, C15332036;
 */
 
+// Extra Libraries
+import processing.sound.*;
+
 //Setup
 void setup()
 { 
@@ -27,6 +30,11 @@ void setup()
     killS     = new Animation("Killshot_"         , 1 , (int)(width*(.35)), (int)(height*(.3))  );
     Berserk   = new Animation("Berserk_"          , 1 , (int)(width*(.3) ), (int)(height*(.35)) );
     
+    Classic = new SoundFile(this, "Nocturne.mp3");
+    //Classic.play();
+    Diamond = new SoundFile(this, "Fire.mp3"    );
+    //Diamond.play();
+    
     Outliner();
     topRightMenu();
     
@@ -34,12 +42,10 @@ void setup()
     
     for(i=0; i<Weapons.size(); i++)
     {
-        inventory_List disp1 = Weapons.get(i);
         println(Weapons.get(i));
     }//end for
     for(i=0; i<Apparel.size(); i++)
     {
-        inventory_List disp2 = Apparel.get(i);
         println(Apparel.get(i));
     }//end for
     for(i=0; i<Miscellaneous.size(); i++)
@@ -62,20 +68,26 @@ boolean Start = false;        //
 
 PFont   globalFont, PipBoy;   // Fonts Used for Text
 
-int     menu   = 5;           // Used to position the menu
+int     menu   = 3;           // Used to position the menu
 int     subM   = 1;
 int     subNav = 2;
 float   menuPos;              //Stores the current position of the menu
 
 Animation walkCycle, Thumb, Hacker, killS, Berserk;
+sineWave Sine = new sineWave();
 
 ArrayList<inventory_List> Weapons       = new ArrayList<inventory_List>();
 ArrayList<inventory_List> Apparel       = new ArrayList<inventory_List>();
 ArrayList<inventory_List> Miscellaneous = new ArrayList<inventory_List>();
-sineWave Sine = new sineWave();
+
+SoundFile Classic;
+SoundFile Diamond;
+boolean ClassicB = false;
+boolean DiamondB = false;
 
 //Draw
 void draw()
 {
     Screen();
+    Light();
 }//end void draw

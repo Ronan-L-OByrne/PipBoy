@@ -118,6 +118,31 @@ void Screen()
         {
             subMenu3_3(xBound, yBound);
         }//end if
+        
+        // Constant throughout all sub menus
+        // Weight/Caps/Damage
+        textAlign(RIGHT, CENTER);
+        fill(0, 100, 0);
+        rect(xBound + width*(.02), yBound + height*(.7),  width*(.175), height*(.040714));
+        rect(xBound + width*(.2) , yBound + height*(.7),  width*(.155), height*(.040714));
+        rect(xBound + width*(.36), yBound + height*(.7),  width*(.375), height*(.040714));
+        
+        String period;
+        
+        if(hour()>=12)
+        {
+            period = "PM";
+        }//end if
+        else
+        {
+            period = "AM";
+        }//end else
+        
+        fill(40, 255, 40);
+        text(nf(month(), 2) +"."+ nf(day(),2 ) +"."+ (year()+271), xBound + width*(.102), yBound + height*(.72));
+        
+        text(nf((hour()%12), 2) +":"+ nf(minute(),2) +" "+ period,    xBound + width*(.265), yBound + height*(.72));
+        fill(0, 100, 0);
     }//end else if
     // Displays the Radio Screen
     else if(menu == 5)
