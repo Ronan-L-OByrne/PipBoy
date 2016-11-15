@@ -27,7 +27,7 @@ void Screen()
     
     // Checks what menu the user is currently in
     // Displays Status screen
-    if(Splash == 1)
+    if(Splash)
     {
         SplashScrn(xBound, yBound);
     }//end if

@@ -253,9 +253,9 @@ void keyPressed()
                 ClassicB = false;
             }//end else if
         }//end if
-        else if(Splash==1)
+        else if(Splash)
         {
-            Splash=2;
+            Splash=false;
         }//end else if
     }//end if
     

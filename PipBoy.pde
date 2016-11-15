@@ -30,12 +30,7 @@ void setup()
     Hacker    = new Animation("Hacker_"           , 1 , (int)(width*(.25)), (int)(height*(.25)) );
     killS     = new Animation("Killshot_"         , 1 , (int)(width*(.35)), (int)(height*(.3))  );
     Berserk   = new Animation("Berserk_"          , 1 , (int)(width*(.3) ), (int)(height*(.35)) );
-    Map       = new Animation("Map_"              , 1 , (int)(width*(.6) ), (int)(height*(.645)));          
-   
-    //Classic = new SoundFile(this, "Nocturne.mp3");
-    //Classic.play();
-    //Diamond = new SoundFile(this, "Fire.mp3"    );
-    //Diamond.play();
+    Map       = new Animation("Map_"              , 1 , (int)(width*(.6) ), (int)(height*(.645)));
     
     Outliner();
     topRightMenu();
@@ -64,8 +59,6 @@ void setup()
     }//end for
     
     Sine = new sineWave();
-    
-    //Split(0, (Weapons.size()-1)/2, Weapons.size()-1);
 }//end setup
 
 //Global Variables
@@ -80,7 +73,7 @@ boolean Start = false;        //
 
 PFont   globalFont, PipBoy;   // Fonts Used for Text
 
-int     menu   = 1;           // Used to position the menu
+int     menu   = 4;           // Used to position the menu
 int     subM   = 1;
 int     subNav = 1;
 float   menuPos;              //Stores the current position of the menu
@@ -99,7 +92,7 @@ ArrayList<SoundFile> Diamond            = new ArrayList<SoundFile>()     ;
 boolean ClassicB = false;
 boolean DiamondB = false;
 
-int Splash = 1;
+boolean Splash = false;
 
 //Draw
 void draw()
