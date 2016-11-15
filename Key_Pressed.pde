@@ -12,7 +12,11 @@ void keyPressed()
         {
             subM = 3;
         }//end else if
-        subNav = 1;
+        
+        if(menu != 5)
+        {
+            subNav = 1;
+        }//end if
         
         return;
     }//end if
@@ -26,7 +30,12 @@ void keyPressed()
         {
             subM = 1;
         }//end else if
-        subNav = 1;
+        
+        if(menu != 5)
+        {
+            subNav = 1;
+        }//end if
+        
         return;
     }//end else if
     
@@ -208,19 +217,19 @@ void keyPressed()
         {
             if(DiamondB && !ClassicB)
             {
-                Diamond.stop();
-                Classic.play();
+                Diamond.get(0).stop();
+                Classic.get(0).play();
                 DiamondB = false;
                 ClassicB = true;
             }
             else if(!DiamondB && !ClassicB)
             {
-                Classic.play();
+                Classic.get(0).play();
                 ClassicB = true;
             }//end else if
             else if(!DiamondB && ClassicB)
             {
-                Classic.stop();
+                Classic.get(0).stop();
                 ClassicB = false;
             }//end else if
         }//end if
@@ -228,22 +237,27 @@ void keyPressed()
         {
             if(DiamondB && !ClassicB)
             {
-                Diamond.stop();
+                Diamond.get(0).stop();
                 DiamondB = false;
             }
             else if(!DiamondB && !ClassicB)
             {
-                Diamond.play();
+                Diamond.get(0).play();
                 DiamondB = true;
             }//end else if
             else if(!DiamondB && ClassicB)
             {
-                Classic.stop();
-                Diamond.play();
+                Classic.get(0).stop();
+                Diamond.get(0).play();
                 DiamondB = true;
                 ClassicB = false;
             }//end else if
         }//end if
+        else if(Splash==1)
+        {
+            Splash=2;
+        }//end else if
     }//end if
+    
     return;
 }//end keyPressed()

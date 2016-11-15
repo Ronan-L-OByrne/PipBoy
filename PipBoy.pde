@@ -6,6 +6,8 @@
   Date Begun: 10/10/2016;    Date Finished: xx/xx/xxxx
 
   Author: Ronan O'Byrne, C15332036;
+  
+  *Requires the processing.sound library which can be downloaded in Sketch-> Import Library... -> Add Library... Filter by sound and download the Sound library by The Processing Foundation
 */
 
 // Extra Libraries
@@ -22,23 +24,31 @@ void setup()
     
     globalFont = loadFont("AgencyFB-Bold-48.vlw");
     
-    PipBoy     = loadFont("BodoniMTCondensed-Italic-48.vlw");
+    PipBoy    = loadFont("BodoniMTCondensed-Italic-48.vlw");
     walkCycle = new Animation("Vault-Boy_Walking_", 21, (int)(width*(.4 )), (int)(height*(.45)) );
     Thumb     = new Animation("Vault-Boy_Thumb_"  , 1 , (int)(width*(.15)), (int)(height*(.325)));
     Hacker    = new Animation("Hacker_"           , 1 , (int)(width*(.25)), (int)(height*(.25)) );
     killS     = new Animation("Killshot_"         , 1 , (int)(width*(.35)), (int)(height*(.3))  );
     Berserk   = new Animation("Berserk_"          , 1 , (int)(width*(.3) ), (int)(height*(.35)) );
-    Map       = new Animation("Map_"              , 1 , (int)(width*(.6) ), (int)(height*(.645))  );          
-    
-    Classic = new SoundFile(this, "Nocturne.mp3");
+    Map       = new Animation("Map_"              , 1 , (int)(width*(.6) ), (int)(height*(.645)));          
+   
+    //Classic = new SoundFile(this, "Nocturne.mp3");
     //Classic.play();
-    Diamond = new SoundFile(this, "Fire.mp3"    );
+    //Diamond = new SoundFile(this, "Fire.mp3"    );
     //Diamond.play();
     
     Outliner();
     topRightMenu();
     
-    loadData("Inventory.csv");
+    loadData("Weapons.csv");
+    loadData("Miscellaneous.csv");
+    loadData("Apparel.csv");
+    
+    SoundFile cur = new SoundFile(this, "Nocturne.mp3");
+    Classic.add(cur);
+    
+    cur = new SoundFile(this, "Fire.mp3");
+    Diamond.add(cur);
     
     for(i=0; i<Weapons.size(); i++)
     {
@@ -70,9 +80,9 @@ boolean Start = false;        //
 
 PFont   globalFont, PipBoy;   // Fonts Used for Text
 
-int     menu   = 5;           // Used to position the menu
+int     menu   = 1;           // Used to position the menu
 int     subM   = 1;
-int     subNav = 2;
+int     subNav = 1;
 float   menuPos;              //Stores the current position of the menu
 
 Animation walkCycle, Thumb, Hacker, killS, Berserk, Map;
@@ -81,27 +91,19 @@ sineWave Sine;
 ArrayList<inventory_List> Weapons       = new ArrayList<inventory_List>();
 ArrayList<inventory_List> Apparel       = new ArrayList<inventory_List>();
 ArrayList<inventory_List> Miscellaneous = new ArrayList<inventory_List>();
+ArrayList<SoundFile> Classic            = new ArrayList<SoundFile>()     ;
+ArrayList<SoundFile> Diamond            = new ArrayList<SoundFile>()     ;
 
-SoundFile Classic;
-SoundFile Diamond;
+//SoundFile Classic;
+//SoundFile Diamond;
 boolean ClassicB = false;
 boolean DiamondB = false;
 
-boolean Splash = true;
+int Splash = 1;
 
 //Draw
 void draw()
 {
-        Light(); //Draws the Red Light below the screen on the outliner
-        Screen();//Draws most of the important stuff on the screen that the user interacts with
+    Light(); //Draws the Red Light below the screen on the outliner
+    Screen();//Draws most of the important stuff on the screen that the user interacts with
 }//end void draw
-
-// The splash screen at the begining of the program
-void SplashScrn()
-{
-    background(0);
-    
-    textFont(PipBoy, height*(.1));
-    textAlign(CENTER,CENTER);
-    text("Welcome to your very own PipBoy 4000!", width*(.5), height*(.1));
-}//end Splash()

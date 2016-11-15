@@ -1,41 +1,44 @@
 // Function to load data from a table
-void loadData(String table)
+void loadData(String file)
 {
-    Table t = loadTable(table);
+    Table t = loadTable(file);
     
-    for(i=0; i<t.getRowCount(); i++)
+    if(file.endsWith(".csv"))
     {
-        TableRow row = t.getRow(i);
-        
-        inventory_List cur = new inventory_List(row);
-        
-        if(cur.type.equals("R"))
+        for(i=0; i<t.getRowCount(); i++)
         {
-            if(row.getInt(8) > 0)
+            TableRow row = t.getRow(i);
+            
+            inventory_List cur = new inventory_List(row);
+            
+            if(cur.type.equals("R"))
             {
-                Weapons.add(cur);
+                if(row.getInt(8) > 0)
+                {
+                    Weapons.add(cur);
+                }//end if
             }//end if
-        }//end if
-        else if(cur.type.equals("M"))
-        {
-            if(row.getInt(6) > 0)
+            else if(cur.type.equals("M"))
             {
-                Weapons.add(cur);
-            }//end if
-        }//end else if
-        else if(cur.type.equals("A"))
-        {
-            if(row.getInt(7)>0)
+                if(row.getInt(6) > 0)
+                {
+                    Weapons.add(cur);
+                }//end if
+            }//end else if
+            else if(cur.type.equals("A"))
             {
-                Apparel.add(cur);
-            }//end if
-        }//end else if
-        else if(cur.type.equals("O"))
-        {
-            if(row.getInt(4)>0)
+                if(row.getInt(7)>0)
+                {
+                    Apparel.add(cur);
+                }//end if
+            }//end else if
+            else if(cur.type.equals("O"))
             {
-                Miscellaneous.add(cur);
-            }//end if
-        }//end else if
-    }//end for
+                if(row.getInt(4)>0)
+                {
+                    Miscellaneous.add(cur);
+                }//end if
+            }//end else if
+        }//end for
+    }//end if
 }//end loadData()
