@@ -19,7 +19,7 @@ void subMenu2_2(float xBound, float yBound)
         
         if(Apparel.get(i).equipped)
         {
-            rect(xBound + width*(.04), yBound + height*(.165+(.05*i)), 15, 15);
+            rect(xBound + width*(.04), yBound + height*(.165+(.05*i)), width*(.015), height*(.02142857));
         }//end if
         
         invApp++;

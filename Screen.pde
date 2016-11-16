@@ -17,7 +17,7 @@ void Screen()
     
     fill(40, 255, 40);
     textAlign(CENTER,CENTER);
-    textFont(globalFont, width*(.025));
+    textFont(globalFont, ((width+height)/2)*(.03));
     text("STAT" , xBound + (width*(.84)/7)*1, yBound + height*(.0259));
     text("INV"  , xBound + (width*(.84)/7)*2, yBound + height*(.0259));
     text("DATA" , xBound + (width*(.84)/7)*3, yBound + height*(.0259));
@@ -94,20 +94,27 @@ void Screen()
             rect(xBound + width*(.56), yBound + height*(.7),  width*(.175), height*(.040714));
             
             fill(40, 255, 40);
-            text("WEIGHT 100/125", xBound + width*(.0875), yBound + height*(.72));
+            text("WEIGHT " + player.Weight + "/" + player.MaxWeight, xBound + width*(.0875), yBound + height*(.72));
             
-            text("CAPS 1000",    xBound + width*(.27), yBound + height*(.72));
+            text("CAPS " + player.Caps,    xBound + width*(.27), yBound + height*(.72));
             ellipse(xBound + width*(.215), yBound + height*(.72), width*(.02), height*(.0285714));
             fill(0, 100, 0);
-            textFont(PipBoy, height*(.035));
+            textFont(PipBoy, ((width+height)/2)*(.025));
             textAlign(CENTER,CENTER);
             text("C  ", xBound + width*(.218), yBound + height*(.72));
             
-            textFont(globalFont, width*(.025));
-            drawGun(.855, .913, .85);
-            drawCrosshair(.775, .795);
+            textFont(globalFont, ((width+height)/2)*(.03));
+            drawGun(.845, .913, .85);
+            drawCrosshair(.765, .795);
             fill(40, 255, 40);
-            text("20",   xBound + width*(.722), yBound + height*(.72));
+            if(curEquipW != -1)
+            {
+                text(Weapons.get(curEquipW).damage,   xBound + width*(.718), yBound + height*(.72));
+            }//end if
+            else
+            {
+                text("0",   xBound + width*(.718), yBound + height*(.72));
+            }//end else
         }//end else if
         // Display the Data subMenus
         else if(menu == 3)

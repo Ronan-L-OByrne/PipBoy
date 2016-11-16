@@ -32,7 +32,7 @@ void Outliner()
     fill(20, 20, 20);
     rect((width*(.06)+width*(.74))/2,  height*(.007142857), width*(.105),  height*(.043));
     fill(50, 50, 50);
-    textFont(PipBoy, height*(.048));
+    textFont(PipBoy, ((width+height)/2)*(.038));
     textAlign(LEFT,LEFT);
     text("Pip-Boy", (width*(.06)+width*(.78))/2, height*(.04));
     
@@ -48,41 +48,6 @@ void Outliner()
         }//end for
     }//end for
     
-    // Geigher Counter
-    fill(0, 0, 0);
-    rect(width*(.84), height*(.352857142), width*(.06),  height*(.178428571));
-    fill(135, 92, 42);
-    rect(width*(.84), height*(.352857142), width*(.06),  height*(.171428571));
-    noStroke();
-    rect(width*(.841), height*(.252857142), width*(.019),  height*(.371428571));
-    stroke(0,0,0);
-        
-    fill(0, 0, 0);
-    arc(width*(.9), height*(.448571428),   width*(.12),  height*(.171428571), Radian*3, Radian*5);
-    
-    fill(135, 92, 42);
-    //rect(width*(.84), height*(.352857142), width*(.06),  height*(.178428571));
-    fill(135, 92, 42);
-    arc(width*(.9), height*(.438571428),   width*(.12),  height*(.171428571), Radian*3, Radian*5);
-    fill(255, 255, 255);
-    stroke(135, 92, 42);
-    arc(width*(.9), height*(.438571428),   width*(.1),   height*(.142857142), Radian*3, Radian*5);
-    fill(255, 0, 0);
-    stroke(255, 0, 0);
-    arc(width*(.9), height*(.438571428),   width*(.075), height*(.107142857), Radian*3, Radian*5);
-    fill(255, 255, 255);
-    arc(width*(.9), height*(.438571428),   width*(.075), height*(.107142857), 5.9,      Radian*5);
-    fill(255, 255, 255);
-    arc(width*(.9), height*(.438571428),   width*(.06),  height*(.085714285), Radian*3, Radian*5);
-    
-    stroke(0, 0, 0);
-    fill(115, 72, 22);
-    ellipse(width*(.88), height*(.485714285), width*(.007), height*(.01));
-    ellipse(width*(.88), height*(.392857142), width*(.007), height*(.01));
-    // Geiger pointer
-    fill(0, 0, 0);
-    ellipse( width*(.905), height*(.438571428), width*(.005), height*(.007142857));
-    triangle(width*(.903), height*(.44),        width*(.906), height*(.437142857), width*(.905), height*(.49));
     
     // Bottom Right Dial
     fill(0, 0, 0);
@@ -103,7 +68,9 @@ void Outliner()
     fill(60, 60, 60);
     ellipse(width*(.98), height*(.842857142), width*(.02), height*(.028571428));
     
-    
+    fill(190, 235, 0);
+    textSize(((width+height)/2)*(.0175));
+    text("Power", width*(.725), height*(.964285714));
     
     // Bottom Vent
     fill(0, 0, 0);
@@ -156,3 +123,48 @@ void Light()
     ellipse(width*(.7), height*(.964285714), width*(.032), height*(.045714285));
     
 }//end Light()
+
+void GeigerCount()
+{
+    // Geigher Counter
+    
+    fill(0, 0, 0);
+    rect(width*(.84), height*(.352857142), width*(.06),  height*(.178428571));
+    fill(135, 92, 42);
+    rect(width*(.84), height*(.352857142), width*(.06),  height*(.171428571));
+    noStroke();
+    rect(width*(.841), height*(.252857142), width*(.019),  height*(.371428571));
+    stroke(0,0,0);
+        
+    fill(0, 0, 0);
+    arc(width*(.9), height*(.448571428),   width*(.12),  height*(.171428571), Radian*3, Radian*5);
+    
+    fill(135, 92, 42);
+    //rect(width*(.84), height*(.352857142), width*(.06),  height*(.178428571));
+    fill(135, 92, 42);
+    arc(width*(.9), height*(.438571428),   width*(.12),  height*(.171428571), Radian*3, Radian*5);
+    fill(255, 255, 255);
+    stroke(135, 92, 42);
+    arc(width*(.9), height*(.438571428),   width*(.1),   height*(.142857142), Radian*3, Radian*5);
+    fill(255, 0, 0);
+    stroke(255, 0, 0);
+    arc(width*(.9), height*(.438571428),   width*(.075), height*(.107142857), Radian*3, Radian*5);
+    fill(255, 255, 255);
+    arc(width*(.9), height*(.438571428),   width*(.075), height*(.107142857), 5.9,      Radian*5);
+    fill(255, 255, 255);
+    arc(width*(.9), height*(.438571428),   width*(.06),  height*(.085714285), Radian*3, Radian*5);
+    
+    stroke(0, 0, 0);
+    fill(115, 72, 22);
+    ellipse(width*(.88), height*(.485714285), width*(.007), height*(.01));
+    ellipse(width*(.88), height*(.392857142), width*(.007), height*(.01));
+    
+    fill(190, 235, 0);
+    textAlign(LEFT, CENTER);
+    textFont(globalFont, ((width+height)/2)*(.0235));
+    text("RADS", width*(.8575), height*(.438571428));
+    // Geiger pointer
+    fill(0, 0, 0);
+    ellipse( width*(.905), height*(.438571428), width*(.005), height*(.007142857));
+    triangle(width*(.903), height*(.44),        width*(.906), height*(.437142857), width*(.905), height*(.49));
+}//end GeigerCount()

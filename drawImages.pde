@@ -17,9 +17,9 @@ void drawCrosshair(float x,float y)
 {
     // Draws a Crosshair based off an x and y variable passed into the function
     fill(40, 255, 40);
-    ellipse(width*(x)     , height*(y)      , width*(.012) , height*(.017142) );
+    ellipse(width*(x)      , height*(y)      , width*(.012) , height*(.017142) );
     rect   (width*(x-.0015), height*(y-.0125), width*(.003) , height*(.025714) );
-    rect   (width*(x-.009), height*(y-.0025), width*(.018) , height*(.004285) );
+    rect   (width*(x-.009) , height*(y-.0025), width*(.018) , height*(.004285) );
     fill(0, 100, 0);
     ellipse(width*(x) , height*(y), width*(.0075), height*(.0107142));
 }//end drawCrosshair()

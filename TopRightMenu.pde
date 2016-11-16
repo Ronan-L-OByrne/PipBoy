@@ -16,8 +16,8 @@ void topRightMenu()
     rect(width*(.952), (menuPos), width*(.107), height*(.032871428));
     fill(60, 60, 60);
     rect(width*(.95) , (menuPos), width*(.1)  , height*(.028871428));
-    fill(210, 255, 0);
-    textFont(globalFont, height*(.03));
+    fill(190, 235, 0);
+    textFont(globalFont, ((height+width)/2)*(.0255));
     textAlign(RIGHT,CENTER);
     text("STAT",  width*(.945), height*(.087028571));
     text("INV",   width*(.945), height*(.115599999));

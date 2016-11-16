@@ -213,7 +213,11 @@ void keyPressed()
     
     if(keyCode == ENTER)
     {
-        if(menu == 5 && subNav == 1)
+        if(Splash)
+        {
+            Splash=false;
+        }//end else if
+        else if(menu == 5 && subNav == 1)
         {
             if(DiamondB && !ClassicB)
             {
@@ -288,10 +292,6 @@ void keyPressed()
                 curEngRes -= Apparel.get(subNav-1).engRes;
                 curRadRes -= Apparel.get(subNav-1).radRes;
             }//end else if
-        }//end else if
-        else if(Splash)
-        {
-            Splash=false;
         }//end else if
     }//end if
     

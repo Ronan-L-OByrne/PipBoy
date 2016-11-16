@@ -19,7 +19,7 @@ void subMenu2_1(float xBound, float yBound)
         
         if(Weapons.get(i).equipped)
         {
-            rect(xBound + width*(.04), yBound + height*(.165+(.05*i)), 15, 15);
+            rect(xBound + width*(.04), yBound + height*(.165+(.05*i)), width*(.015), height*(.02142857));
         }//end if
         
         invWea++;
