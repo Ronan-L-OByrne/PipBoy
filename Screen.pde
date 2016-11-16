@@ -67,7 +67,7 @@ void Screen()
             rect(xBound + width*(.27),  yBound + height*(.7075), width*(.06) , height*(.027585));
             
             fill(40, 255, 40);
-            text("AP 90/90",   xBound + width*(.69), yBound + height*(.72));
+            text("AP " + player.Ap[1] + "/" + player.Ap[0],   xBound + width*(.69), yBound + height*(.72));
         }//end if(menu)
         // Displays Inventory sceen
         else if(menu == 2)

@@ -2,21 +2,22 @@
 class inventory_List
 {
     //Variables associated with the various inventory items
-    String type    ;
-    String name    ;
-    int    damage  ;
-    int    fireRate;
-    String speed   ;
-    int    range   ;
-    int    accuracy;
+    String  type          ;
+    String  name          ;
+    int     damage        ;
+    int     fireRate      ;
+    String  speed         ;
+    int     range         ;
+    int     accuracy      ;
     
-    int radRes     ;
-    int engRes     ;
-    int dmgRes     ;
+    int     radRes        ;
+    int     engRes        ;
+    int     dmgRes        ;
+    boolean equipped=false;
     
-    float  weight  ;
-    int    value   ;
-    int    qty     ;
+    float   weight        ;
+    int     value         ;
+    int     qty           ;
     
     //Enters the desired data into the variables
     inventory_List(TableRow row)
@@ -34,6 +35,7 @@ class inventory_List
             this.weight   = row.getFloat(6) ;
             this.value    = row.getInt(7)   ;
             this.qty      = row.getInt(8)   ;
+            this.equipped = false           ;
         }//end if
         //Is the item a Melee weapon?
         else if(type.equals("M"))
@@ -44,6 +46,7 @@ class inventory_List
             this.weight   = row.getInt(4)   ;
             this.value    = row.getInt(5)   ;
             this.qty      = row.getInt(6)   ;
+            this.equipped = false           ;
         }//end else if
         //Is the item a piece of apparel?
         else if(type.equals("A"))

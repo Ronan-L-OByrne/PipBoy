@@ -253,6 +253,42 @@ void keyPressed()
                 ClassicB = false;
             }//end else if
         }//end if
+        else if(menu == 2 && subM == 1)
+        {
+            if(curEquipW != subNav-1)
+            {
+                Weapons.get(subNav-1).equipped = true;
+                
+                if(curEquipW >= 0)
+                {
+                    Weapons.get(curEquipW).equipped = false;
+                }//end if
+                
+                curEquipW = subNav-1;
+            }//end if
+            else if(curEquipW == subNav-1)
+            {
+                Weapons.get(subNav-1).equipped = false;
+                curEquipW = -1;
+            }//end else if
+        }//end else if
+        else if(menu == 2 && subM == 2)
+        {
+            if(Apparel.get(subNav-1).equipped == false)
+            {
+                Apparel.get(subNav-1).equipped = true;
+                curDmgRes += Apparel.get(subNav-1).dmgRes;
+                curEngRes += Apparel.get(subNav-1).engRes;
+                curRadRes += Apparel.get(subNav-1).radRes;
+            }//end if
+            else if(Apparel.get(subNav-1).equipped == true)
+            {
+                Apparel.get(subNav-1).equipped = false;
+                curDmgRes -= Apparel.get(subNav-1).dmgRes;
+                curEngRes -= Apparel.get(subNav-1).engRes;
+                curRadRes -= Apparel.get(subNav-1).radRes;
+            }//end else if
+        }//end else if
         else if(Splash)
         {
             Splash=false;

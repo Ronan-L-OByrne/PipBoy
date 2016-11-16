@@ -17,6 +17,11 @@ void subMenu2_1(float xBound, float yBound)
     {
         text(Weapons.get(i).name +" ("+ Weapons.get(i).qty+")", xBound + width*(.075), yBound + height*(.175+(.05*invWea)));
         
+        if(Weapons.get(i).equipped)
+        {
+            rect(xBound + width*(.04), yBound + height*(.165+(.05*i)), 15, 15);
+        }//end if
+        
         invWea++;
     }//end for
     

@@ -20,6 +20,7 @@ void setup()
     // fullScreen();
      size(1000, 700);
     // size(500, 350);
+    // size(250, 175);
     // size(750, 750);
     
     globalFont = loadFont("AgencyFB-Bold-48.vlw");
@@ -72,7 +73,7 @@ boolean Start = false;        //
 
 PFont   globalFont, PipBoy;   // Fonts Used for Text
 
-int     menu   = 4;           // Used to position the menu
+int     menu   = 1;           // Used to position the menu
 int     subM   = 1;
 int     subNav = 1;
 float   menuPos;              //Stores the current position of the menu
@@ -85,6 +86,11 @@ ArrayList<inventory_List> Apparel       = new ArrayList<inventory_List>();
 ArrayList<inventory_List> Miscellaneous = new ArrayList<inventory_List>();
 ArrayList<SoundFile> Classic            = new ArrayList<SoundFile>()     ;
 ArrayList<SoundFile> Diamond            = new ArrayList<SoundFile>()     ;
+
+int curEquipW = -1;
+int curDmgRes = 0 ;
+int curEngRes = 0 ;
+int curRadRes = 0 ;
 
 Stats player = new Stats();
 

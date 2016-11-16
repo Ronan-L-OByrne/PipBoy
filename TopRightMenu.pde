@@ -24,5 +24,4 @@ void topRightMenu()
     text("DATA",  width*(.945), height*(.144171427));
     text("MAP",   width*(.945), height*(.172742855));
     text("RADIO", width*(.945), height*(.202314283));
-    
 }//end TopRigthMenu

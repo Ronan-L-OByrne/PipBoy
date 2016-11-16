@@ -17,6 +17,11 @@ void subMenu2_2(float xBound, float yBound)
     {
         text(Apparel.get(i).name + " (" + Apparel.get(i).qty + ")", xBound + width*(.075), yBound + height*(.175+(.05*invApp)));
         
+        if(Apparel.get(i).equipped)
+        {
+            rect(xBound + width*(.04), yBound + height*(.165+(.05*i)), 15, 15);
+        }//end if
+        
         invApp++;
     }//end for
     

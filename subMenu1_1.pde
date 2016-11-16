@@ -12,13 +12,13 @@ void subMenu1_1(float xBound, float yBound)
     text("PERKS"  ,  xBound + (width*(.84)/9)*3, yBound + height*(.07));
     
     rect(xBound + width*(.25 ),  yBound + height*(.55), width*(.05) , height*(.07142));
-    rect(xBound + width*(.305),  yBound + height*(.55), width*(.025), height*(.07142));
+    rect(xBound + width*(.305),  yBound + height*(.55), width*(.035), height*(.07142));
     rect(xBound + width*(.36 ),  yBound + height*(.55), width*(.05) , height*(.07142));
     rect(xBound + width*(.415),  yBound + height*(.55), width*(.025), height*(.07142));
     rect(xBound + width*(.445),  yBound + height*(.55), width*(.025), height*(.07142));
     
     // Crosshair
-    drawCrosshair(.3923, .6425);
+    drawCrosshair(.3983, .6425);
     
     // Lightning Bolt
     fill(40, 255, 40);
@@ -33,9 +33,16 @@ void subMenu1_1(float xBound, float yBound)
     
     // Damage/Resistence Values
     fill(40, 255, 40);
-    text("20", xBound + width*(.3175), yBound + height*(.602));
-    text("10", xBound + width*(.4275), yBound + height*(.602));
-    text("20", xBound + width*(.4575), yBound + height*(.602));
+    if(curEquipW == -1)
+    {
+        text("0", xBound + width*(.32375), yBound + height*(.602));  
+    }//end if
+    else
+    {
+        text(Weapons.get(curEquipW).damage, xBound + width*(.32375), yBound + height*(.602));
+    }//end else
+    text(curEngRes, xBound + width*(.4275), yBound + height*(.602));
+    text(curRadRes, xBound + width*(.4575), yBound + height*(.602));
     
     //Gun
     drawGun(.33, .6375, 1);

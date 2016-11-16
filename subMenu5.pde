@@ -8,7 +8,7 @@ void subMenu5(float xBound, float yBound)
     fill(40,255,40);
     stroke(40,255,40);
     strokeWeight(5);
-    rect(xBound+width*(.695), yBound+height*(.091), width*(.001), height*(.375));
+    rect(xBound+width*(.695), yBound+height*(.091), width*(.001) , height*(.375));
     rect(xBound+width*(.43) , yBound+height*(.465), width*(.2625), height*(.001));
     strokeWeight(1);
     
