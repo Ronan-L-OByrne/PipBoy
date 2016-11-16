@@ -86,6 +86,8 @@ ArrayList<inventory_List> Miscellaneous = new ArrayList<inventory_List>();
 ArrayList<SoundFile> Classic            = new ArrayList<SoundFile>()     ;
 ArrayList<SoundFile> Diamond            = new ArrayList<SoundFile>()     ;
 
+Stats player = new Stats();
+
 //SoundFile Classic;
 //SoundFile Diamond;
 boolean ClassicB = false;

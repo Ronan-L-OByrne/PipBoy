@@ -11,13 +11,18 @@ void subMenu1_2(float xBound, float yBound)
     // Displays the users S.P.E.C.I.A.L stats
     fill(40, 255, 40);
     textAlign(LEFT, CENTER);
-    text("Strength"     ,  xBound + width*(.075), yBound + height*(.175));  text("10", xBound + width*(.3), yBound + height*(.175));
-    text("Perception"   ,  xBound + width*(.075), yBound + height*(.25) );  text("10", xBound + width*(.3), yBound + height*(.25) );
-    text("Endurance"    ,  xBound + width*(.075), yBound + height*(.325));  text("10", xBound + width*(.3), yBound + height*(.325));
-    text("Charisma"     ,  xBound + width*(.075), yBound + height*(.4)  );  text("10", xBound + width*(.3), yBound + height*(.4)  );
-    text("Intelligence" ,  xBound + width*(.075), yBound + height*(.475));  text("10", xBound + width*(.3), yBound + height*(.475));
-    text("Agility"      ,  xBound + width*(.075), yBound + height*(.55) );  text("10", xBound + width*(.3), yBound + height*(.55) );
-    text("Luck"         ,  xBound + width*(.075), yBound + height*(.625));  text("10", xBound + width*(.3), yBound + height*(.625));
+    text("Strength"     ,  xBound + width*(.075), yBound + height*(.175));
+    text("Perception"   ,  xBound + width*(.075), yBound + height*(.25) );
+    text("Endurance"    ,  xBound + width*(.075), yBound + height*(.325));
+    text("Charisma"     ,  xBound + width*(.075), yBound + height*(.4)  );
+    text("Intelligence" ,  xBound + width*(.075), yBound + height*(.475));
+    text("Agility"      ,  xBound + width*(.075), yBound + height*(.55) );
+    text("Luck"         ,  xBound + width*(.075), yBound + height*(.625));
+    
+    for(int i=0; i<7; i++)
+    {
+        text(player.SPECIAL[i], xBound + width*(.3), yBound + height*(.175)+i*(height*(.075)));
+    }//end for
     
     Thumb.display(xBound+width*(.45), yBound+height*(.115));
     
@@ -29,7 +34,7 @@ void subMenu1_2(float xBound, float yBound)
             fill(0, 0, 0);
             textAlign(LEFT, CENTER);
             text("Strength", xBound + width*(.075), yBound + height*(.175));
-            text("10", xBound + width*(.3), yBound + height*(.175));
+            text(player.SPECIAL[subNav-1], xBound + width*(.3), yBound + height*(.175));
             fill(40, 255, 40);
             textAlign(LEFT, TOP);
             text("Strength is a measure of your raw \nphysical power. it afftects how much you \ncan carry, and the damage of all melee \nattacks."
@@ -42,7 +47,7 @@ void subMenu1_2(float xBound, float yBound)
             fill(0, 0, 0);
             textAlign(LEFT, CENTER);
             text("Perception", xBound + width*(.075), yBound + height*(.25));   
-            text("10", xBound + width*(.3), yBound + height*(.25));
+            text(player.SPECIAL[subNav-1], xBound + width*(.3), yBound + height*(.25));
             fill(40, 255, 40);
             textAlign(LEFT, TOP);
             text("Perception is your environmental \nawareness and \"sixth sense,\" and affects \naccuract in V.A.T.S."
@@ -55,7 +60,7 @@ void subMenu1_2(float xBound, float yBound)
             fill(0, 0, 0);
             textAlign(LEFT, CENTER);
             text("Endurance", xBound + width*(.075), yBound + height*(.325));   
-            text("10", xBound + width*(.3), yBound + height*(.325));
+            text(player.SPECIAL[subNav-1], xBound + width*(.3), yBound + height*(.325));
             fill(40, 255, 40);
             textAlign(LEFT, TOP);
             text("Endurance is a measure of your overall \nphysical fitness. It affects your total \nHealth and the Action Point drain from \nsprinting."
@@ -68,7 +73,7 @@ void subMenu1_2(float xBound, float yBound)
             fill(0, 0, 0);
             textAlign(LEFT, CENTER);
             text("Charisma", xBound + width*(.075), yBound + height*(.4));     
-            text("10", xBound + width*(.3), yBound + height*(.4));
+            text(player.SPECIAL[subNav-1], xBound + width*(.3), yBound + height*(.4));
             fill(40, 255, 40);
             textAlign(LEFT, TOP);
             text("Charisma is your ability to charm and \nconvince others. It affects your success \nto persuade in dialogue and prices when \nyou barter."
@@ -81,7 +86,7 @@ void subMenu1_2(float xBound, float yBound)
             fill(0, 0, 0);
             textAlign(LEFT, CENTER);
             text("Intelligence", xBound + width*(.075), yBound + height*(.475)); 
-            text("10", xBound + width*(.3), yBound + height*(.475));
+            text(player.SPECIAL[subNav-1], xBound + width*(.3), yBound + height*(.475));
             fill(40, 255, 40);
             textAlign(LEFT, TOP);
             text("Intelligence is a measure of your overall \nmental acuity, and affects the number of \nExperience Points earned."
@@ -94,7 +99,7 @@ void subMenu1_2(float xBound, float yBound)
             fill(0, 0, 0);
             textAlign(LEFT, CENTER);
             text("Agility", xBound + width*(.075), yBound + height*(.55));     
-            text("10", xBound + width*(.3), yBound + height*(.55));
+            text(player.SPECIAL[subNav-1], xBound + width*(.3), yBound + height*(.55));
             fill(40, 255, 40);
             textAlign(LEFT, TOP);
             text("Agility is a measure of your overall \nfinesse and reflexes. It affects the \nnumber of Action Points in V.A.T.S and \nyour ability to sneak."
@@ -107,7 +112,7 @@ void subMenu1_2(float xBound, float yBound)
             fill(0, 0, 0);
             textAlign(LEFT, CENTER);
             text("Luck", xBound + width*(.075), yBound + height*(.625));
-            text("10", xBound + width*(.3), yBound + height*(.625));
+            text(player.SPECIAL[subNav-1], xBound + width*(.3), yBound + height*(.625));
             fill(40, 255, 40);
             textAlign(LEFT, TOP);
             text("Luck is a measure of your general good \nfortune, and affects the recharge rate of \nCritical Hits."

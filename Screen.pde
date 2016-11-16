@@ -57,9 +57,9 @@ void Screen()
             rect(xBound + width*(.56), yBound + height*(.7),  width*(.175), height*(.040714));
             
             fill(40, 255, 40);
-            text("HP 100/125", xBound + width*(.07), yBound + height*(.72));
+            text("HP " + player.Hp[1] + "/" + player.Hp[0], xBound + width*(.07), yBound + height*(.72));
             
-            text("LEVEL 3",    xBound + width*(.23), yBound + height*(.72));
+            text("LEVEL " + player.Level,    xBound + width*(.23), yBound + height*(.72));
             stroke(40, 255, 40);
             fill(0, 75, 0);
             rect(xBound + width*(.27),  yBound + height*(.7075), width*(.275), height*(.027585));
