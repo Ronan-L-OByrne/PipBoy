@@ -40,9 +40,9 @@ void Outliner()
     // Vents Right of Geiger Counter//
     Ventx = width*(.96);
     Venty = height*(.385714285);
-    for(i=0; i<2; i++)
+    for(int i=0; i<2; i++)
     {
-        for(j=0; j<6; j++)
+        for(int j=0; j<6; j++)
         {
             rect(Ventx+(i*(width*(.03))), Venty+ ((j+1)*(height*(.028571428))), width*(.025), height*(.004285714));
         }//end for
@@ -115,7 +115,7 @@ void Outliner()
     fill(10, 10, 10);
       
     Ventx = width*(.19);
-    for(i = 0; i < 9; i++)
+    for(int i = 0; i < 9; i++)
     {
         rect(Ventx+((i+1)*width*(.04)), height-(height*(.042857142)), width*(.015), height*(.071428571), ((width+height)/2)*(.023529411));
     }//end for

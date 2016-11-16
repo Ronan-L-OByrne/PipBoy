@@ -5,7 +5,7 @@ void loadData(String file)
     
     if(file.endsWith(".csv"))
     {
-        for(i=0; i<t.getRowCount(); i++)
+        for(int i=0; i<t.getRowCount(); i++)
         {
             TableRow row = t.getRow(i);
             

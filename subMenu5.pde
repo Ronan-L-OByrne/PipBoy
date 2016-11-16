@@ -39,7 +39,7 @@ void waveCal()
     // For every x value, calculate a y value with sine function
     float x = Sine.theta;
     
-    for (i=0; i < Sine.yVal.length; i++) 
+    for (int i=0; i < Sine.yVal.length; i++) 
     {
         if(!DiamondB && !ClassicB)
         {
@@ -69,7 +69,7 @@ void drawWave()
     fill(40, 255, 40);
     
     // A simple way to draw the wave with an ellipse at each location
-    for (j=0; j < Sine.yVal.length; j++)
+    for (int j=0; j < Sine.yVal.length; j++)
     {
         ellipse((width*(.5))+j*Sine.xSpace, height*(.35)+Sine.yVal[j], ((width+height)/2)*(.005882352), ((width+height)/2)*(.005882352));
     }//end for

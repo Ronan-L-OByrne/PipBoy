@@ -62,7 +62,6 @@ void setup()
 }//end setup
 
 //Global Variables
-int     i, j;                 // Index variables for loops
 int     invApp, invWea, invMisc;
 float   Ventx, Venty;         // Used to position the vents
 float   Radian = PI/2;        // Quarter Circle

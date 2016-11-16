@@ -11,7 +11,7 @@ class Animation
         imgCount = count;
         imgs     = new PImage[imgCount];
         
-        for (i=0; i<imgCount; i++)
+        for (int i=0; i<imgCount; i++)
         {
             // nf() adds 4 digits onto the end depending on the frames associated with the file (4 digits is unnessicary for this program)
             String filename = imgEnd + nf(i, 4) + ".png"; //Adds a number and .png onto the end of the loaded image

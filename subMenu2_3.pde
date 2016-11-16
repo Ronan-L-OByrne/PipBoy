@@ -13,7 +13,7 @@ void subMenu2_3(float xBound, float yBound)
     textAlign(LEFT, CENTER);
     
     invMisc=0;
-    for(i=0; i<Miscellaneous.size(); i++)
+    for(int i=0; i<Miscellaneous.size(); i++)
     {
         text(Miscellaneous.get(i).name + " (" + Miscellaneous.get(i).qty + ")", xBound + width*(.075), yBound + height*(.175+(.05*invMisc)));
         

@@ -13,7 +13,7 @@ void subMenu2_1(float xBound, float yBound)
     textAlign(LEFT, CENTER);
     
     invWea=0;
-    for(i=0; i<Weapons.size(); i++)
+    for(int i=0; i<Weapons.size(); i++)
     {
         text(Weapons.get(i).name +" ("+ Weapons.get(i).qty+")", xBound + width*(.075), yBound + height*(.175+(.05*invWea)));
         

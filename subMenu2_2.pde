@@ -13,7 +13,7 @@ void subMenu2_2(float xBound, float yBound)
     textAlign(LEFT, CENTER);
     
     invApp=0;
-    for(i=0; i<Apparel.size(); i++)
+    for(int i=0; i<Apparel.size(); i++)
     {
         text(Apparel.get(i).name + " (" + Apparel.get(i).qty + ")", xBound + width*(.075), yBound + height*(.175+(.05*invApp)));
         
