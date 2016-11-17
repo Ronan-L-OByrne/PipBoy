@@ -51,10 +51,10 @@ void Outliner()
     
     // Bottom Right Dial
     fill(0, 0, 0);
-    arc(width*(.97), height*(.857142857), width*(.15), height*(.214285714), Radian+.1, (Radian*2)+.1);
+    arc(width*(.97), height*(.857142857), width*(.15), height*(.214285714), HALF_PI+.1, (HALF_PI*2)+.1);
     fill(135, 92, 42);
     noStroke();
-    arc(width*(.975), height*(.85), width*(.1), height*(.142857132), Radian+.1, (Radian*2)+.1);
+    arc(width*(.975), height*(.85), width*(.1), height*(.142857132), HALF_PI+.1, (HALF_PI*2)+.1);
     
     stroke(0, 0, 0);
     fill(0, 0, 0);
@@ -69,7 +69,8 @@ void Outliner()
     ellipse(width*(.98), height*(.842857142), width*(.02), height*(.028571428));
     
     fill(190, 235, 0);
-    textSize(((width+height)/2)*(.0175));
+    textAlign(LEFT, CENTER);
+    textFont(globalFont, ((width+height)/2)*(.0175));
     text("Power", width*(.725), height*(.964285714));
     
     // Bottom Vent
@@ -127,6 +128,13 @@ void Light()
 void GeigerCount()
 {
     // Geigher Counter
+    float val = map(player.Radiation, 0, 100, HALF_PI*4, HALF_PI*6);
+    float cx = width*(.9), cy = height*(.438571428);
+    val += random(-.01, .01);
+    
+    Tip = new PVector(cx+sin(val)*35, cy+cos(val)*35);
+    Base[0] = new PVector(cx+sin(val)*3, cy+cos(val)*3);
+    Base[1] = new PVector(cx+(sin(val)-(sin(val))*2), cy+(cos(val)-(cos(val))*2));
     
     fill(0, 0, 0);
     rect(width*(.84), height*(.352857142), width*(.06),  height*(.178428571));
@@ -137,22 +145,22 @@ void GeigerCount()
     stroke(0,0,0);
         
     fill(0, 0, 0);
-    arc(width*(.9), height*(.448571428),   width*(.12),  height*(.171428571), Radian*3, Radian*5);
+    arc(width*(.9), height*(.448571428),   width*(.12),  height*(.171428571), HALF_PI*3, HALF_PI*5);
     
     fill(135, 92, 42);
     //rect(width*(.84), height*(.352857142), width*(.06),  height*(.178428571));
     fill(135, 92, 42);
-    arc(width*(.9), height*(.438571428),   width*(.12),  height*(.171428571), Radian*3, Radian*5);
+    arc(width*(.9), height*(.438571428),   width*(.12),  height*(.171428571), HALF_PI*3, HALF_PI*5);
     fill(255, 255, 255);
     stroke(135, 92, 42);
-    arc(width*(.9), height*(.438571428),   width*(.1),   height*(.142857142), Radian*3, Radian*5);
+    arc(width*(.9), height*(.438571428),   width*(.1),   height*(.142857142), HALF_PI*3, HALF_PI*5);
     fill(255, 0, 0);
     stroke(255, 0, 0);
-    arc(width*(.9), height*(.438571428),   width*(.075), height*(.107142857), Radian*3, Radian*5);
+    arc(width*(.9), height*(.438571428),   width*(.075), height*(.107142857), HALF_PI*3, HALF_PI*5);
     fill(255, 255, 255);
-    arc(width*(.9), height*(.438571428),   width*(.075), height*(.107142857), 5.9,      Radian*5);
+    arc(width*(.9), height*(.438571428),   width*(.075), height*(.107142857), map(75, 0, 100, HALF_PI*3, HALF_PI*5)-HALF_PI, map(100, 0, 100, HALF_PI*3, HALF_PI*5));
     fill(255, 255, 255);
-    arc(width*(.9), height*(.438571428),   width*(.06),  height*(.085714285), Radian*3, Radian*5);
+    arc(width*(.9), height*(.438571428),   width*(.06),  height*(.085714285), HALF_PI*3, HALF_PI*5);
     
     stroke(0, 0, 0);
     fill(115, 72, 22);
@@ -165,6 +173,6 @@ void GeigerCount()
     text("RADS", width*(.8575), height*(.438571428));
     // Geiger pointer
     fill(0, 0, 0);
-    ellipse( width*(.905), height*(.438571428), width*(.005), height*(.007142857));
-    triangle(width*(.903), height*(.44),        width*(.906), height*(.437142857), width*(.905), height*(.49));
+    ellipse( cx, cy, width*(.005), height*(.007142857));
+    triangle(Base[0].x, Base[0].y, Base[1].x, Base[1].y, Tip.x, Tip.y);//width*(.905), height*(.49));
 }//end GeigerCount()

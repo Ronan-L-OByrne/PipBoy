@@ -40,6 +40,9 @@ void setup()
     loadData("Miscellaneous.csv");
     loadData("Apparel.csv");
     
+    Tip     = new PVector(1, 1);
+    Base[0] = new PVector(1, 1);
+    
     SoundFile cur = new SoundFile(this, "Nocturne.mp3");
     Classic.add(cur);
     
@@ -70,13 +73,15 @@ void setup()
 //Global Variables
 int     invApp, invWea, invMisc;
 float   Ventx, Venty;         // Used to position the vents
-float   Radian = PI/2;        // Quarter Circle
 
 int     Light=0;              // Used for the small red light
 boolean Grad = true;          // Used for the small red light
 boolean Start = false;        //
 
 PFont   globalFont, PipBoy;   // Fonts Used for Text
+
+PVector   Tip;
+PVector[] Base = new PVector[2];
 
 int     menu   = 1;           // Used to position the menu
 int     subM   = 1;

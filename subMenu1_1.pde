@@ -27,9 +27,9 @@ void subMenu1_1(float xBound, float yBound)
     triangle(xBound+width*(.425), yBound+height*(.58) , xBound+width*(.435), yBound+height*(.5675), xBound+width*(.43), yBound+height*(.5675));
     
     // Radiation Symbol
-    arc(xBound + width*(.4575), yBound + height*(.5675),   width*(.1)/5,   height*(.142857142)/5, Radian*3.275, Radian*4    );
-    arc(xBound + width*(.4575), yBound + height*(.5675),   width*(.1)/5,   height*(.142857142)/5, Radian*2    , Radian*2.725);
-    arc(xBound + width*(.4575), yBound + height*(.5675),   width*(.1)/5,   height*(.142857142)/5, Radian*.65  , Radian*1.35 );
+    arc(xBound + width*(.4575), yBound + height*(.5675),   width*(.1)/5,   height*(.142857142)/5, HALF_PI*3.275, HALF_PI*4    );
+    arc(xBound + width*(.4575), yBound + height*(.5675),   width*(.1)/5,   height*(.142857142)/5, HALF_PI*2    , HALF_PI*2.725);
+    arc(xBound + width*(.4575), yBound + height*(.5675),   width*(.1)/5,   height*(.142857142)/5, HALF_PI*.65  , HALF_PI*1.35 );
     
     // Damage/Resistence Values
     fill(40, 255, 40);
@@ -49,7 +49,7 @@ void subMenu1_1(float xBound, float yBound)
     
     //Helmet
     fill(40, 255, 40);
-    arc    (xBound + width*(.3855), yBound + height*(.59), width*(.0345),   height*(.052), Radian*2, Radian*4);
+    arc    (xBound + width*(.3855), yBound + height*(.59), width*(.0345),   height*(.052), HALF_PI*2, HALF_PI*4);
     ellipse(xBound + width*(.385) , yBound + height*(.59), width*(.041) ,   height*(.01) );
     rect   (xBound + width*(.385) , yBound + height*(.59), width*(.016) ,   height*(.01)  , 10);
     rect   (xBound + width*(.3725), yBound + height*(.56), width*(.0285),   height*(.0325), 20);
