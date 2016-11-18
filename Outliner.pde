@@ -52,6 +52,22 @@ void Outliner()
     // Bottom Right Dial
     fill(0, 0, 0);
     arc(width*(.97), height*(.857142857), width*(.15), height*(.214285714), HALF_PI+.1, (HALF_PI*2)+.1);
+    
+    stroke(255);
+    for(int i=0; i<=10; i++)
+    {
+        float mX = map(i, 0, 10, (HALF_PI*3), (HALF_PI*4)-.2);
+        
+        if(i%2 == 0)
+        {
+            line(width*(.97), height*(.857142857), width*(.975)+sin(mX)*(width*(.075)),  height*(.85)+cos(mX)*(height*(.10714285)));
+        }//end if
+        else
+        {
+            line(width*(.97), height*(.857142857), width*(.975)+sin(mX)*(width*(.065)),  height*(.85)+cos(mX)*(height*(.09285714)));
+        }//end else
+    }//end for
+    
     fill(135, 92, 42);
     noStroke();
     arc(width*(.975), height*(.85), width*(.1), height*(.142857132), HALF_PI+.1, (HALF_PI*2)+.1);
@@ -128,7 +144,7 @@ void Light()
 void GeigerCount()
 {
     // Geigher Counter
-    float val = map(player.Radiation, 0, 100, HALF_PI*4, HALF_PI*6);
+    float val = map(player.Radiation, 0, 100, 0, HALF_PI*2);
     float cx = width*(.9), cy = height*(.438571428);
     val += random(-.01, .01);
     
@@ -158,7 +174,27 @@ void GeigerCount()
     stroke(255, 0, 0);
     arc(width*(.9), height*(.438571428),   width*(.075), height*(.107142857), HALF_PI*3, HALF_PI*5);
     fill(255, 255, 255);
-    arc(width*(.9), height*(.438571428),   width*(.075), height*(.107142857), map(75, 0, 100, HALF_PI*3, HALF_PI*5)-HALF_PI, map(100, 0, 100, HALF_PI*3, HALF_PI*5));
+    arc(width*(.9), height*(.438571428),   width*(.075), height*(.107142857), map(75, 0, 100, HALF_PI*2, HALF_PI*4), map(100, 0, 100, HALF_PI*3, HALF_PI*5));
+    
+    stroke(0);
+    fill(0);
+    textSize(((width+height)/2)*(.01));
+    textAlign(CENTER, CENTER);
+    for(int i=0; i<=10; i++)
+    {
+        float mX = map(i, 0, 10, 0, HALF_PI*2);
+        
+        if(i%2 == 0)
+        {
+            line(cx, cy, cx+sin(mX)*(width*(.04)), cy+cos(mX)*(height*(.05714285)));
+            text(i, (cx+sin(mX)*(width*(.043))+(width*(.004))), cy+cos(mX)*(height*(.06142857)));
+        }//end if
+        else
+        {
+            line(cx, cy, cx+sin(mX)*(width*(.036)), cy+cos(mX)*(height*(.0554285)));
+        }//end else
+    }//end for
+    
     fill(255, 255, 255);
     arc(width*(.9), height*(.438571428),   width*(.06),  height*(.085714285), HALF_PI*3, HALF_PI*5);
     
