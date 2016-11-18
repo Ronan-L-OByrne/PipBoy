@@ -131,6 +131,16 @@ void keyPressed()
             
             return;
         }//end else if
+        else if(subM == 2 && menu == 3)
+        {
+            subNav--;
+            if (subNav < 1) 
+            {
+                subNav = 5;
+            }//end if
+            
+            return;
+        }//end else if
         else if(menu == 5)
         {
             subNav--;
@@ -193,6 +203,16 @@ void keyPressed()
         {
             subNav++;
             if (subNav > invMisc) 
+            {
+                subNav = 1;
+            }//end if
+            
+            return;
+        }//end else if
+        else if(subM == 2 && menu == 3)
+        {
+            subNav++;
+            if (subNav > 5) 
             {
                 subNav = 1;
             }//end if

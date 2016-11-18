@@ -19,6 +19,7 @@ void setup()
     int i=0;
     // fullScreen();
      size(1000, 700);
+    // size(1000, 1000);
     // size(500, 350);
     // size(250, 175);
     // size(750, 750);
@@ -109,7 +110,7 @@ Stats player = new Stats();
 boolean ClassicB = false;
 boolean DiamondB = false;
 
-boolean Splash = true;
+boolean Splash = false;
 
 //Draw
 void draw()

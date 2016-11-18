@@ -50,24 +50,25 @@ void Screen()
             
             // Constant throughout all sub menus
             // Hp/Level/AP/Name
-            textAlign(CENTER, CENTER);
             fill(0, 100, 0);
             rect(xBound + width*(.02), yBound + height*(.7),  width*(.175), height*(.040714));
             rect(xBound + width*(.2) , yBound + height*(.7),  width*(.355), height*(.040714));
             rect(xBound + width*(.56), yBound + height*(.7),  width*(.175), height*(.040714));
             
+            textAlign(LEFT, CENTER);
             fill(40, 255, 40);
-            text("HP " + player.Hp[1] + "/" + player.Hp[0], xBound + width*(.07), yBound + height*(.72));
+            text("HP " + player.Hp[1] + "/" + player.Hp[0], xBound + width*(.025), yBound + height*(.72));
             
-            text("LEVEL " + player.Level,    xBound + width*(.23), yBound + height*(.72));
+            text("LEVEL " + player.Level,    xBound + width*(.205), yBound + height*(.72));
             stroke(40, 255, 40);
             fill(0, 75, 0);
-            rect(xBound + width*(.27),  yBound + height*(.7075), width*(.275), height*(.027585));
+            rect(xBound + width*(.28),  yBound + height*(.7075), width*(.265), height*(.027585));
             fill(40, 255, 40);
-            rect(xBound + width*(.27),  yBound + height*(.7075), width*(.06) , height*(.027585));
+            rect(xBound + width*(.28),  yBound + height*(.7075), width*(.05) , height*(.027585));
             
+            textAlign(RIGHT, CENTER);
             fill(40, 255, 40);
-            text("AP " + player.Ap[1] + "/" + player.Ap[0],   xBound + width*(.69), yBound + height*(.72));
+            text("AP " + player.Ap[1] + "/" + player.Ap[0],   xBound + width*(.73), yBound + height*(.72));
         }//end if(menu)
         // Displays Inventory sceen
         else if(menu == 2)
