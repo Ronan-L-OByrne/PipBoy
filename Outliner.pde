@@ -1,6 +1,8 @@
 // Function to draw the graphical outliner of the program
 void Outliner()
 {
+    float   Ventx, Venty; // Used to position the vents
+    
     // Background
     background(135, 92, 42);
     
@@ -13,7 +15,7 @@ void Outliner()
     fill(135, 92, 42);
     rect(width*(.06),  height*(.021428571), width*(.82), height*(.897142857), ((width+height)/2)*(.058823529));
     fill(0, 0, 0);
-    rect(width*(.045), height*(.071428571), width*(.8165), height*(.825), ((width+height)/2)*(.058823529));
+    rect(width*(.045), height*(.0551428571), width*(.817), height*(.84), ((width+height)/2)*(.058823529));
     fill(135, 92, 42);
     rect(width*(.04),  height*(.051428571), width*(.82), height*(.84), ((width+height)/2)*(.058823529));
     
@@ -104,7 +106,17 @@ void Outliner()
     }//end for
     
     // Screws
-    //ellipse();
+    fill(125, 82, 32);
+    ellipse(width*(.86), height*(.057142857), width*(.015), height*(.021428571));
+    line(width*(.855), height*(.05), width*(.865), height*(.064285714));
+    ellipse(width*(.86), height*(.885714285), width*(.015), height*(.021428571));
+    line(width*(.855), height*(.878571428), width*(.865), height*(.892857142));
+    
+    ellipse(width*(.035), height*(.942857142), width*(.04), height*(.057142857));
+    line(width*(.015), height*(.942857142), width*(.055), height*(.942857142));
+    ellipse(width*(.15), height*(.964285714), width*(.025), height*(.035714285));
+    line(width*(.15), height*(.982142857), width*(.15), height*(.946428571));
+    
 }//end Outliner()
 
 void Light()
@@ -122,7 +134,7 @@ void Light()
     {
         Light++;
         
-        if(Light == 254)
+        if(Light == 255)
         {
             Grad = false;
         }// end if
@@ -131,7 +143,7 @@ void Light()
     {
         Light--;
         
-        if(Light == 150)
+        if(Light == 100)
         {
             Grad = true;
         }//end else if
@@ -146,6 +158,9 @@ void GeigerCount()
     float val = map(player.Radiation, 0, 100, 0, HALF_PI*2);
     float cx = width*(.9), cy = height*(.438571428);
     val += random(-.01, .01);
+    
+    PVector   Tip;                  // Dictates the position of the geiger counters tip
+    PVector[] Base = new PVector[2];// Dictates the position of the base of the geiger pointer
     
     Tip = new PVector(cx+sin(val)*(width*(.035)), cy+cos(val)*height*(.05));
     Base[0] = new PVector(cx+sin(val)*3, cy+cos(val)*3);
@@ -173,7 +188,7 @@ void GeigerCount()
     stroke(255, 0, 0);
     arc(width*(.9), height*(.438571428),   width*(.075), height*(.107142857), HALF_PI*3, HALF_PI*5);
     fill(255, 255, 255);
-    arc(width*(.9), height*(.438571428),   width*(.075), height*(.107142857), map(75, 0, 100, HALF_PI*2, HALF_PI*4), map(100, 0, 100, HALF_PI*3, HALF_PI*5));
+    arc(width*(.9), height*(.438571428),   width*(.075), height*(.107142857), map(40, 0, 100, HALF_PI*3, HALF_PI*5), map(100, 0, 100, HALF_PI*3, HALF_PI*5));
     
     stroke(0);
     fill(0);
@@ -216,7 +231,7 @@ void GeigerCount()
 void topRightMenu()
 {
     // Updates whenever the menu is changed
-    menuPos = (menu*(height*(.028871428)))+(height*(.043057143));
+    float menuPos = (menu*(height*(.028871428)))+(height*(.043057143));
     noStroke();
     fill(135, 92, 42);
     rect(width*(.95), height*(.21427), width*(.1), height*(.05));

@@ -241,19 +241,19 @@ void keyPressed()
         {
             if(DiamondB && !ClassicB)
             {
-                Diamond.get(0).stop();
-                Classic.get(0).play();
+                Diamond.stop();
+                Classic.play();
                 DiamondB = false;
                 ClassicB = true;
             }
             else if(!DiamondB && !ClassicB)
             {
-                Classic.get(0).play();
+                Classic.play();
                 ClassicB = true;
             }//end else if
             else if(!DiamondB && ClassicB)
             {
-                Classic.get(0).stop();
+                Classic.stop();
                 ClassicB = false;
             }//end else if
         }//end if
@@ -261,18 +261,18 @@ void keyPressed()
         {
             if(DiamondB && !ClassicB)
             {
-                Diamond.get(0).stop();
+                Diamond.stop();
                 DiamondB = false;
             }
             else if(!DiamondB && !ClassicB)
             {
-                Diamond.get(0).play();
+                Diamond.play();
                 DiamondB = true;
             }//end else if
             else if(!DiamondB && ClassicB)
             {
-                Classic.get(0).stop();
-                Diamond.get(0).play();
+                Classic.stop();
+                Diamond.play();
                 DiamondB = true;
                 ClassicB = false;
             }//end else if

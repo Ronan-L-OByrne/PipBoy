@@ -1,9 +1,6 @@
 // Draws the contents of the screen (ie. the different menues and contents)
-void Screen()
+void Screen(float xBound, float yBound)
 {
-    float xBound = width *(.075);
-    float yBound = height*(.075928571);
-    
     noStroke();
     
     fill(0, 0, 0);

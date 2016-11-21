@@ -46,10 +46,8 @@ void setup()
     loadData("Apparel.csv");
     
     //Loads the sound files
-    SoundFile cur = new SoundFile(this, "Nocturne.mp3");
-    Classic.add(cur);
-    cur = new SoundFile(this, "Fire.mp3");
-    Diamond.add(cur);
+    Classic = new SoundFile(this, "Nocturne.mp3");
+    Diamond = new SoundFile(this, "Fire.mp3");
     
     //Calculates the players current carry weight
     for(i=0; i<Weapons.size(); i++)
@@ -75,20 +73,14 @@ void setup()
 }//end setup
 
 //Global Variables
-float   Ventx, Venty;           // Used to position the vents
-
-int     Light=0;                // Used for the small red light
-boolean Grad = true;            // Used for the small red light
-
-PFont   globalFont, PipBoy;     // Fonts Used for Text
-
-PVector   Tip;                  // Dictates the position of the geiger counters tip
-PVector[] Base = new PVector[2];
+int     Light= 0;             // Used for the small red light
+boolean Grad = true;          // Used for the small red light
+    
+PFont   globalFont, PipBoy;   // Fonts Used for Text
 
 int     menu   = 1;           // Used to select the menu
 int     subM   = 1;           // Used to select the sub Menu
 int     subNav = 1;           // Used to navigate within the sub menus
-float   menuPos;              // Stores the current position of the menu
 
 Animation walkCycle, Thumb, Hacker, killS, Berserk, Map; // The various images used in the program
 sineWave Sine; // Displays the sine wave
@@ -96,24 +88,25 @@ sineWave Sine; // Displays the sine wave
 ArrayList<inventory_List> Weapons       = new ArrayList<inventory_List>(); // Stores the Weapons in the players inventory
 ArrayList<inventory_List> Apparel       = new ArrayList<inventory_List>(); // Stores the Apparel in the players inventory
 ArrayList<inventory_List> Miscellaneous = new ArrayList<inventory_List>(); // Stores the Misc items in the players inventory
-ArrayList<SoundFile> Classic            = new ArrayList<SoundFile>()     ; // Stores the Classical song for use in the radio
-ArrayList<SoundFile> Diamond            = new ArrayList<SoundFile>()     ; // Stores the Other song for use in the radio
 
 int curEquipW = -1; // Stores the array position of the currently equiped weapon
 
 Stats player = new Stats(); // Stores the various data associated with the player
 
-//SoundFile Classic;
-//SoundFile Diamond;
+SoundFile Classic, Diamond;
 boolean ClassicB = false; // Records whether or not this song is playing
 boolean DiamondB = false; // Records whether or not this song is playing
 
 boolean Splash = true; // Dictates whether or not the splash screen is being displayed
+boolean Check  = true;
 
 //Draw
 void draw()
 {
-    Light(); //Draws the Red Light below the screen on the outliner
-    GeigerCount(); // Draws the geiger counter to the right of the screen
-    Screen();//Draws most of the important stuff on the screen that the user interacts with
+    float xBound = width *(.075);
+    float yBound = height*(.075928571);
+    
+    Light()               ; // Draws the Red Light below the screen on the outliner
+    GeigerCount()         ; // Draws the geiger counter to the right of the screen
+    Screen(xBound, yBound); // Draws most of the important stuff on the screen that the user interacts with
 }//end void draw
