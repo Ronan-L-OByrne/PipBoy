@@ -12,12 +12,9 @@ void subMenu2_3(float xBound, float yBound)
     fill(40, 255, 40);
     textAlign(LEFT, CENTER);
     
-    invMisc=0;
     for(int i=0; i<Miscellaneous.size(); i++)
     {
-        text(Miscellaneous.get(i).name + " (" + Miscellaneous.get(i).qty + ")", xBound + width*(.075), yBound + height*(.175+(.05*invMisc)));
-        
-        invMisc++;
+        text(Miscellaneous.get(i).name + " (" + Miscellaneous.get(i).qty + ")", xBound + width*(.075), yBound + height*(.175+(.05*i)));
     }//end for
     
     rect(width*(.14), height*(.225+(.05*(subNav-1))), width*(.2575), height*(.05));

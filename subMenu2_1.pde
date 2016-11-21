@@ -12,19 +12,15 @@ void subMenu2_1(float xBound, float yBound)
     fill(40, 255, 40);
     textAlign(LEFT, CENTER);
     
-    invWea=0;
     for(int i=0; i<Weapons.size(); i++)
     {
-        text(Weapons.get(i).name +" ("+ Weapons.get(i).qty+")", xBound + width*(.075), yBound + height*(.175+(.05*invWea)));
+        text(Weapons.get(i).name +" ("+ Weapons.get(i).qty+")", xBound + width*(.075), yBound + height*(.175+(.05*i)));
         
         if(Weapons.get(i).equipped)
         {
             rect(xBound + width*(.04), yBound + height*(.165+(.05*i)), width*(.015), height*(.02142857));
         }//end if
-        
-        invWea++;
     }//end for
-    
     
     rect(width*(.14), height*(.225+(.05*(subNav-1))), width*(.2575), height*(.05));
     fill(0, 0, 0);

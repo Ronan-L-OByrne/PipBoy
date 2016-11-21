@@ -26,23 +26,26 @@ void Screen()
     rect(xBound + (width*(.2)/6), height*(.075928571) + height*(.047), width*(.67), ((width+height)/2)*(.003529411));
     
     // Checks what menu the user is currently in
-    // Displays Status screen
-    if(Splash)
+    if(Splash) // Displays the splash screen at the start of the program
     {
         SplashScrn(xBound, yBound);
     }//end if
     else
     {
+        // Displays STAT screen
         if(menu == 1)
         {
+            // Displays the STATUS screen
             if(subM == 1)
             {
                 subMenu1_1(xBound, yBound);
             }//end if(subM)
+            // Displays the SPECIAL screen
             else if(subM == 2)
             {
                 subMenu1_2(xBound, yBound);
             }//end else if(subM)
+            // Displays the PERKS screen
             else if(subM == 3)
             {
                 subMenu1_3(xBound, yBound);
@@ -70,17 +73,20 @@ void Screen()
             fill(40, 255, 40);
             text("AP " + player.Ap[1] + "/" + player.Ap[0],   xBound + width*(.73), yBound + height*(.72));
         }//end if(menu)
-        // Displays Inventory sceen
+        // Displays INV (Inventory) sceen
         else if(menu == 2)
         {
+            // Displays the WEAPONS screen
             if(subM == 1)
             {
                 subMenu2_1(xBound, yBound);
             }//end if(subM)
+            // Displays the APPAREL screen
             else if(subM == 2)
             {
                 subMenu2_2(xBound, yBound);
             }//end else if(subM)
+            // Displays the MISC screen
             else if(subM == 3)
             {
                 subMenu2_3(xBound, yBound);
@@ -117,17 +123,20 @@ void Screen()
                 text("0",   xBound + width*(.718), yBound + height*(.72));
             }//end else
         }//end else if
-        // Display the Data subMenus
+        // Display the DATA screen
         else if(menu == 3)
         {
+            // Displays the QUESTS screen
             if(subM == 1)
             {
                 subMenu3_1(xBound, yBound);
             }//end if
+            // Displays the STATS screen
             if(subM == 2)
             {
                 subMenu3_2(xBound, yBound);
             }//end if
+            // Displays the WORKSHOP screen
             if(subM == 3)
             {
                 subMenu3_3(xBound, yBound);
@@ -158,6 +167,7 @@ void Screen()
             text(nf((hour()%12), 2) +":"+ nf(minute(),2) +" "+ period,    xBound + width*(.205), yBound + height*(.72));
             fill(0, 100, 0);
         }//end else if
+        // Displays the MAP screen
         else if(menu == 4)
         {
             subMenu4(xBound, yBound);
@@ -169,7 +179,7 @@ void Screen()
             rect(xBound + width*(.2) , yBound + height*(.7),  width*(.155), height*(.040714));
             rect(xBound + width*(.36), yBound + height*(.7),  width*(.375), height*(.040714));
             
-            String period;
+            String period;//Following the current time
             
             if(hour()>=12)
             {
@@ -181,13 +191,13 @@ void Screen()
             }//end else
             
             fill(40, 255, 40);
+            // nf makes sure the time is always displayed as a two digit numbers
             text(nf(month(), 2) +"."+ nf(day(),2 ) +"."+ (year()+271), xBound + width*(.028), yBound + height*(.72));
             
             text(nf((hour()%12), 2) +":"+ nf(minute(),2) +" "+ period,    xBound + width*(.205), yBound + height*(.72));
             fill(0, 100, 0);
         }//end else if
-        
-        // Displays the Radio Screen
+        // Displays the RADIO Screen
         else if(menu == 5)
         {
             subMenu5(xBound, yBound);

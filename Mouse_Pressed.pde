@@ -1,7 +1,7 @@
 // Checks what to do if a mouse button is pressed
 void mousePressed()
 {
-    // Conditions for changing the Menu location
+    // Conditions for changing the Menu location (unessicary due to keypressed but im still keeping it in)
     if(mouseButton == LEFT && Button(width*(.952), (1*height*(.028871428))+height*(.043057143), 
     (width*(.952) + width*(.1)), (1*height*(.028871428))+height*(.043057143)+height*(.028871428)))
     {

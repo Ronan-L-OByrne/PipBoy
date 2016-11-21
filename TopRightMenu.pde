@@ -1,6 +1,7 @@
 // Draws the simple menu in the top right of the screen
 void topRightMenu()
 {
+    // Updates whenever the menu is changed
     menuPos = (menu*(height*(.028871428)))+(height*(.043057143));
     noStroke();
     fill(135, 92, 42);

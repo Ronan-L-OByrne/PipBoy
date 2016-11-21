@@ -12,17 +12,14 @@ void subMenu2_2(float xBound, float yBound)
     fill(40, 255, 40);
     textAlign(LEFT, CENTER);
     
-    invApp=0;
     for(int i=0; i<Apparel.size(); i++)
     {
-        text(Apparel.get(i).name + " (" + Apparel.get(i).qty + ")", xBound + width*(.075), yBound + height*(.175+(.05*invApp)));
+        text(Apparel.get(i).name + " (" + Apparel.get(i).qty + ")", xBound + width*(.075), yBound + height*(.175+(.05*i)));
         
         if(Apparel.get(i).equipped)
         {
             rect(xBound + width*(.04), yBound + height*(.165+(.05*i)), width*(.015), height*(.02142857));
         }//end if
-        
-        invApp++;
     }//end for
     
     rect(width*(.14), height*(.225+(.05*(subNav-1))), width*(.2575), height*(.05));

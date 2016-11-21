@@ -28,7 +28,7 @@ void setup()
     
     //Loads the fonts used in the sketch
     globalFont = loadFont("AgencyFB-Bold-48.vlw");
-    PipBoy     = loadFont("BodoniMTCondensed-Italic-48.vlw");
+    PipBoy    = loadFont("BodoniMTCondensed-Italic-48.vlw");
     
     //Loads the images used in the sketch
     walkCycle = new Animation("Vault-Boy_Walking_", 21, (int)(width*(.4 )), (int)(height*(.45)) );
@@ -77,10 +77,12 @@ void setup()
 }//end setup
 
 //Global Variables
+int     invApp, invWea, invMisc;// Counts the number of items of apparel, weapons , and misc items
 float   Ventx, Venty;           // Used to position the vents
 
 int     Light=0;                // Used for the small red light
 boolean Grad = true;            // Used for the small red light
+//boolean Start = false;        //
 
 PFont   globalFont, PipBoy;     // Fonts Used for Text
 
@@ -102,6 +104,9 @@ ArrayList<SoundFile> Classic            = new ArrayList<SoundFile>()     ; // St
 ArrayList<SoundFile> Diamond            = new ArrayList<SoundFile>()     ; // Stores the Other song for use in the radio
 
 int curEquipW = -1; // Stores the array position of the currently equiped weapon
+int curDmgRes = 0 ; // Stores the users current Damage resistance
+int curEngRes = 0 ; // Stores the users current Energy resistance
+int curRadRes = 0 ; // Stores the users current Radiation resistance
 
 Stats player = new Stats(); // Stores the various data associated with the player
 

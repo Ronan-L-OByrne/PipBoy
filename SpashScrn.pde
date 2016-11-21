@@ -1,6 +1,7 @@
 // The splash screen at the begining of the program
 void SplashScrn(float xBound, float yBound)
 {
+    //Displays the Instructions for how to use the program
     fill(0, 0, 0);
     rect(xBound, yBound, width*(.75), height*(.785714285), ((width+height)/2)*(.058823529));
     

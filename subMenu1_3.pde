@@ -15,7 +15,7 @@ void subMenu1_3(float xBound, float yBound)
     text("Killshot"   ,  xBound + width*(.075), yBound + height*(.25) );
     text("Berserk"    ,  xBound + width*(.075), yBound + height*(.325));
     
-    
+    // Displays the description of the currently selected Perk
     switch(subNav)
     {
         case 1:

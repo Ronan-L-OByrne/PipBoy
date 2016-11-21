@@ -70,7 +70,6 @@ void keyPressed()
         subM = 1;
         topRightMenu();
         
-        
         return;
     }//end else if
     
@@ -106,7 +105,7 @@ void keyPressed()
             subNav--;
             if(subNav < 1)
             {
-                subNav = invWea;
+                subNav = Weapons.size();
             }//end if
             
             return;
@@ -116,7 +115,7 @@ void keyPressed()
             subNav--;
             if(subNav < 1)
             {
-                subNav = invApp;
+                subNav = Apparel.size();
             }//end if
             
             return;
@@ -126,7 +125,7 @@ void keyPressed()
             subNav--;
             if(subNav < 1)
             {
-                subNav = invMisc;
+                subNav = Miscellaneous.size();
             }//end if
             
             return;
@@ -182,7 +181,7 @@ void keyPressed()
         else if(subM == 1 && menu == 2)
         {
             subNav++;
-            if (subNav > invWea) 
+            if (subNav > Weapons.size()) 
             {
                 subNav = 1;
             }//end if
@@ -192,7 +191,7 @@ void keyPressed()
         else if(subM == 2 && menu == 2)
         {
             subNav++;
-            if (subNav > invApp) 
+            if (subNav > Apparel.size()) 
             {
                 subNav = 1;
             }//end if
@@ -202,7 +201,7 @@ void keyPressed()
         else if(subM == 3 && menu == 2)
         {
             subNav++;
-            if (subNav > invMisc) 
+            if (subNav > Miscellaneous.size()) 
             {
                 subNav = 1;
             }//end if
@@ -231,6 +230,7 @@ void keyPressed()
         }//end else if
     }//end else if
     
+    // Interacts with certain thing in the program
     if(keyCode == ENTER)
     {
         if(Splash)
@@ -301,16 +301,16 @@ void keyPressed()
             if(Apparel.get(subNav-1).equipped == false)
             {
                 Apparel.get(subNav-1).equipped = true;
-                curDmgRes += Apparel.get(subNav-1).dmgRes;
-                curEngRes += Apparel.get(subNav-1).engRes;
-                curRadRes += Apparel.get(subNav-1).radRes;
+                player.dmgRes += Apparel.get(subNav-1).dmgRes;
+                player.engRes += Apparel.get(subNav-1).engRes;
+                player.radRes += Apparel.get(subNav-1).radRes;
             }//end if
             else if(Apparel.get(subNav-1).equipped == true)
             {
                 Apparel.get(subNav-1).equipped = false;
-                curDmgRes -= Apparel.get(subNav-1).dmgRes;
-                curEngRes -= Apparel.get(subNav-1).engRes;
-                curRadRes -= Apparel.get(subNav-1).radRes;
+                player.dmgRes -= Apparel.get(subNav-1).dmgRes;
+                player.engRes -= Apparel.get(subNav-1).engRes;
+                player.radRes -= Apparel.get(subNav-1).radRes;
             }//end else if
         }//end else if
     }//end if

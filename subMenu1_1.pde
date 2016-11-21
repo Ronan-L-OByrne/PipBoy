@@ -41,8 +41,8 @@ void subMenu1_1(float xBound, float yBound)
     {
         text(Weapons.get(curEquipW).damage, xBound + width*(.32375), yBound + height*(.602));
     }//end else
-    text(curEngRes, xBound + width*(.4275), yBound + height*(.602));
-    text(curRadRes, xBound + width*(.4575), yBound + height*(.602));
+    text(player.engRes, xBound + width*(.4275), yBound + height*(.602));
+    text(player.radRes, xBound + width*(.4575), yBound + height*(.602));
     
     //Gun
     drawGun(.33, .6375, 1);

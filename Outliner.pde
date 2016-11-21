@@ -1,7 +1,6 @@
 // Function to draw the graphical outliner of the program
 void Outliner()
 {
-    
     // Background
     background(135, 92, 42);
     
