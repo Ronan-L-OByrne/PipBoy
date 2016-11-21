@@ -8,10 +8,9 @@ void subMenu2_3(float xBound, float yBound)
     fill(0, 100, 0);
     text("APPAREL"   , xBound + (width*(.88)/9)*4, yBound + height*(.07));
     
-    // Displays the users Miscilaneous items
+    // Displayes the names of various Miscellaneous items
     fill(40, 255, 40);
     textAlign(LEFT, CENTER);
-    
     for(int i=0; i<Miscellaneous.size(); i++)
     {
         text(Miscellaneous.get(i).name + " (" + Miscellaneous.get(i).qty + ")", xBound + width*(.075), yBound + height*(.175+(.05*i)));
@@ -25,6 +24,7 @@ void subMenu2_3(float xBound, float yBound)
     rect(xBound+width*(.45), yBound+height*(.55), width*(.25) , height*(.040714));
     rect(xBound+width*(.45), yBound+height*(.6 ), width*(.25) , height*(.040714));
     
+    //Displays the Data associated with the various Miscellaneous items
     fill(40, 255, 40);
     textAlign(LEFT, CENTER);
     text("Weight"    , xBound+width*(.455), yBound+height*(.569));

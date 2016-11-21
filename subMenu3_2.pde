@@ -21,6 +21,7 @@ void subMenu3_2(float xBound, float yBound)
     rect(width*(.4), height*(.345), width*(.36), height*(.05));
     rect(width*(.4), height*(.405), width*(.36), height*(.05));
     
+    //Displays General Stats
     if(subNav == 1)
     {
         fill(40, 255, 40);
@@ -41,6 +42,7 @@ void subMenu3_2(float xBound, float yBound)
         text(player.hoursSlept, xBound + width*(.675), yBound + height*(.295));
         text(player.robHacked, xBound + width*(.675), yBound + height*(.355));
     }//end if
+    //Displays Quests Stats
     else if(subNav == 2)
     {
         fill(40, 255, 40);
@@ -61,6 +63,7 @@ void subMenu3_2(float xBound, float yBound)
         text(player.mainQ, xBound + width*(.675), yBound + height*(.295));
         text(player.sideQ, xBound + width*(.675), yBound + height*(.355));
     }//end if
+    //Displays Combat Stats
     else if(subNav == 3)
     {
         fill(40, 255, 40);
@@ -81,6 +84,7 @@ void subMenu3_2(float xBound, float yBound)
         text("0?", xBound + width*(.675), yBound + height*(.295));
         text(player.grandSlams, xBound + width*(.675), yBound + height*(.355));
     }//end if
+    //Displays Crafting Stats
     else if(subNav == 4)
     {
         fill(40, 255, 40);
@@ -101,6 +105,7 @@ void subMenu3_2(float xBound, float yBound)
         text(player.objBuilt, xBound + width*(.675), yBound + height*(.295));
         text(player.plants, xBound + width*(.675), yBound + height*(.355));
     }//end if
+    //Displays Crime Stats
     else if(subNav == 5)
     {
         fill(40, 255, 40);

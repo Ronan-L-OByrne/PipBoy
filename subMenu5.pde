@@ -39,13 +39,16 @@ void waveCal()
     // For every x value, calculate a y value with sine function
     float x = Sine.theta;
     
+    //Loop to calculate the position of each ellipse in the sine wave
     for (int i=0; i < Sine.yVal.length; i++) 
     {
+        // If no music is playing
         if(!DiamondB && !ClassicB)
         {
-            Sine.Hei = 0;
+            Sine.Hei = 2;
         }//end if
         
+        //Sets the height of the sine wave
         Sine.Hei = Sine.Hei+random(-(height*(.0005)), (height*(.0005)));
         if(Sine.Hei > height*(.142857142))
         {
@@ -56,6 +59,7 @@ void waveCal()
             Sine.Hei = Sine.Hei+random(0 , (height*(.0005)));
         }//end else if
             
+        // Sets the y Value of each ellipse
         Sine.yVal[i] = sin(x)*Sine.Hei;
         x+=Sine.dx;
     }//end for
@@ -68,7 +72,7 @@ void drawWave()
     noStroke();
     fill(40, 255, 40);
     
-    // A simple way to draw the wave with an ellipse at each location
+    // Draws the sine wave using many ellipse
     for (int j=0; j < Sine.yVal.length; j++)
     {
         ellipse((width*(.5))+j*Sine.xSpace, height*(.35)+Sine.yVal[j], ((width+height)/2)*(.005882352), ((width+height)/2)*(.005882352));

@@ -8,14 +8,14 @@ void subMenu2_1(float xBound, float yBound)
     fill(0, 100, 0);
     text("MISC"   , xBound + (width*(.88)/9)*4, yBound + height*(.07));
     
-    // Displays the users Weapons
+    // Displayes the names of various Weapons
     fill(40, 255, 40);
     textAlign(LEFT, CENTER);
-    
     for(int i=0; i<Weapons.size(); i++)
     {
         text(Weapons.get(i).name +" ("+ Weapons.get(i).qty+")", xBound + width*(.075), yBound + height*(.175+(.05*i)));
         
+        // Marks the currently equiped Weapon
         if(Weapons.get(i).equipped)
         {
             rect(xBound + width*(.04), yBound + height*(.165+(.05*i)), width*(.015), height*(.02142857));
@@ -26,6 +26,7 @@ void subMenu2_1(float xBound, float yBound)
     fill(0, 0, 0);
     text(Weapons.get(subNav-1).name +" ("+ Weapons.get(subNav-1).qty+")", xBound + width*(.075), yBound + height*(.175+(.05*(subNav-1))));
     
+    //Displays the data associated with the currently selected Ranged weapon
     if(Weapons.get(subNav-1).type.equals("R"))
     {
         fill(0, 100, 0);
@@ -51,7 +52,7 @@ void subMenu2_1(float xBound, float yBound)
         
         textAlign(RIGHT, CENTER);
         text(Weapons.get(subNav-1).damage  , xBound+width*(.695), yBound+height*(.32));
-        text("0"                            , xBound+width*(.695), yBound+height*(.37));
+        text("0"                           , xBound+width*(.695), yBound+height*(.37));
         text(Weapons.get(subNav-1).fireRate, xBound+width*(.695), yBound+height*(.42));
         text(Weapons.get(subNav-1).range   , xBound+width*(.695), yBound+height*(.47));
         text(Weapons.get(subNav-1).accuracy, xBound+width*(.695), yBound+height*(.52));
@@ -59,6 +60,7 @@ void subMenu2_1(float xBound, float yBound)
         text(Weapons.get(subNav-1).value   , xBound+width*(.695), yBound+height*(.62));
         drawCrosshair(.715, .395);
     }//end if
+    //Displays the data associated with the currently selected Melee weapon
     else if(Weapons.get(subNav-1).type.equals("M"))
     {
         fill(0, 100, 0);

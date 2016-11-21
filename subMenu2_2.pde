@@ -8,14 +8,14 @@ void subMenu2_2(float xBound, float yBound)
     fill(0, 100, 0);
     text("WEAPONS"   , xBound + (width*(.88)/9)*4, yBound + height*(.07));
     
-    // Displays the users Apparel
+    // Displayes the names of various apparel items
     fill(40, 255, 40);
     textAlign(LEFT, CENTER);
-    
     for(int i=0; i<Apparel.size(); i++)
     {
         text(Apparel.get(i).name + " (" + Apparel.get(i).qty + ")", xBound + width*(.075), yBound + height*(.175+(.05*i)));
         
+        // Marks the currently equiped items of apparel
         if(Apparel.get(i).equipped)
         {
             rect(xBound + width*(.04), yBound + height*(.165+(.05*i)), width*(.015), height*(.02142857));
@@ -37,6 +37,7 @@ void subMenu2_2(float xBound, float yBound)
     rect(xBound+width*(.45), yBound+height*(.55), width*(.25) , height*(.040714));
     rect(xBound+width*(.45), yBound+height*(.6 ), width*(.25) , height*(.040714));
     
+    //Displays the Data associated with the various items of apparel
     fill(40, 255, 40);
     textAlign(LEFT, CENTER);
     text("DMG Resist", xBound+width*(.455), yBound+height*(.419));
@@ -44,7 +45,6 @@ void subMenu2_2(float xBound, float yBound)
     text("ENG Resist", xBound+width*(.455), yBound+height*(.519));
     text("Weight"    , xBound+width*(.455), yBound+height*(.569));
     text("Value"     , xBound+width*(.455), yBound+height*(.619));
-    
     textAlign(RIGHT, CENTER);
     text(Apparel.get(subNav-1).dmgRes, xBound+width*(.695), yBound+height*(.42));
     text(Apparel.get(subNav-1).radRes, xBound+width*(.695), yBound+height*(.47));
