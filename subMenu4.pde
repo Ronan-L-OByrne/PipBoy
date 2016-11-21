@@ -16,7 +16,7 @@ void subMenu4(float xBound, float yBound)
         Zoom.x = mouseX-(width*(.025));
         Zoom.y = mouseY-(height*(.035714285));
         
-        line(mouseX, yBound+height*(.055), mouseX, (yBound+height*(.055))+(height*(.645)));
+        line(mouseX, yBound+height*(.055), mouseX, (yBound+height*(.055))+(height*(.644)));
         line(xBound+width*(.03), mouseY , (xBound+width*(.03))+(width*(.6)), mouseY);
         
         //copy(cx, cy, cw, ch, rx, ry, rw, rh);
@@ -25,14 +25,13 @@ void subMenu4(float xBound, float yBound)
     }//end if
     else
     {
-        line(Zoom.x, yBound+height*(.055), Zoom.x, (yBound+height*(.055))+(height*(.645)));
+        line(Zoom.x, yBound+height*(.055), Zoom.x, (yBound+height*(.055))+(height*(.644)));
         line(xBound+width*(.03), Zoom.y, (xBound+width*(.03))+(width*(.6)), Zoom.y);
         
         //copy(cx, cy, cw, ch, rx, ry, rw, rh);
         copy((int)(width*(.5)), (int)(height*(.35)), (int)(width*(.05))  , (int)(height*(.071428571)),
              (int)(xBound+width*(.642)), (int)(yBound+height*(.25)), (int)(width*(.1)), (int)(height*(.142857142)));
     }//end else
-    
     noFill();
     rect((int)(xBound+width*(.642)), (int)(yBound+height*(.25)), width*(.1), height*(.142857142));
     noStroke();

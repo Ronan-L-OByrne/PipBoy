@@ -110,7 +110,7 @@ Stats player = new Stats();
 boolean ClassicB = false;
 boolean DiamondB = false;
 
-boolean Splash = false;
+boolean Splash = true;
 
 //Draw
 void draw()

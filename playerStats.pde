@@ -62,10 +62,10 @@ class Stats
         this.hoursSlept  = (this.days*8);
         this.robHacked   = (int)(random(1, 5));
         
-        this.quests      = (int)(random(50, 200));
         this.miscOb      = (int)(random(200, 700));
         this.mainQ       = (int)(random(2, 10));
         this.sideQ       = (int)(random(20, 1000));
+        this.quests      = this.mainQ + this.sideQ;
         
         this.grandSlams  = (int)(random(1000, 6000));
         
