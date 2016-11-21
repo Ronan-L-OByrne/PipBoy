@@ -1,5 +1,5 @@
 // Draws the contents of menu 5, the Radio
-void subMenu5(float xBound, float yBound)
+void menu5(float xBound, float yBound)
 {
     // Displays the radio options and draws a Sine wave
     waveCal();
@@ -28,7 +28,7 @@ void subMenu5(float xBound, float yBound)
     {
         text("Diamond City Radio", xBound + width*(.075), yBound + height*(.225));
     }//end else
-}//end subMenu5
+}//end menu5()
 
 // Calculates the current status of the wave
 void waveCal() 

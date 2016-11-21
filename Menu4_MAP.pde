@@ -1,5 +1,5 @@
 // Draws the contents of menu 4, the Map
-void subMenu4(float xBound, float yBound)
+void menu4(float xBound, float yBound)
 {
     // Displaye the map PNG
     Map.display(xBound+width*(.03), yBound+height*(.055));
@@ -43,4 +43,4 @@ void subMenu4(float xBound, float yBound)
     noFill();
     rect((int)(xBound+width*(.642)), (int)(yBound+height*(.25)), width*(.1), height*(.142857142));
     noStroke();
-}//end subMenu4()
+}//end menu4()

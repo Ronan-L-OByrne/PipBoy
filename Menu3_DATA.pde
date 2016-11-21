@@ -1,3 +1,15 @@
+// Draws the contents of menu 3 sub-menu 1
+void subMenu3_1(float xBound, float yBound)
+{
+    fill(40, 255, 40);
+    text("QUESTS", xBound + (width*(.84)/7)*3, yBound + height*(.07));
+    fill(0, 170, 0);
+    text("STATS"   , xBound + (width*(.88)/8)*4, yBound + height*(.07));
+    text("WORKSHOPS", xBound + (width*(.82)/6)*2, yBound + height*(.07));
+    
+    
+}//end subMenu3_1()
+
 // Draws the contents of menu 3 sub-menu 2
 void subMenu3_2(float xBound, float yBound)
 {
@@ -127,3 +139,15 @@ void subMenu3_2(float xBound, float yBound)
         text(player.trespass, xBound + width*(.675), yBound + height*(.355));
     }//end if
 }//end subMenu3_2()
+
+// Draws the contents of menu 3 sub-menu 2
+void subMenu3_3(float xBound, float yBound)
+{
+    fill(40, 255, 40);
+    text("WORKSHOPS", xBound + (width*(.84)/7)*3, yBound + height*(.07));
+    fill(0, 170, 0);
+    text("QUESTS"   , xBound + (width*(.89)/8)*4, yBound + height*(.07));
+    text("STATS", xBound + (width*(.84)/6)*2, yBound + height*(.07));
+    
+    
+}//end subMenu3_3()

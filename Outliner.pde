@@ -147,7 +147,7 @@ void GeigerCount()
     float cx = width*(.9), cy = height*(.438571428);
     val += random(-.01, .01);
     
-    Tip = new PVector(cx+sin(val)*35, cy+cos(val)*35);
+    Tip = new PVector(cx+sin(val)*(width*(.035)), cy+cos(val)*height*(.05));
     Base[0] = new PVector(cx+sin(val)*3, cy+cos(val)*3);
     Base[1] = new PVector(cx+(sin(val)-(sin(val))*2), cy+(cos(val)-(cos(val))*2));
     
@@ -211,3 +211,32 @@ void GeigerCount()
     ellipse( cx, cy, width*(.005), height*(.007142857));
     triangle(Base[0].x, Base[0].y, Base[1].x, Base[1].y, Tip.x, Tip.y);//width*(.905), height*(.49));
 }//end GeigerCount()
+
+// Draws the simple menu in the top right of the screen
+void topRightMenu()
+{
+    // Updates whenever the menu is changed
+    menuPos = (menu*(height*(.028871428)))+(height*(.043057143));
+    noStroke();
+    fill(135, 92, 42);
+    rect(width*(.95), height*(.21427), width*(.1), height*(.05));
+    
+    //Top Right Menu
+    stroke(0, 0, 0);
+    fill(135, 92, 42);
+    rect(width*(.885), height*(.071428571), width*(.1), height*(.142857142));
+    fill(60, 60, 60);
+    rect(width*(.95),  height*(.071428571), width*(.1), height*(.142857142));
+    fill(0, 0, 0);
+    rect(width*(.952), (menuPos), width*(.107), height*(.032871428));
+    fill(60, 60, 60);
+    rect(width*(.95) , (menuPos), width*(.1)  , height*(.028871428));
+    fill(190, 235, 0);
+    textFont(globalFont, ((height+width)/2)*(.0255));
+    textAlign(RIGHT,CENTER);
+    text("STAT",  width*(.945), height*(.087028571));
+    text("INV",   width*(.945), height*(.115599999));
+    text("DATA",  width*(.945), height*(.144171427));
+    text("MAP",   width*(.945), height*(.172742855));
+    text("RADIO", width*(.945), height*(.202314283));
+}//end TopRigthMenu
