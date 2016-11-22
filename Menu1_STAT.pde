@@ -92,7 +92,7 @@ void subMenu1_2(float xBound, float yBound)
     //Displays the image of Vault Boy giving the thumbs up
     Thumb.display(xBound+width*(.45), yBound+height*(.115));
     
-    rect(width*(.14), height*(.215)+(height*(.075)*(subNav-1)), width*(.2575), height*(.07));
+    rect(width*(.14), height*(.22)+(height*(.075)*(subNav-1)), width*(.2575), height*(.06));
     
     //Displays info associated with each of the Special Stats
     switch(subNav)
@@ -202,12 +202,13 @@ void subMenu1_3(float xBound, float yBound)
     text("Killshot",  xBound + width*(.075), yBound + height*(.25)) ;
     text("Berserk" ,  xBound + width*(.075), yBound + height*(.325));
     
+    rect(width*(.14), height*(.22)+(height*(.075)*(subNav-1)), width*(.2575), height*(.06));
+    
     // Displays the description of the currently selected Perk
     switch(subNav)
     {
         case 1:
         {
-            rect(width*(.14), height*(.225), width*(.2575), height*(.05));
             fill(0, 0, 0)                                                ;
             textAlign(LEFT, CENTER)                                      ;
             text("Hacker", xBound + width*(.075), yBound + height*(.175));
@@ -220,7 +221,6 @@ void subMenu1_3(float xBound, float yBound)
         }//end case 1
         case 2:
         {
-            rect(width*(.14), height*(.3), width*(.2575), height*(.05))   ;
             fill(0, 0, 0)                                                 ;
             textAlign(LEFT, CENTER)                                       ;
             text("Killshot", xBound + width*(.075), yBound + height*(.25));
@@ -232,7 +232,6 @@ void subMenu1_3(float xBound, float yBound)
         }//end case 2
         case 3:
         {
-            rect(width*(.14), height*(.375), width*(.2575), height*(.05)) ;
             fill(0, 0, 0)                                                 ;
             textAlign(LEFT, CENTER)                                       ;
             text("Berserk", xBound + width*(.075), yBound + height*(.325));

@@ -273,7 +273,6 @@ void keyPressed()
                 Classic.stop()  ;
                 ClassicB = false;
             }//end else if
-            println(playback);
         }//end if
         else if(menu == 5 && subNav == 2)
         {
@@ -296,8 +295,7 @@ void keyPressed()
                 playback = frameCount+(int)Diamond.duration()*60;
                 DiamondB = true                                 ;
                 ClassicB = false                                ;
-            }//end else if
-         println(playback)                                      ;
+            }//end else if                                     ;
         }//end if
         // Allows the user to equip weapons
         else if(menu == 2 && subM == 1)
@@ -393,7 +391,7 @@ boolean Button(float x1, float y1, float x2, float y2)
     //If the mouse is pressed in the given region return true
     if(mouseX > x1 && mouseY > y1 && mouseX < x2 && mouseY < y2)
     {
-        return true;
+        return true ;
     }//end if
     else
     {

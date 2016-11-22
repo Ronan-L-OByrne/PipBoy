@@ -17,12 +17,12 @@ void setup()
     int i=0;
     
     //Various screen sizes to test scaling
-     size(1000, 700);
+     size(1000, 700) ; // I chose a terrible resolution
     // size(1000, 1000);
-    // size(500, 350);
-    // size(250, 175);
-    // size(750, 750);
-    // fullScreen();
+    // size(500, 350)  ;
+    // size(250, 175)  ;
+    // size(750, 750)  ;
+    // fullScreen()    ;
     
     //Loads the fonts used in the sketch
     globalFont = loadFont("AgencyFB-Bold-48.vlw");
@@ -37,17 +37,17 @@ void setup()
     Map       = new Animation("Map_"              , 1 , (int)(width*(.6) ), (int)(height*(.645)));
     
     //Sketch only draws the outliner once
-    Outliner();
+    Outliner()    ;
     topRightMenu();
     
     // Loads the various tables
-    loadData("Weapons.csv");
+    loadData("Weapons.csv")      ;
     loadData("Miscellaneous.csv");
-    loadData("Apparel.csv");
+    loadData("Apparel.csv")      ;
     
     //Loads the sound files
     Classic = new SoundFile(this, "Nocturne.mp3");
-    Diamond = new SoundFile(this, "Fire.mp3"    );
+    Diamond = new SoundFile(this, "Fire.mp3")    ;
     
     //Sound effects used in the program
     Effects[0] =  new SoundFile(this, "Equip.wav"  );
