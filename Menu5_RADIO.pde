@@ -18,8 +18,18 @@ void menu5(float xBound, float yBound)
     text("Classic Radio", xBound + width*(.075), yBound + height*(.175));
     text("Diamond City Radio", xBound + width*(.075), yBound + height*(.225));
     rect(width*(.14), height*(.225+(.05*(subNav-1))), width*(.2575), height*(.05));
-    fill(0, 0, 0);
     
+    fill(40,255,40);
+    if(ClassicB)
+    {
+        rect(width*(.115), height*(.235), width*(.02), height*(.028571428));
+    }//end if
+    else if(DiamondB)
+    {
+        rect(width*(.115), height*(.285), width*(.02), height*(.028571428));
+    }//end else if
+    
+    fill(0, 0, 0);
     if(subNav == 1)
     {
         text("Classic Radio", xBound + width*(.075), yBound + height*(.175));
