@@ -23,7 +23,6 @@ void subMenu3_1(float xBound, float yBound)
     fill(40, 255, 40);
     text("Do Some Work", xBound + width*(.335), yBound + height*(.48));
     text("(Optional) or don't whatever", xBound + width*(.335), yBound + height*(.535));
-    
 }//end subMenu3_1()
 
 // Draws the contents of menu 3 sub-menu 2
@@ -166,10 +165,10 @@ void subMenu3_3(float xBound, float yBound)
     text("STATS"    , xBound + (width*(.84)/6)*2, yBound + height*(.07));
     
     fill(40, 255, 40);
-    rect(width*(.12), height*(.225), width*(.29), height*(.05));
+    rect(width*(.14), height*(.225), width*(.29), height*(.05));
     textAlign(LEFT, CENTER);
     fill(0);
-    text("Home", xBound + width*(.05), yBound + height*(.175));
+    text("Home", xBound + width*(.08), yBound + height*(.175));
     
     fill(0, 100, 0);
     rect(xBound + width*(.425), yBound + height*(.15) , width*(.26), height*(.05));
@@ -180,13 +179,23 @@ void subMenu3_3(float xBound, float yBound)
     rect(xBound + width*(.425), yBound + height*(.425), width*(.26), height*(.05));
     rect(xBound + width*(.425), yBound + height*(.48) , width*(.26), height*(.05));
     
+    textAlign(LEFT, CENTER);
     fill(40, 255, 40);
-    text("People"   , xBound + width*(.05), yBound + height*(.175));
-    text("Food"     , xBound + width*(.05), yBound + height*(.175));
-    text("Water"    , xBound + width*(.05), yBound + height*(.175));
-    text("Power"    , xBound + width*(.05), yBound + height*(.175));
-    text("Defence"  , xBound + width*(.05), yBound + height*(.175));
-    text("Beds"     , xBound + width*(.05), yBound + height*(.175));
-    text("Happiness", xBound + width*(.05), yBound + height*(.175));
+    text("People"   , xBound + width*(.44), yBound + height*(.175));
+    text("Food"     , xBound + width*(.44), yBound + height*(.23));
+    text("Water"    , xBound + width*(.44), yBound + height*(.285));
+    text("Power"    , xBound + width*(.44), yBound + height*(.34));
+    text("Defence"  , xBound + width*(.44), yBound + height*(.395));
+    text("Beds"     , xBound + width*(.44), yBound + height*(.45));
+    text("Happiness", xBound + width*(.44), yBound + height*(.505));
     
+    textAlign(RIGHT, CENTER);
+    fill(40, 255, 40);
+    text("3"  , xBound + width*(.675), yBound + height*(.175));
+    text("5"  , xBound + width*(.675), yBound + height*(.23));
+    text("10" , xBound + width*(.675), yBound + height*(.285));
+    text("10" , xBound + width*(.675), yBound + height*(.34));
+    text("4"  , xBound + width*(.675), yBound + height*(.395));
+    text("4"  , xBound + width*(.675), yBound + height*(.45));
+    text("100", xBound + width*(.675), yBound + height*(.505));
 }//end subMenu3_3()

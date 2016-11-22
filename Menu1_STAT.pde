@@ -91,11 +91,12 @@ void subMenu1_2(float xBound, float yBound)
     
     Thumb.display(xBound+width*(.45), yBound+height*(.115));
     
+    rect(width*(.14), height*(.215)+(height*(.075)*(subNav-1)), width*(.2575), height*(.07));
+    
     switch(subNav)
     {
         case 1:
         {
-            rect(width*(.14), height*(.225), width*(.2575), height*(.05));
             fill(0, 0, 0);
             textAlign(LEFT, CENTER);
             text("Strength", xBound + width*(.075), yBound + height*(.175));
@@ -108,7 +109,6 @@ void subMenu1_2(float xBound, float yBound)
         }//end case 1
         case 2:
         {
-            rect(width*(.14), height*(.3), width*(.2575), height*(.05));
             fill(0, 0, 0);
             textAlign(LEFT, CENTER);
             text("Perception", xBound + width*(.075), yBound + height*(.25));   
@@ -121,7 +121,6 @@ void subMenu1_2(float xBound, float yBound)
         }//end case 2
         case 3:
         {
-            rect(width*(.14), height*(.375), width*(.2575), height*(.05));
             fill(0, 0, 0);
             textAlign(LEFT, CENTER);
             text("Endurance", xBound + width*(.075), yBound + height*(.325));   
@@ -133,8 +132,7 @@ void subMenu1_2(float xBound, float yBound)
             break;
         }//end case 3
         case 4:
-        {  
-            rect(width*(.14), height*(.45), width*(.2575), height*(.05));
+        {
             fill(0, 0, 0);
             textAlign(LEFT, CENTER);
             text("Charisma", xBound + width*(.075), yBound + height*(.4));     
@@ -147,7 +145,6 @@ void subMenu1_2(float xBound, float yBound)
         }//end case 4
         case 5:
         {
-            rect(width*(.14), height*(.525), width*(.2575), height*(.05));
             fill(0, 0, 0);
             textAlign(LEFT, CENTER);
             text("Intelligence", xBound + width*(.075), yBound + height*(.475)); 
@@ -160,7 +157,6 @@ void subMenu1_2(float xBound, float yBound)
         }//end case 5
         case 6:
         {
-            rect(width*(.14), height*(.6), width*(.2575), height*(.05));
             fill(0, 0, 0);
             textAlign(LEFT, CENTER);
             text("Agility", xBound + width*(.075), yBound + height*(.55));     
