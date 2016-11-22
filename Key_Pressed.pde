@@ -266,12 +266,14 @@ void keyPressed()
             {
                 Diamond.stop();
                 Classic.play();
+                playback = frameCount+(int)Classic.duration()*60;
                 DiamondB = false;
                 ClassicB = true;
             }
             else if(!DiamondB && !ClassicB)
             {
                 Classic.play();
+                playback = frameCount+(int)Classic.duration()*60;
                 ClassicB = true;
             }//end else if
             else if(!DiamondB && ClassicB)
@@ -279,6 +281,7 @@ void keyPressed()
                 Classic.stop();
                 ClassicB = false;
             }//end else if
+            println(playback);
         }//end if
         else if(menu == 5 && subNav == 2)
         {
@@ -291,15 +294,18 @@ void keyPressed()
             else if(!DiamondB && !ClassicB)
             {
                 Diamond.play();
+                playback = frameCount+(int)Diamond.duration()*60;
                 DiamondB = true;
             }//end else if
             else if(!DiamondB && ClassicB)
             {
                 Classic.stop();
                 Diamond.play();
+                playback = frameCount+(int)Diamond.duration()*60;
                 DiamondB = true;
                 ClassicB = false;
             }//end else if
+         println(playback);
         }//end if
         // Allows the user to equip weapons
         else if(menu == 2 && subM == 1)

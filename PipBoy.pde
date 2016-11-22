@@ -105,6 +105,7 @@ SoundFile[] Effects = new SoundFile[4];
 SoundFile Classic, Diamond; // Variables to hold the sound files 
 boolean ClassicB = false;   // Records whether or not this song is playing
 boolean DiamondB = false;   // Records whether or not this song is playing
+int playback;
 
 boolean Splash = true; // Dictates whether or not the splash screen is being displayed
 
@@ -117,4 +118,5 @@ void draw()
     Light()               ; // Draws the Red Light below the screen on the outliner
     GeigerCount()         ; // Draws the geiger counter to the right of the screen
     Screen(xBound, yBound); // Draws most of the important stuff on the screen that the user interacts with
+    musicCheck()          ; // Checks if music is playing and if the song has finished and should start again
 }//end void draw

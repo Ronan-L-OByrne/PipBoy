@@ -2,7 +2,7 @@
 class sineWave
 {
     //Varialbes used in the sine wave class
-    float xSpace   = ((width+height)/2)*(.000117647); // How far apart should each horizontal location be spaced
+    float xSpace   = ((width+height)/2)*(.0005); // How far apart should each horizontal location be spaced
     float wid      = ((width)*(.27))                ; // Width of entire wave
     
     float theta  = 0                                ; // Start angle at 0
@@ -16,7 +16,7 @@ class sineWave
     {
       
         // Increment theta (try different values for 'angular velocity' here
-       theta += ((width+height)/2)*(.000294117);
+        theta += ((width+height)/2)*(.000294117);
         // For every x value, calculate a y value with sine function
         float x = theta;
         

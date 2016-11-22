@@ -39,3 +39,22 @@ void menu5(float xBound, float yBound)
         text("Diamond City Radio", xBound + width*(.075), yBound + height*(.225));
     }//end else
 }//end menu5()
+
+//Checks to see if the music needs to begin playback
+void musicCheck()
+{
+    if(ClassicB && (playback) <= frameCount)
+    {
+        Classic.play();
+        playback = frameCount+(int)Classic.duration()*60;
+    }//end if
+    if(DiamondB && (playback) <= frameCount)
+    {
+        Diamond.play();
+        playback = frameCount+(int)Diamond.duration()*60;
+    }//end if
+   
+    println("Diamond: " + Diamond.duration() + ", Classic: " + Classic.duration());
+    println("Playback: " + playback);
+    println("Frame: " + frameCount + ", Framerate: " + frameRate);
+}//end musicCheck()
