@@ -1,14 +1,6 @@
 // Checks what to do if certain keys have been pressed
 void keyPressed()
 {
-    /*
-    Effects[0] =  new SoundFile(this, "Equip.mp3");
-    Effects[1] =  new SoundFile(this, "Unequip.mp3");
-    Effects[2] =  new SoundFile(this, "HumStatic.mp3");
-    Effects[3] =  new SoundFile(this, "RadioOn.mp3");
-    Effects[3] =  new SoundFile(this, "Move.mp3");
-    */
-    
     //Navigating the sub tabs
     if(!Splash)
     {
@@ -69,8 +61,8 @@ void keyPressed()
             {
                 menu = 5;
             }//end else
-            subNav = 1;
-            subM = 1;
+            subNav = 1    ;
+            subM   = 1    ;
             topRightMenu();
             
             return;
@@ -86,8 +78,8 @@ void keyPressed()
             {
                 menu = 1;
             }//end else
-            subNav = 1;
-            subM = 1;
+            subNav = 1    ;
+            subM   = 1    ;
             topRightMenu();
             
             return;
@@ -103,7 +95,7 @@ void keyPressed()
             else if(subM == 2 && menu == 1)
             {
                 Effects[3].play();
-                subNav--;
+                subNav--         ;
                 if(subNav < 1)
                 {
                     subNav = 7;
@@ -113,7 +105,7 @@ void keyPressed()
             else if(subM == 3 && menu == 1)
             {
                 Effects[3].play();
-                subNav--;
+                subNav--         ;
                 if(subNav < 1)
                 {
                     subNav = 3;
@@ -123,7 +115,7 @@ void keyPressed()
             else if(subM == 1 && menu == 2)
             {
                 Effects[3].play();
-                subNav--;
+                subNav--         ;
                 if(subNav < 1)
                 {
                     subNav = Weapons.size();
@@ -133,7 +125,7 @@ void keyPressed()
             else if(subM == 2 && menu == 2)
             {
                 Effects[3].play();
-                subNav--;
+                subNav--         ;
                 if(subNav < 1)
                 {
                     subNav = Apparel.size();
@@ -143,7 +135,7 @@ void keyPressed()
             else if(subM == 3 && menu == 2)
             {
                 Effects[3].play();
-                subNav--;
+                subNav--         ;
                 if(subNav < 1)
                 {
                     subNav = Miscellaneous.size();
@@ -153,7 +145,7 @@ void keyPressed()
             else if(subM == 2 && menu == 3)
             {
                 Effects[3].play();
-                subNav--;
+                subNav--         ;
                 if (subNav < 1) 
                 {
                     subNav = 5;
@@ -163,7 +155,7 @@ void keyPressed()
             else if(menu == 5)
             {
                 Effects[3].play();
-                subNav--;
+                subNav--         ;
                 if (subNav < 1) 
                 {
                     subNav = 2;
@@ -180,7 +172,7 @@ void keyPressed()
             else if(subM == 2 && menu == 1)
             {
                 Effects[3].play();
-                subNav++;
+                subNav++         ;
                 if (subNav > 7) 
                 {
                     subNav = 1;
@@ -190,7 +182,7 @@ void keyPressed()
             else if(subM == 3 && menu == 1)
             {
                 Effects[3].play();
-                subNav++;
+                subNav++         ;
                 if (subNav > 3) 
                 {
                     subNav = 1;
@@ -200,7 +192,7 @@ void keyPressed()
             else if(subM == 1 && menu == 2)
             {
                 Effects[3].play();
-                subNav++;
+                subNav++         ;
                 if (subNav > Weapons.size()) 
                 {
                     subNav = 1;
@@ -210,7 +202,7 @@ void keyPressed()
             else if(subM == 2 && menu == 2)
             {
                 Effects[3].play();
-                subNav++;
+                subNav++         ;
                 if (subNav > Apparel.size()) 
                 {
                     subNav = 1;
@@ -220,7 +212,7 @@ void keyPressed()
             else if(subM == 3 && menu == 2)
             {
                 Effects[3].play();
-                subNav++;
+                subNav++         ;
                 if (subNav > Miscellaneous.size()) 
                 {
                     subNav = 1;
@@ -230,7 +222,7 @@ void keyPressed()
             else if(subM == 2 && menu == 3)
             {
                 Effects[3].play();
-                subNav++;
+                subNav++         ;
                 if (subNav > 5) 
                 {
                     subNav = 1;
@@ -240,7 +232,7 @@ void keyPressed()
             else if(menu == 5)
             {
                 Effects[3].play();
-                subNav++;
+                subNav++         ;
                 if (subNav > 2) 
                 {
                     subNav = 1;
@@ -264,21 +256,21 @@ void keyPressed()
             Effects[2].play();
             if(DiamondB && !ClassicB)
             {
-                Diamond.stop();
-                Classic.play();
+                Diamond.stop()                                  ;
+                Classic.play()                                  ;
                 playback = frameCount+(int)Classic.duration()*60;
-                DiamondB = false;
-                ClassicB = true;
+                DiamondB = false                                ;
+                ClassicB = true                                 ;
             }
             else if(!DiamondB && !ClassicB)
             {
-                Classic.play();
+                Classic.play()                                  ;
                 playback = frameCount+(int)Classic.duration()*60;
-                ClassicB = true;
+                ClassicB = true                                 ;
             }//end else if
             else if(!DiamondB && ClassicB)
             {
-                Classic.stop();
+                Classic.stop()  ;
                 ClassicB = false;
             }//end else if
             println(playback);
@@ -288,24 +280,24 @@ void keyPressed()
             Effects[2].play();
             if(DiamondB && !ClassicB)
             {
-                Diamond.stop();
+                Diamond.stop()  ;
                 DiamondB = false;
             }
             else if(!DiamondB && !ClassicB)
             {
-                Diamond.play();
+                Diamond.play()                                  ;
                 playback = frameCount+(int)Diamond.duration()*60;
-                DiamondB = true;
+                DiamondB = true                                 ;
             }//end else if
             else if(!DiamondB && ClassicB)
             {
-                Classic.stop();
-                Diamond.play();
+                Classic.stop()                                  ;
+                Diamond.play()                                  ;
                 playback = frameCount+(int)Diamond.duration()*60;
-                DiamondB = true;
-                ClassicB = false;
+                DiamondB = true                                 ;
+                ClassicB = false                                ;
             }//end else if
-         println(playback);
+         println(playback)                                      ;
         }//end if
         // Allows the user to equip weapons
         else if(menu == 2 && subM == 1)
@@ -313,21 +305,20 @@ void keyPressed()
             if(curEquipW != subNav-1)
             {
                 Weapons.get(subNav-1).equipped = true;
-                Effects[0].play();
+                Effects[0].play()                    ;
                 
                 if(curEquipW >= 0)
                 {
                     Weapons.get(curEquipW).equipped = false;
-                    Effects[1].play();
+                    Effects[1].play()                      ;
                 }//end if
-                
                 curEquipW = subNav-1;
             }//end if
             else if(curEquipW == subNav-1)
             {
                 Weapons.get(subNav-1).equipped = false;
-                Effects[1].play();
-                curEquipW = -1;
+                Effects[1].play()                     ;
+                curEquipW = -1                        ;
             }//end else if
         }//end else if
         // Allows the user to equip Apparel
@@ -335,16 +326,16 @@ void keyPressed()
         {
             if(Apparel.get(subNav-1).equipped == false)
             {
-                Apparel.get(subNav-1).equipped = true;
-                Effects[0].play();
+                Apparel.get(subNav-1).equipped = true        ;
+                Effects[0].play()                            ;
                 player.dmgRes += Apparel.get(subNav-1).dmgRes;
                 player.engRes += Apparel.get(subNav-1).engRes;
                 player.radRes += Apparel.get(subNav-1).radRes;
             }//end if
             else if(Apparel.get(subNav-1).equipped == true)
             {
-                Apparel.get(subNav-1).equipped = false;
-                Effects[1].play();
+                Apparel.get(subNav-1).equipped = false       ;
+                Effects[1].play()                            ;
                 player.dmgRes -= Apparel.get(subNav-1).dmgRes;
                 player.engRes -= Apparel.get(subNav-1).engRes;
                 player.radRes -= Apparel.get(subNav-1).radRes;
@@ -362,36 +353,36 @@ void mousePressed()
     if(mouseButton == LEFT && Button(width*(.952), (1*height*(.028871428))+height*(.043057143), 
     (width*(.952) + width*(.1)), (1*height*(.028871428))+height*(.043057143)+height*(.028871428)))
     {
-        menu = 1;
-        subM = 1;
+        menu = 1      ;
+        subM = 1      ;
         topRightMenu();
     }//end if
     else if(mouseButton == LEFT && Button(width*(.952), 2*height*(.028871428)+height*(.043057143), 
     width*(.952) + width*(.1), 2*height*(.028871428)+height*(.043057143)+height*(.028871428)))
     {
-        menu = 2;
-        subM = 1;
+        menu = 2      ;
+        subM = 1      ;
         topRightMenu();      
     }//end else if
     else if(mouseButton == LEFT && Button(width*(.952), 3*height*(.028871428)+height*(.043057143), 
     width*(.952) + width*(.1), 3*height*(.028871428)+height*(.043057143)+height*(.028871428)))
     {
-        menu = 3;
-        subM = 1;
+        menu = 3      ;
+        subM = 1      ;
         topRightMenu();  
     }//end else if
     else if(mouseButton == LEFT && Button(width*(.952),(4*height*(.028871428))+height*(.043057143), 
     width*(.952) + width*(.1), 4*height*(.028871428)+height*(.043057143)+height*(.028871428)))
     {
-        menu = 4;
-        subM = 1;
+        menu = 4      ;
+        subM = 1      ;
         topRightMenu();  
     }//end else if
     else if(mouseButton == LEFT && Button(width*(.952), 5*height*(.028871428)+height*(.043057143),
     width*(.952) + width*(.1), 5*height*(.028871428)+height*(.043057143)+height*(.028871428)))
     {
-        menu = 5;
-        subM = 1;
+        menu = 5      ;
+        subM = 1      ;
         topRightMenu();  
     }//end else if
 }//end mousePressed()

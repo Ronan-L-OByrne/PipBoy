@@ -76,14 +76,14 @@ void setup()
 }//end setup
 
 //Global Variables
-int     Light= 0   ;        // Used for the small red light (in outliner function)
-boolean Grad = true;        // Used for the small red light (in outliner function)
+int     Light= 0          ; // Used for the small red light (in outliner function)
+boolean Grad = true       ; // Used for the small red light (in outliner function)
     
 PFont   globalFont, PipBoy; // Fonts Used for Text
 
-int     menu   = 1;         // Used to select the menu
-int     subM   = 1;         // Used to select the sub Menu
-int     subNav = 1;         // Used to navigate within the sub menus
+int     menu   = 1        ; // Used to select the menu
+int     subM   = 1        ; // Used to select the sub Menu
+int     subNav = 1        ; // Used to navigate within the sub menus
 
 Animation walkCycle, Thumb, Hacker, killS, Berserk, Map; // The various images used in the program
 sineWave Sine                                          ; // Displays the sine wave
@@ -100,18 +100,18 @@ SoundFile[] Effects = new SoundFile[4]; // Array that hold the sound effects use
 SoundFile Classic, Diamond            ; // Variables to hold the sound files 
 boolean ClassicB = false              ; // Records whether or not this song is playing
 boolean DiamondB = false              ; // Records whether or not this song is playing
-int playback;
+int playback                          ; // Used to tell when the music should replay
 
-boolean Splash = true; // Dictates whether or not the splash screen is being displayed
+boolean Splash = true                 ; // Dictates whether or not the splash screen is being displayed
 
 //Draw
 void draw()
 {
-    float xBound = width *(.075)      ;
-    float yBound = height*(.075928571);
+    float xBound = width *(.075)      ; // Shows the x value of the begining of the screen
+    float yBound = height*(.075928571); // Shows the y value of the begining of the screen
     
-    Light()               ; // Draws the Red Light below the screen on the outliner
-    GeigerCount()         ; // Draws the geiger counter to the right of the screen
-    Screen(xBound, yBound); // Draws most of the important stuff on the screen that the user interacts with
-    musicCheck()          ; // Checks if music is playing and if the song has finished and should start again
+    Light()                           ; // Draws the Red Light below the screen on the outliner
+    GeigerCount()                     ; // Draws the geiger counter to the right of the screen
+    Screen(xBound, yBound)            ; // Draws most of the important stuff on the screen that the user interacts with
+    musicCheck()                      ; // Checks if music is playing and if the song has finished and should start again
 }//end void draw

@@ -2,7 +2,7 @@
 class sineWave
 {
     //Varialbes used in the sine wave class
-    float xSpace   = ((width+height)/2)*(.0005); // How far apart should each horizontal location be spaced
+    float xSpace   = ((width+height)/2)*(.0005)     ; // How far apart should each horizontal location be spaced
     float wid      = ((width)*(.27))                ; // Width of entire wave
     
     float theta  = 0                                ; // Start angle at 0
@@ -18,7 +18,7 @@ class sineWave
         // Increment theta (try different values for 'angular velocity' here
         theta += ((width+height)/2)*(.000294117);
         // For every x value, calculate a y value with sine function
-        float x = theta;
+        float x = theta                         ;
         
         //Loop to calculate the position of each ellipse in the sine wave
         for (int i=0; i < yVal.length; i++) 
@@ -42,7 +42,7 @@ class sineWave
                 
             // Sets the y Value of each ellipse
             yVal[i] = sin(x)*Hei;
-            x+=dx;
+            x+=dx               ;
         }//end for
         
     }//end waveCal()
@@ -50,7 +50,7 @@ class sineWave
     //Draws the wave using a series of Ellipses
     void drawWave()
     {
-        noStroke();
+        noStroke()       ;
         fill(40, 255, 40);
         
         // Draws the sine wave using many ellipse

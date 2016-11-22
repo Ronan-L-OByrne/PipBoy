@@ -40,7 +40,7 @@ class Stats
     {
         for(int i=0; i<7; i++)
         {
-            this.SPECIAL[i] = (int)random(1, 10)                                                 ; // Randomizes base stats
+            this.SPECIAL[i] = (int)random(1, 10); // Randomizes base stats
         }//end for
         
         this.Level       = (int)random(18, 30)                                                   ; // Randomizes level (also doubles as age in the sketch)
