@@ -60,28 +60,23 @@ void setup()
     //Calculates the players current carry weight
     for(i=0; i<Weapons.size(); i++)
     {
-        //println(Weapons.get(i));
         player.Weight += (int)Weapons.get(i).weight;
     }//end for
     for(i=0; i<Apparel.size(); i++)
     {
-        //println(Apparel.get(i));
         player.Weight += (int)Apparel.get(i).weight;
     }//end for
     for(i=0; i<Miscellaneous.size(); i++)
     {
-        //println(Miscellaneous.get(i));
         player.Weight += (int)Miscellaneous.get(i).weight;
     }//end for
     
     //Declares the sine wave used in subMenu5()
     Sine = new sineWave();
-    
-    //println(player.Radiation);
 }//end setup
 
 //Global Variables
-int     Light= 0;           // Used for the small red light (in outliner function)
+int     Light= 0   ;        // Used for the small red light (in outliner function)
 boolean Grad = true;        // Used for the small red light (in outliner function)
     
 PFont   globalFont, PipBoy; // Fonts Used for Text
@@ -91,20 +86,20 @@ int     subM   = 1;         // Used to select the sub Menu
 int     subNav = 1;         // Used to navigate within the sub menus
 
 Animation walkCycle, Thumb, Hacker, killS, Berserk, Map; // The various images used in the program
-sineWave Sine; // Displays the sine wave
+sineWave Sine                                          ; // Displays the sine wave
 
 ArrayList<inventory_List> Weapons       = new ArrayList<inventory_List>(); // Stores the Weapons in the players inventory
 ArrayList<inventory_List> Apparel       = new ArrayList<inventory_List>(); // Stores the Apparel in the players inventory
 ArrayList<inventory_List> Miscellaneous = new ArrayList<inventory_List>(); // Stores the Misc items in the players inventory
 
-int curEquipW = -1;         // Stores the array position of the currently equiped weapon
+int curEquipW = -1                    ; // Stores the array position of the currently equiped weapon
 
-Stats player = new Stats(); // Stores the various data associated with the player
+Stats player = new Stats()            ; // Stores the various data associated with the player
 
-SoundFile[] Effects = new SoundFile[4];
-SoundFile Classic, Diamond; // Variables to hold the sound files 
-boolean ClassicB = false;   // Records whether or not this song is playing
-boolean DiamondB = false;   // Records whether or not this song is playing
+SoundFile[] Effects = new SoundFile[4]; // Array that hold the sound effects used in the sketch
+SoundFile Classic, Diamond            ; // Variables to hold the sound files 
+boolean ClassicB = false              ; // Records whether or not this song is playing
+boolean DiamondB = false              ; // Records whether or not this song is playing
 int playback;
 
 boolean Splash = true; // Dictates whether or not the splash screen is being displayed
@@ -112,7 +107,7 @@ boolean Splash = true; // Dictates whether or not the splash screen is being dis
 //Draw
 void draw()
 {
-    float xBound = width *(.075);
+    float xBound = width *(.075)      ;
     float yBound = height*(.075928571);
     
     Light()               ; // Draws the Red Light below the screen on the outliner

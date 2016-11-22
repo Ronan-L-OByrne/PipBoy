@@ -1,7 +1,7 @@
 // Function to draw the graphical outliner of the program
 void Outliner()
 {
-    float   Ventx, Venty; // Used to position the vents
+    float Ventx, Venty; // Used to position the vents
     
     // Background
     background(135, 92, 42);
@@ -24,7 +24,7 @@ void Outliner()
     fill(50, 50, 50);
     rect(width*(.06),  height*(.05),        width*(.78),  height*(.828571428), ((width+height)/2)*(.058823529));
     fill(255, 255, 255);
-    rect(width*(.075),  height*(.0714285714), width*(.753), height*(.790857142), ((width+height)/2)*(.058823529));
+    rect(width*(.075), height*(.0714285714), width*(.753), height*(.790857142), ((width+height)/2)*(.058823529));
     
     // Actual Screen
     fill(0, 0, 0);
@@ -75,7 +75,7 @@ void Outliner()
     
     stroke(0, 0, 0);
     fill(0, 0, 0);
-    ellipse(width*(.985), height*(.847857142), width*(.08), height*(.114285714));
+    ellipse(width*(.985),height*(.847857142), width*(.08), height*(.114285714));
     fill(50, 50, 50);
     ellipse(width*(.98), height*(.842857142), width*(.08), height*(.114285714));
     fill(25, 25, 25);
@@ -92,7 +92,7 @@ void Outliner()
     
     // Bottom Vent
     fill(0, 0, 0);
-    rect(width*(.155) , height-(height*(.056142857)), width*(.5), height*(.678571428), ((width+height)/2)*(.117647058));
+    rect(width*(.155) ,height-(height*(.056142857)), width*(.5), height*(.678571428), ((width+height)/2)*(.117647058));
     
     fill(115, 72, 22);
     rect(width*(.15) , height-(height*(.058142857)), width*(.5), height*(.678571428), ((width+height)/2)*(.117647058));
@@ -107,15 +107,15 @@ void Outliner()
     
     // Screws
     fill(125, 82, 32);
-    ellipse(width*(.86), height*(.057142857), width*(.015), height*(.021428571));
-    line(width*(.855), height*(.05), width*(.865), height*(.064285714));
-    ellipse(width*(.86), height*(.885714285), width*(.015), height*(.021428571));
-    line(width*(.855), height*(.878571428), width*(.865), height*(.892857142));
+    ellipse(width*(.86),  height*(.057142857), width*(.015), height*(.021428571));
+    line   (width*(.855), height*(.05),        width*(.865), height*(.064285714));
+    ellipse(width*(.86),  height*(.885714285), width*(.015), height*(.021428571));
+    line   (width*(.855), height*(.878571428), width*(.865), height*(.892857142));
     
-    ellipse(width*(.035), height*(.942857142), width*(.04), height*(.057142857));
-    line(width*(.015), height*(.942857142), width*(.055), height*(.942857142));
-    ellipse(width*(.15), height*(.964285714), width*(.025), height*(.035714285));
-    line(width*(.15), height*(.982142857), width*(.15), height*(.946428571));
+    ellipse(width*(.035), height*(.942857142), width*(.04),  height*(.057142857));
+    line   (width*(.015), height*(.942857142), width*(.055), height*(.942857142));
+    ellipse(width*(.15),  height*(.964285714), width*(.025), height*(.035714285));
+    line   (width*(.15),  height*(.982142857), width*(.15),  height*(.946428571));
     
 }//end Outliner()
 
@@ -162,14 +162,14 @@ void GeigerCount()
     PVector   Tip;                  // Dictates the position of the geiger counters tip
     PVector[] Base = new PVector[2];// Dictates the position of the base of the geiger pointer
     
-    Tip = new PVector(cx+sin(val)*(width*(.035)), cy+cos(val)*height*(.05));
-    Base[0] = new PVector(cx+sin(val)*3, cy+cos(val)*3);
+    Tip     = new PVector(cx+sin(val)*(width*(.035)), cy+cos(val)*height*(.05));
+    Base[0] = new PVector(cx+sin(val)*3             , cy+cos(val)*3);
     Base[1] = new PVector(cx+(sin(val)-(sin(val))*2), cy+(cos(val)-(cos(val))*2));
     
     fill(0, 0, 0);
-    rect(width*(.84), height*(.352857142), width*(.06),  height*(.178428571));
+    rect(width*(.84), height*(.352857142) , width*(.06) ,  height*(.178428571));
     fill(135, 92, 42);
-    rect(width*(.84), height*(.352857142), width*(.06),  height*(.171428571));
+    rect(width*(.84), height*(.352857142) , width*(.06) ,  height*(.171428571));
     noStroke();
     rect(width*(.841), height*(.252857142), width*(.019),  height*(.371428571));
     stroke(0,0,0);
@@ -177,8 +177,6 @@ void GeigerCount()
     fill(0, 0, 0);
     arc(width*(.9), height*(.448571428),   width*(.12),  height*(.171428571), HALF_PI*3, HALF_PI*5);
     
-    fill(135, 92, 42);
-    //rect(width*(.84), height*(.352857142), width*(.06),  height*(.178428571));
     fill(135, 92, 42);
     arc(width*(.9), height*(.438571428),   width*(.12),  height*(.171428571), HALF_PI*3, HALF_PI*5);
     fill(255, 255, 255);
