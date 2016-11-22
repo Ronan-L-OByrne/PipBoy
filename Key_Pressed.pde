@@ -10,242 +10,245 @@ void keyPressed()
     */
     
     //Navigating the sub tabs
-    if(keyCode == LEFT)
+    if(!Splash)
     {
-        if(menu != 5 && menu != 4)
+        if(keyCode == LEFT)
         {
-            Effects[3].play();
-            if(subM > 1)
+            if(menu != 5 && menu != 4)
             {
-                subM--;
+                Effects[3].play();
+                if(subM > 1)
+                {
+                    subM--;
+                }//end if
+                else if(subM == 1)
+                {
+                    subM = 3;
+                }//end else if
+                
+                subNav = 1;
             }//end if
-            else if(subM == 1)
-            {
-                subM = 3;
-            }//end else if
-            
-            subNav = 1;
-        }//end if
-        else
-        {
-            subM = 1;
-        }//end else
-        return;
-    }//end if
-    else if(keyCode == RIGHT)
-    {
-        if(menu != 5 && menu != 4)
-        {
-            Effects[3].play();
-            if(subM < 3)
-            {
-                subM++;
-            }//end if
-            else if(subM == 3)
+            else
             {
                 subM = 1;
+            }//end else
+            return;
+        }//end if
+        else if(keyCode == RIGHT)
+        {
+            if(menu != 5 && menu != 4)
+            {
+                Effects[3].play();
+                if(subM < 3)
+                {
+                    subM++;
+                }//end if
+                else if(subM == 3)
+                {
+                    subM = 1;
+                }//end else if
+                
+                subNav = 1;
+            }//end if
+            else
+            {
+                subNav = 1;
+            }//end else
+            return;
+        }//end else if
+        
+        // Navigating the Main tabs
+        else if(key == 'z' || key == 'Z')
+        {
+            Effects[3].play();
+            if(menu > 1)
+            {
+                menu--;
             }//end else if
+            else
+            {
+                menu = 5;
+            }//end else
+            subNav = 1;
+            subM = 1;
+            topRightMenu();
             
+            return;
+        }//end else if
+        else if(key == 'x' || key == 'X')
+        {
+            Effects[3].play();
+            if(menu < 5)
+            {
+                menu++;
+            }//end else if
+            else
+            {
+                menu = 1;
+            }//end else
             subNav = 1;
-        }//end if
-        else
-        {
-            subNav = 1;
-        }//end else
-        return;
-    }//end else if
-    
-    // Navigating the Main tabs
-    else if(key == 'z' || key == 'Z')
-    {
-        Effects[3].play();
-        if(menu > 1)
-        {
-            menu--;
+            subM = 1;
+            topRightMenu();
+            
+            return;
         }//end else if
-        else
-        {
-            menu = 5;
-        }//end else
-        subNav = 1;
-        subM = 1;
-        topRightMenu();
         
-        return;
-    }//end else if
-    else if(key == 'x' || key == 'X')
-    {
-        Effects[3].play();
-        if(menu < 5)
+        //Navigating within the sub tabs
+        else if(keyCode == UP)
         {
-            menu++;
-        }//end else if
-        else
-        {
-            menu = 1;
-        }//end else
-        subNav = 1;
-        subM = 1;
-        topRightMenu();
-        
-        return;
-    }//end else if
-    
-    //Navigating within the sub tabs
-    else if(keyCode == UP)
-    {
-        if(subM == 1 && menu == 1)
-        {
-            return;
-        }//end if
-        else if(subM == 2 && menu == 1)
-        {
-            Effects[3].play();
-            subNav--;
-            if(subNav < 1)
+            if(subM == 1 && menu == 1)
             {
-                subNav = 7;
+                return;
             }//end if
-            return;
-        }//end else if
-        else if(subM == 3 && menu == 1)
-        {
-            Effects[3].play();
-            subNav--;
-            if(subNav < 1)
+            else if(subM == 2 && menu == 1)
             {
-                subNav = 3;
-            }//end if
-            return;
-        }//end else if
-        else if(subM == 1 && menu == 2)
-        {
-            Effects[3].play();
-            subNav--;
-            if(subNav < 1)
+                Effects[3].play();
+                subNav--;
+                if(subNav < 1)
+                {
+                    subNav = 7;
+                }//end if
+                return;
+            }//end else if
+            else if(subM == 3 && menu == 1)
             {
-                subNav = Weapons.size();
-            }//end if
-            return;
-        }//end else if
-        else if(subM == 2 && menu == 2)
-        {
-            Effects[3].play();
-            subNav--;
-            if(subNav < 1)
+                Effects[3].play();
+                subNav--;
+                if(subNav < 1)
+                {
+                    subNav = 3;
+                }//end if
+                return;
+            }//end else if
+            else if(subM == 1 && menu == 2)
             {
-                subNav = Apparel.size();
-            }//end if
-            return;
-        }//end else if
-        else if(subM == 3 && menu == 2)
-        {
-            Effects[3].play();
-            subNav--;
-            if(subNav < 1)
+                Effects[3].play();
+                subNav--;
+                if(subNav < 1)
+                {
+                    subNav = Weapons.size();
+                }//end if
+                return;
+            }//end else if
+            else if(subM == 2 && menu == 2)
             {
-                subNav = Miscellaneous.size();
-            }//end if
-            return;
-        }//end else if
-        else if(subM == 2 && menu == 3)
-        {
-            Effects[3].play();
-            subNav--;
-            if (subNav < 1) 
+                Effects[3].play();
+                subNav--;
+                if(subNav < 1)
+                {
+                    subNav = Apparel.size();
+                }//end if
+                return;
+            }//end else if
+            else if(subM == 3 && menu == 2)
             {
-                subNav = 5;
-            }//end if
-            return;
-        }//end else if
-        else if(menu == 5)
-        {
-            Effects[3].play();
-            subNav--;
-            if (subNav < 1) 
+                Effects[3].play();
+                subNav--;
+                if(subNav < 1)
+                {
+                    subNav = Miscellaneous.size();
+                }//end if
+                return;
+            }//end else if
+            else if(subM == 2 && menu == 3)
             {
-                subNav = 2;
-            }//end if
-            return;
-        }//end else if
-    }//end else if
-    else if(keyCode == DOWN)
-    {
-        if(subM == 1 && menu == 1)
-        {
-            return;
-        }//end if
-        else if(subM == 2 && menu == 1)
-        {
-            Effects[3].play();
-            subNav++;
-            if (subNav > 7) 
+                Effects[3].play();
+                subNav--;
+                if (subNav < 1) 
+                {
+                    subNav = 5;
+                }//end if
+                return;
+            }//end else if
+            else if(menu == 5)
             {
-                subNav = 1;
-            }//end if
-            return;
+                Effects[3].play();
+                subNav--;
+                if (subNav < 1) 
+                {
+                    subNav = 2;
+                }//end if
+                return;
+            }//end else if
         }//end else if
-        else if(subM == 3 && menu == 1)
+        else if(keyCode == DOWN)
         {
-            Effects[3].play();
-            subNav++;
-            if (subNav > 3) 
+            if(subM == 1 && menu == 1)
             {
-                subNav = 1;
+                return;
             }//end if
-            return;
-        }//end else if
-        else if(subM == 1 && menu == 2)
-        {
-            Effects[3].play();
-            subNav++;
-            if (subNav > Weapons.size()) 
+            else if(subM == 2 && menu == 1)
             {
-                subNav = 1;
-            }//end if
-            return;
-        }//end else if
-        else if(subM == 2 && menu == 2)
-        {
-            Effects[3].play();
-            subNav++;
-            if (subNav > Apparel.size()) 
+                Effects[3].play();
+                subNav++;
+                if (subNav > 7) 
+                {
+                    subNav = 1;
+                }//end if
+                return;
+            }//end else if
+            else if(subM == 3 && menu == 1)
             {
-                subNav = 1;
-            }//end if
-            return;
-        }//end else if
-        else if(subM == 3 && menu == 2)
-        {
-            Effects[3].play();
-            subNav++;
-            if (subNav > Miscellaneous.size()) 
+                Effects[3].play();
+                subNav++;
+                if (subNav > 3) 
+                {
+                    subNav = 1;
+                }//end if
+                return;
+            }//end else if
+            else if(subM == 1 && menu == 2)
             {
-                subNav = 1;
-            }//end if
-            return;
-        }//end else if
-        else if(subM == 2 && menu == 3)
-        {
-            Effects[3].play();
-            subNav++;
-            if (subNav > 5) 
+                Effects[3].play();
+                subNav++;
+                if (subNav > Weapons.size()) 
+                {
+                    subNav = 1;
+                }//end if
+                return;
+            }//end else if
+            else if(subM == 2 && menu == 2)
             {
-                subNav = 1;
-            }//end if
-            return;
-        }//end else if
-        else if(menu == 5)
-        {
-            Effects[3].play();
-            subNav++;
-            if (subNav > 2) 
+                Effects[3].play();
+                subNav++;
+                if (subNav > Apparel.size()) 
+                {
+                    subNav = 1;
+                }//end if
+                return;
+            }//end else if
+            else if(subM == 3 && menu == 2)
             {
-                subNav = 1;
-            }//end if
-            return;
+                Effects[3].play();
+                subNav++;
+                if (subNav > Miscellaneous.size()) 
+                {
+                    subNav = 1;
+                }//end if
+                return;
+            }//end else if
+            else if(subM == 2 && menu == 3)
+            {
+                Effects[3].play();
+                subNav++;
+                if (subNav > 5) 
+                {
+                    subNav = 1;
+                }//end if
+                return;
+            }//end else if
+            else if(menu == 5)
+            {
+                Effects[3].play();
+                subNav++;
+                if (subNav > 2) 
+                {
+                    subNav = 1;
+                }//end if
+                return;
+            }//end else if
         }//end else if
-    }//end else if
+    }//end if
     
     // Interacts with certain thing in the program
     if(keyCode == ENTER)

@@ -75,8 +75,6 @@ void setup()
     //Declares the sine wave used in subMenu5()
     Sine = new sineWave();
     
-    Effects[2].play();
-    
     //println(player.Radiation);
 }//end setup
 
