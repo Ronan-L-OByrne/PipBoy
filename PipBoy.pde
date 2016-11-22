@@ -1,6 +1,6 @@
-/*Pip_Boy UI, Object Oriented Programming Assignment: Year 2-Semester 1
+/*Pip_Boy UI, Object Oriented Programming Assignment: Year 2 ~ Semester 1
   
-  This Program is meant to create a User Interface based of the Pip-Boy 3000 Mark IV from the game Fallout 4.
+  This Program is meant to create a User Interface based off the Pip-Boy 3000 Mark IV from the game Fallout 4.
 
   Date Begun: 10/10/2016;    Date Finished: xx/11/2016;
   Author: Ronan O'Byrne, C15332036;
@@ -17,12 +17,12 @@ void setup()
     int i=0;
     
     //Various screen sizes to test scaling
-    // fullScreen();
      size(1000, 700);
     // size(1000, 1000);
     // size(500, 350);
     // size(250, 175);
     // size(750, 750);
+    // fullScreen();
     
     //Loads the fonts used in the sketch
     globalFont = loadFont("AgencyFB-Bold-48.vlw");
@@ -47,7 +47,13 @@ void setup()
     
     //Loads the sound files
     Classic = new SoundFile(this, "Nocturne.mp3");
-    Diamond = new SoundFile(this, "Fire.mp3");
+    Diamond = new SoundFile(this, "Fire.mp3"    );
+    
+    //Sound effects used in the program
+    Effects[0] =  new SoundFile(this, "Equip.wav"  );
+    Effects[1] =  new SoundFile(this, "Unequip.wav");
+    Effects[2] =  new SoundFile(this, "RadioOn.wav");
+    Effects[3] =  new SoundFile(this, "Move.wav"   );
     
     //Calculates the players current carry weight
     for(i=0; i<Weapons.size(); i++)
@@ -69,18 +75,20 @@ void setup()
     //Declares the sine wave used in subMenu5()
     Sine = new sineWave();
     
+    Effects[2].play();
+    
     //println(player.Radiation);
 }//end setup
 
 //Global Variables
-int     Light= 0;             // Used for the small red light
-boolean Grad = true;          // Used for the small red light
+int     Light= 0;           // Used for the small red light (in outliner function)
+boolean Grad = true;        // Used for the small red light (in outliner function)
     
-PFont   globalFont, PipBoy;   // Fonts Used for Text
+PFont   globalFont, PipBoy; // Fonts Used for Text
 
-int     menu   = 1;           // Used to select the menu
-int     subM   = 1;           // Used to select the sub Menu
-int     subNav = 1;           // Used to navigate within the sub menus
+int     menu   = 1;         // Used to select the menu
+int     subM   = 1;         // Used to select the sub Menu
+int     subNav = 1;         // Used to navigate within the sub menus
 
 Animation walkCycle, Thumb, Hacker, killS, Berserk, Map; // The various images used in the program
 sineWave Sine; // Displays the sine wave
@@ -89,16 +97,16 @@ ArrayList<inventory_List> Weapons       = new ArrayList<inventory_List>(); // St
 ArrayList<inventory_List> Apparel       = new ArrayList<inventory_List>(); // Stores the Apparel in the players inventory
 ArrayList<inventory_List> Miscellaneous = new ArrayList<inventory_List>(); // Stores the Misc items in the players inventory
 
-int curEquipW = -1; // Stores the array position of the currently equiped weapon
+int curEquipW = -1;         // Stores the array position of the currently equiped weapon
 
 Stats player = new Stats(); // Stores the various data associated with the player
 
-SoundFile Classic, Diamond;
-boolean ClassicB = false; // Records whether or not this song is playing
-boolean DiamondB = false; // Records whether or not this song is playing
+SoundFile[] Effects = new SoundFile[4];
+SoundFile Classic, Diamond; // Variables to hold the sound files 
+boolean ClassicB = false;   // Records whether or not this song is playing
+boolean DiamondB = false;   // Records whether or not this song is playing
 
 boolean Splash = true; // Dictates whether or not the splash screen is being displayed
-boolean Check  = true;
 
 //Draw
 void draw()

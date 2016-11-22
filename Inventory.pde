@@ -1,8 +1,8 @@
 // Contains inventory_List class, This will read and store data on all weapons from a file
 class inventory_List
 {
-    //Variables associated with the various inventory items
-    String  type          ;
+    // Variables associated with the various inventory items
+    String  type          ; // Used to find what ArrayList it should be in
     String  name          ;
     int     damage        ;
     int     fireRate      ;
@@ -19,12 +19,12 @@ class inventory_List
     int     value         ;
     int     qty           ;
     
-    //Enters the desired data into the variables
+    // Enters the desired data into the variables
     inventory_List(TableRow row)
     {
-        type = row.getString(0);//Loads the type of item
+        type = row.getString(0); // Loads the type of item
         
-        //Is the item a Ranged weapon?
+        // Is the item a Ranged weapon?
         if(type.equals("R"))
         {
             this.name     = row.getString(1);
