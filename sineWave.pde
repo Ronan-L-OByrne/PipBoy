@@ -26,7 +26,7 @@ class sineWave
             // If no music is playing
             if(!DiamondB && !ClassicB)
             {
-                Hei = 2;
+                Hei = 0;
             }//end if
             
             //Sets the height of the sine wave

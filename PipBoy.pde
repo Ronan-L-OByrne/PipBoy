@@ -55,6 +55,8 @@ void setup()
     Effects[2] =  new SoundFile(this, "RadioOn.wav");
     Effects[3] =  new SoundFile(this, "Move.wav"   );
     
+    Effects[3].rate(.5);
+    
     //Calculates the players current carry weight
     for(i=0; i<Weapons.size(); i++)
     {

@@ -18,7 +18,7 @@ void subMenu2_1(float xBound, float yBound)
         // Marks the currently equiped Weapon
         if(Weapons.get(i).equipped)
         {
-            rect(xBound + width*(.04), yBound + height*(.165+(.05*i)), width*(.015), height*(.02142857));
+            rect(xBound + width*(.04), yBound + height*(.16+(.05*i)), width*(.02), height*(.028571428));
         }//end if
     }//end for
     
@@ -108,7 +108,7 @@ void subMenu2_2(float xBound, float yBound)
         // Marks the currently equiped items of apparel
         if(Apparel.get(i).equipped)
         {
-            rect(xBound + width*(.04), yBound + height*(.165+(.05*i)), width*(.015), height*(.02142857));
+            rect(xBound + width*(.04), yBound + height*(.16+(.05*i)), width*(.02), height*(.028571428));
         }//end if
     }//end for
     
