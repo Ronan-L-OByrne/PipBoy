@@ -69,6 +69,9 @@ void Screen(float xBound, float yBound)
             textAlign(RIGHT, CENTER)                                                                      ;
             fill(40, 255, 40)                                                                             ;
             text("AP " + player.Ap[1] + "/" + player.Ap[0],   xBound + width*(.73), yBound + height*(.72));
+            
+            textAlign(CENTER, CENTER)                                    ;  
+            text(player.Name, xBound + width*(.375), yBound + height*(.66));
         }//end if(menu)
         // Displays INV (Inventory) sceen
         else if(menu == 2)
@@ -91,16 +94,16 @@ void Screen(float xBound, float yBound)
             
             // Constant throughout all sub menus
             // Weight/Caps/Damage
-            textAlign(CENTER, CENTER)                                                        ;
+            textAlign(LEFT, CENTER)                                                        ;
             fill(0, 100, 0)                                                                  ;
             rect(xBound + width*(.02), yBound + height*(.7),  width*(.175), height*(.040714));
             rect(xBound + width*(.2) , yBound + height*(.7),  width*(.355), height*(.040714));
             rect(xBound + width*(.56), yBound + height*(.7),  width*(.175), height*(.040714));
             
             fill(40, 255, 40)                                                                                      ;
-            text("WEIGHT " + player.Weight + "/" + player.MaxWeight, xBound + width*(.0875), yBound + height*(.72));
+            text("WEIGHT " + player.Weight + "/" + player.MaxWeight, xBound + width*(.0275), yBound + height*(.72));
             
-            text("CAPS " + player.Caps,    xBound + width*(.27), yBound + height*(.72))          ;
+            text("CAPS " + player.Caps,    xBound + width*(.23), yBound + height*(.72))          ;
             ellipse(xBound + width*(.215), yBound + height*(.72), width*(.02), height*(.0285714));
             fill(0, 100, 0)                                                                      ;
             textFont(PipBoy, ((width+height)/2)*(.025))                                          ;

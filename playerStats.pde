@@ -1,43 +1,45 @@
 class Stats
 {
     //Players stats displayed throughout the sketch
-    int[] SPECIAL = new int [7];
-    int   Level                ;
-    int[] Hp      = new int [2]; // Hit Points
-    int[] Ap      = new int [2]; // Action Points
-    int   Radiation            ;
-    int   Caps                 ; // Caps used a currency
-    int   dmgRes               ;
-    int   radRes               ;
-    int   engRes               ;
-    int   MaxWeight            ;   
-    int   Weight               ;
+    String Name                 ;
+    int[]  SPECIAL = new int [7];
+    int    Level                ;
+    int[]  Hp      = new int [2]; // Hit Points
+    int[]  Ap      = new int [2]; // Action Points
+    int    Radiation            ;
+    int    Caps                 ; // Caps used a currency
+    int    dmgRes               ;
+    int    radRes               ;
+    int    engRes               ;
+    int    MaxWeight            ;   
+    int    Weight               ;
     
     //Displayed in subMenu3_2()
-    int locations              ;
-    int days                   ;
-    int hoursSlept             ;
-    int robHacked              ;
+    int locations               ;
+    int days                    ;
+    int hoursSlept              ;
+    int robHacked               ;
     
-    int quests                 ; 
-    int miscOb                 ;
-    int mainQ                  ;
-    int sideQ                  ;
+    int quests                  ; 
+    int miscOb                  ;
+    int mainQ                   ;
+    int sideQ                   ;
     
-    int grandSlams             ;
+    int grandSlams              ;
     
-    int progsCreate            ;
-    int food                   ;
-    int objBuilt               ;
-    int plants                 ;
+    int progsCreate             ;
+    int food                    ;
+    int objBuilt                ;
+    int plants                  ;
     
-    int compHack               ;
-    int itStole                ;
-    int trespass               ;
+    int compHack                ;
+    int itStole                 ;
+    int trespass                ;
     
     //Initialize the variables
     Stats()
     {
+        this.Name        = "Ronan";
         for(int i=0; i<7; i++)
         {
             this.SPECIAL[i] = (int)random(1, 10); // Randomizes base stats

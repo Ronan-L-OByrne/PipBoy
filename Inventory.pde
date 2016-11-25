@@ -41,7 +41,7 @@ public class MeleeWeapon extends inventory_List
     {
         return name + "\t" + damage + "\t" + speed + "\t" + weight + "\t" + value + "\t" + qty;
     }//end toString()
-}
+}//end class MeleeWeapon extends inventory_List
 
 //Begin class RangedWeapon extends inventory_List
 public class RangedWeapon extends inventory_List
@@ -71,7 +71,7 @@ public class RangedWeapon extends inventory_List
     {
         return name + "\t" + damage + "\t" + fireRate + "\t" + range + "\t" + accuracy + "\t" + weight + "\t" + value + "\t" +  qty;
     }//end toString()
-}//end class RangedWeapon
+}//end class RangedWeapon extends inventory_List
 
 //Begin class Apparel extends inventory_List
 public class Apparel extends inventory_List
@@ -98,7 +98,7 @@ public class Apparel extends inventory_List
     {
         return name + "\t" + dmgRes + "\t" + radRes + "\t" + engRes + "\t" + weight + "\t" + value + "\t" + qty;
     }//end toString()
-}//end class Apparel
+}//end class Apparel extends inventory_List
 
 //Begin class Misc extends inventory_List
 public class Misc extends inventory_List
@@ -111,13 +111,13 @@ public class Misc extends inventory_List
         this.weight   = row.getInt(2)   ;
         this.value    = row.getInt(3)   ;
         this.qty      = row.getInt(4)   ;
-    }//end Apparel
+    }//end Misc
     
     String toString()
     {
         return name + "\t" + weight + "\t" + value + "\t" + qty;
     }//end toString
-}//end class Misc
+}//end class Misc extends inventory_List
 
 // Function to load data from a table
 void loadData(String file)

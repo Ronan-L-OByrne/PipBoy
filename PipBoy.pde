@@ -2,7 +2,7 @@
   
   This Program is meant to create a User Interface based off the Pip-Boy 3000 Mark IV from the game Fallout 4.
 
-  Date Begun: 10/10/2016;    Date Finished: xx/11/2016;
+  Date Begun: 10/10/2016;    Date Finished: 25/11/2016;
   Author: Ronan O'Byrne, C15332036;
   
   *Requires the processing.sound library which can be downloaded in Sketch-> Import Library... -> Add Library... Filter by sound and download the Sound library by The Processing Foundation
