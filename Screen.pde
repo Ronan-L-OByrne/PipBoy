@@ -113,7 +113,14 @@ void Screen(float xBound, float yBound)
             fill(40, 255, 40)                             ;
             if(curEquipW != -1)
             {
-                text(Weapons.get(curEquipW).damage,   xBound + width*(.718), yBound + height*(.72));
+                if(curEquipW < Ranged_Weapons.size())
+                {
+                    text(Ranged_Weapons.get(curEquipW).damage,   xBound + width*(.718), yBound + height*(.72));
+                }//end if
+                else
+                {
+                    text(Melee_Weapons.get(curEquipW-Ranged_Weapons.size()).damage,   xBound + width*(.718), yBound + height*(.72));
+                }//end if
             }//end if
             else
             {

@@ -16,7 +16,6 @@ Requires the Sound library by the Processing Foundation which can be downloaded 
 Import Library... -> Add Library... Filter by sound and download the Sound library by The 
 Processing Foundation.
 
-
 # Contents
 The project contains most of the functionality of the PipBoy in the game with minor changes to 
 better fit the limitations and strengths of the Processing IDE.
@@ -36,7 +35,6 @@ It Contains:
 	4. MAP which contains the map of Boston used in Fallout 4.
 
 	5. RADIO which contains two stations which each have one song associated with them.
-	
 
 # Controls
 * Z and X are used to navigate the menus.

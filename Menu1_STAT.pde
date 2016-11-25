@@ -37,9 +37,13 @@ void subMenu1_1(float xBound, float yBound)
     {
         text("0", xBound + width*(.32375), yBound + height*(.602));  
     }//end if
+    else if(curEquipW < Ranged_Weapons.size())
+    {
+        text(Ranged_Weapons.get(curEquipW).damage, xBound + width*(.32375), yBound + height*(.602));
+    }//end else
     else
     {
-        text(Weapons.get(curEquipW).damage, xBound + width*(.32375), yBound + height*(.602));
+        text(Melee_Weapons.get(curEquipW-Ranged_Weapons.size()).damage, xBound + width*(.32375), yBound + height*(.602));
     }//end else
     text(player.engRes, xBound + width*(.4275), yBound + height*(.602));
     text(player.radRes, xBound + width*(.4575), yBound + height*(.602));

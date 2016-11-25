@@ -58,9 +58,13 @@ void setup()
     Effects[3].rate(.5);
     
     //Calculates the players current carry weight
-    for(i=0; i<Weapons.size(); i++)
+    for(i=0; i<Melee_Weapons.size(); i++)
     {
-        player.Weight += (int)Weapons.get(i).weight;
+        player.Weight += (int)Melee_Weapons.get(i).weight;
+    }//end for
+    for(i=0; i<Ranged_Weapons.size(); i++)
+    {
+        player.Weight += (int)Ranged_Weapons.get(i).weight;
     }//end for
     for(i=0; i<Apparel.size(); i++)
     {
@@ -88,8 +92,9 @@ int     subNav = 1        ; // Used to navigate within the sub menus
 Animation walkCycle, Thumb, Hacker, killS, Berserk, Map; // The various images used in the program
 sineWave Sine                                          ; // Displays the sine wave
 
-ArrayList<inventory_List> Weapons       = new ArrayList<inventory_List>(); // Stores the Weapons in the players inventory
-ArrayList<inventory_List> Apparel       = new ArrayList<inventory_List>(); // Stores the Apparel in the players inventory
+ArrayList<RangedWeapon> Ranged_Weapons  = new ArrayList<RangedWeapon>();   // Stores the RangedWeapons in the players inventory
+ArrayList<MeleeWeapon> Melee_Weapons    = new ArrayList<MeleeWeapon>();    // Stores the MeleeWeapons in the players inventory
+ArrayList<Apparel> Apparel              = new ArrayList<Apparel>();        // Stores the Apparel in the players inventory
 ArrayList<inventory_List> Miscellaneous = new ArrayList<inventory_List>(); // Stores the Misc items in the players inventory
 
 int curEquipW = -1                    ; // Stores the array position of the currently equiped weapon

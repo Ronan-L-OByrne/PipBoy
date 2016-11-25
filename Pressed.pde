@@ -118,7 +118,7 @@ void keyPressed()
                 subNav--         ;
                 if(subNav < 1)
                 {
-                    subNav = Weapons.size();
+                    subNav = Ranged_Weapons.size()+Melee_Weapons.size();
                 }//end if
                 return;
             }//end else if
@@ -193,7 +193,7 @@ void keyPressed()
             {
                 Effects[3].play();
                 subNav++         ;
-                if (subNav > Weapons.size()) 
+                if (subNav > Ranged_Weapons.size()+Melee_Weapons.size()) 
                 {
                     subNav = 1;
                 }//end if
@@ -300,24 +300,60 @@ void keyPressed()
         // Allows the user to equip weapons
         else if(menu == 2 && subM == 1)
         {
-            if(curEquipW != subNav-1)
+            if(subNav-1 < Ranged_Weapons.size())
             {
-                Weapons.get(subNav-1).equipped = true;
-                Effects[0].play()                    ;
-                
-                if(curEquipW >= 0)
+                if(curEquipW != subNav-1)
                 {
-                    Weapons.get(curEquipW).equipped = false;
-                    Effects[1].play()                      ;
+                    Ranged_Weapons.get(subNav-1).equipped = true;
+                    Effects[0].play()                    ;
+                    
+                    if(curEquipW >= 0 && curEquipW < Ranged_Weapons.size())
+                    {
+                        Ranged_Weapons.get(curEquipW).equipped = false;
+                        Effects[1].play()                      ;
+                    }//end if
+                    else if(curEquipW >= 0 && curEquipW > Ranged_Weapons.size()-1)
+                    {
+                        Melee_Weapons.get(curEquipW-Ranged_Weapons.size()).equipped = false;
+                        Effects[1].play()                      ;
+                    }//end else
+                    
+                    curEquipW = subNav-1;
                 }//end if
-                curEquipW = subNav-1;
+                else if(curEquipW == subNav-1)
+                {
+                    Ranged_Weapons.get(subNav-1).equipped = false;
+                    Effects[1].play()                     ;
+                    curEquipW = -1                        ;
+                }//end else if
             }//end if
-            else if(curEquipW == subNav-1)
+            else
             {
-                Weapons.get(subNav-1).equipped = false;
-                Effects[1].play()                     ;
-                curEquipW = -1                        ;
-            }//end else if
+                if(curEquipW != subNav-1)
+                {
+                    Melee_Weapons.get(subNav-1-Ranged_Weapons.size()).equipped = true;
+                    Effects[0].play()                    ;
+                    
+                    if(curEquipW >= 0 && curEquipW > Ranged_Weapons.size()-1)
+                    {
+                        Melee_Weapons.get(curEquipW-Ranged_Weapons.size()).equipped = false;
+                        Effects[1].play()                      ;
+                    }//end else
+                    else if(curEquipW >= 0 && curEquipW < Ranged_Weapons.size())
+                    {
+                        Ranged_Weapons.get(curEquipW).equipped = false;
+                        Effects[1].play()                      ;
+                    }//end if
+                    
+                    curEquipW = subNav-1;
+                }//end if
+                else if(curEquipW == subNav-1)
+                {
+                    Melee_Weapons.get(subNav-1-Ranged_Weapons.size()).equipped = false;
+                    Effects[1].play()                     ;
+                    curEquipW = -1                        ;
+                }//end else if
+            }//end else
         }//end else if
         // Allows the user to equip Apparel
         else if(menu == 2 && subM == 2)
