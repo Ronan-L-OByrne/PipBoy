@@ -21,9 +21,9 @@ void subMenu1_1(float xBound, float yBound)
     drawCrosshair(.3983, .6425);
     
     // Lightning Bolt
-    fill(40, 255, 40);
+    fill(40, 255, 40)                                                                                                                         ;
     triangle(xBound+width*(.426), yBound+height*(.552), xBound+width*(.434), yBound+height*(.552), xBound+width*(.424), yBound+height*(.568 ));
-    rect    (xBound+width*(.425), yBound+height*(.563), width*(.01), height*(.00571));
+    rect    (xBound+width*(.425), yBound+height*(.563), width*(.01), height*(.00571))                                                         ;
     triangle(xBound+width*(.425), yBound+height*(.58) , xBound+width*(.435), yBound+height*(.5675), xBound+width*(.43), yBound+height*(.5675));
     
     // Radiation Symbol

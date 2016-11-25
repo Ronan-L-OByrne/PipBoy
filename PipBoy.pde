@@ -29,11 +29,11 @@ void setup()
     PipBoy     = loadFont("BodoniMTCondensed-Italic-48.vlw");
     
     //Loads the images used in the sketch
-    walkCycle = new Animation("Vault-Boy_Walking_", 21, (int)(width*(.4 )), (int)(height*(.45)) );
+    walkCycle = new Animation("Vault-Boy_Walking_", 21, (int)(width*(.4 )), (int)(height*(.45))) ;
     Thumb     = new Animation("Vault-Boy_Thumb_"  , 1 , (int)(width*(.15)), (int)(height*(.325)));
-    Hacker    = new Animation("Hacker_"           , 1 , (int)(width*(.25)), (int)(height*(.25)) );
-    killS     = new Animation("Killshot_"         , 1 , (int)(width*(.35)), (int)(height*(.3))  );
-    Berserk   = new Animation("Berserk_"          , 1 , (int)(width*(.3) ), (int)(height*(.35)) );
+    Hacker    = new Animation("Hacker_"           , 1 , (int)(width*(.25)), (int)(height*(.25))) ;
+    killS     = new Animation("Killshot_"         , 1 , (int)(width*(.35)), (int)(height*(.3)))  ;
+    Berserk   = new Animation("Berserk_"          , 1 , (int)(width*(.3) ), (int)(height*(.35))) ;
     Map       = new Animation("Map_"              , 1 , (int)(width*(.6) ), (int)(height*(.645)));
     
     //Sketch only draws the outliner once
@@ -60,7 +60,7 @@ void setup()
     //Calculates the players current carry weight
     for(i=0; i<Melee_Weapons.size(); i++)
     {
-        player.Weight += (int)Melee_Weapons.get(i).weight;
+        player.Weight += (int)Melee_Weapons.get(i).weight ;
     }//end for
     for(i=0; i<Ranged_Weapons.size(); i++)
     {
@@ -68,11 +68,11 @@ void setup()
     }//end for
     for(i=0; i<Apparel.size(); i++)
     {
-        player.Weight += (int)Apparel.get(i).weight;
+        player.Weight += (int)Apparel.get(i).weight       ;
     }//end for
     for(i=0; i<Miscellaneous.size(); i++)
     {
-        player.Weight += (int)Miscellaneous.get(i).weight;
+        player.Weight += (int)Miscellaneous.get(i).weight ;
     }//end for
     
     //Declares the sine wave used in subMenu5()
@@ -92,9 +92,9 @@ int     subNav = 1        ; // Used to navigate within the sub menus
 Animation walkCycle, Thumb, Hacker, killS, Berserk, Map; // The various images used in the program
 sineWave Sine                                          ; // Displays the sine wave
 
-ArrayList<RangedWeapon> Ranged_Weapons  = new ArrayList<RangedWeapon>();   // Stores the RangedWeapons in the players inventory
-ArrayList<MeleeWeapon> Melee_Weapons    = new ArrayList<MeleeWeapon>();    // Stores the MeleeWeapons in the players inventory
-ArrayList<Apparel> Apparel              = new ArrayList<Apparel>();        // Stores the Apparel in the players inventory
+ArrayList<RangedWeapon> Ranged_Weapons  = new ArrayList<RangedWeapon>()  ; // Stores the RangedWeapons in the players inventory
+ArrayList<MeleeWeapon> Melee_Weapons    = new ArrayList<MeleeWeapon>()   ; // Stores the MeleeWeapons in the players inventory
+ArrayList<Apparel> Apparel              = new ArrayList<Apparel>()       ; // Stores the Apparel in the players inventory
 ArrayList<inventory_List> Miscellaneous = new ArrayList<inventory_List>(); // Stores the Misc items in the players inventory
 
 int curEquipW = -1                    ; // Stores the array position of the currently equiped weapon

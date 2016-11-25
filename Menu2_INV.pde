@@ -55,15 +55,15 @@ void subMenu2_1(float xBound, float yBound)
             text("Weight"   , xBound+width*(.455), yBound+height*(.569));
             text("Value"    , xBound+width*(.455), yBound+height*(.619));
             
-            textAlign(RIGHT, CENTER)                                                      ;
+            textAlign(RIGHT, CENTER)                                                             ;
             text(Ranged_Weapons.get(subNav-1).damage  , xBound+width*(.695), yBound+height*(.32));
-            text("0"                           , xBound+width*(.695), yBound+height*(.37));
+            text("0"                           , xBound+width*(.695), yBound+height*(.37))       ;
             text(Ranged_Weapons.get(subNav-1).fireRate, xBound+width*(.695), yBound+height*(.42));
             text(Ranged_Weapons.get(subNav-1).range   , xBound+width*(.695), yBound+height*(.47));
             text(Ranged_Weapons.get(subNav-1).accuracy, xBound+width*(.695), yBound+height*(.52));
             text(Ranged_Weapons.get(subNav-1).weight  , xBound+width*(.695), yBound+height*(.57));
             text(Ranged_Weapons.get(subNav-1).value   , xBound+width*(.695), yBound+height*(.62));
-            drawCrosshair(.715, .395)                                                     ;
+            drawCrosshair(.715, .395)                                                            ;
         }//end if
     }//end if
     else
@@ -90,12 +90,12 @@ void subMenu2_1(float xBound, float yBound)
             text("Weight", xBound+width*(.455), yBound+height*(.569));
             text("Value" , xBound+width*(.455), yBound+height*(.619));
             
-            textAlign(RIGHT, CENTER)                                                    ;
+            textAlign(RIGHT, CENTER)                                                                                ;
             text(Melee_Weapons.get(subNav-1-Ranged_Weapons.size()).damage, xBound+width*(.695), yBound+height*(.47));
             text(Melee_Weapons.get(subNav-1-Ranged_Weapons.size()).speed , xBound+width*(.695), yBound+height*(.52));
             text(Melee_Weapons.get(subNav-1-Ranged_Weapons.size()).weight, xBound+width*(.695), yBound+height*(.57));
             text(Melee_Weapons.get(subNav-1-Ranged_Weapons.size()).value , xBound+width*(.695), yBound+height*(.62));
-            drawCrosshair(.715, .545)                                                   ;
+            drawCrosshair(.715, .545)                                                                               ;
         }//end else if
   }//end else
     
