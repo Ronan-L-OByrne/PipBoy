@@ -15,15 +15,15 @@ It Contains:
 
 2. Five Menus which contain between one and three sub-menus. The menus include:
 
-..1. STAT which contains the Statusm Special and Perks sub-menus.
+	1. STAT which contains the Statusm Special and Perks sub-menus.
 
-..2. INV which displays the users Inventory using the Weapons, Apparel and Misc sub-menus.
+	2. INV which displays the users Inventory using the Weapons, Apparel and Misc sub-menus.
 
-..3. DATA which contains the Quests, Workshops and Stats sub-menus.
+	3. DATA which contains the Quests, Workshops and Stats sub-menus.
 
-..4. MAP which contains the map of Boston from Fallout 4.
+	4. MAP which contains the map of Boston from Fallout 4.
 
-..5. RADIO which contains two stations which each have one song associated with them.
+	5. RADIO which contains two stations which each have one song associated with them.
 
 # Controls
 * Z and X are used to navigate the menus.
@@ -34,8 +34,8 @@ It Contains:
 
 * ENTER is used to interact with certain things such as:
 
-..* Equip and Unequip weapons and apparel int the INV menu.
+	* Equip and Unequip weapons and apparel int the INV menu.
 
-..* Play Music from the RADIO menu.
+	* Play Music from the RADIO menu.
 
 * The MOUSE can interact with the map and zoom in on the sected area.
