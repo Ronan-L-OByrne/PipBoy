@@ -48,23 +48,27 @@ void subMenu1_1(float xBound, float yBound)
     text(player.engRes, xBound + width*(.4275), yBound + height*(.602));
     text(player.radRes, xBound + width*(.4575), yBound + height*(.602));
     
-    //Gun
+    // Gun
     drawGun(.33, .6375, 1);
     
-    //Helmet
+    // Helmet
     fill   (40, 255, 40);
     arc    (xBound + width*(.3855), yBound + height*(.59), width*(.0345),   height*(.052), HALF_PI*2, HALF_PI*4);
     ellipse(xBound + width*(.385) , yBound + height*(.59), width*(.041) ,   height*(.01))                       ;
     rect   (xBound + width*(.385) , yBound + height*(.59), width*(.016) ,   height*(.01)  , 10)                 ;
     rect   (xBound + width*(.3725), yBound + height*(.56), width*(.0285),   height*(.0325), 20)                 ;
     
-    //Status Bars
+    // Status Bars
     rect(xBound + (width*(.35)), yBound + height*(.5) , width*(.05), height*(.01428));
     rect(xBound + (width*(.25)), yBound + height*(.45), width*(.05), height*(.01428));
     rect(xBound + (width*(.25)), yBound + height*(.25), width*(.05), height*(.01428));
     rect(xBound + (width*(.35)), yBound + height*(.12), width*(.05), height*(.01428));
     rect(xBound + (width*(.45)), yBound + height*(.45), width*(.05), height*(.01428));
     rect(xBound + (width*(.45)), yBound + height*(.25), width*(.05), height*(.01428));
+            
+    // Display Name
+    textAlign(CENTER, CENTER)                                      ;  
+    text(player.Name, xBound + width*(.375), yBound + height*(.66));
 }//end submenu()
 
 // Draws the contents of menu 1 sub-menu 2

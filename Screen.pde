@@ -49,7 +49,7 @@ void Screen(float xBound, float yBound)
             }//end else if(subM)
             
             // Constant throughout all sub menus
-            // Hp/Level/AP/Name
+            // Hp/Level/AP
             fill(0, 100, 0);
             rect(xBound + width*(.02), yBound + height*(.7),  width*(.175), height*(.040714));
             rect(xBound + width*(.2) , yBound + height*(.7),  width*(.355), height*(.040714));
@@ -69,9 +69,6 @@ void Screen(float xBound, float yBound)
             textAlign(RIGHT, CENTER)                                                                      ;
             fill(40, 255, 40)                                                                             ;
             text("AP " + player.Ap[1] + "/" + player.Ap[0],   xBound + width*(.73), yBound + height*(.72));
-            
-            textAlign(CENTER, CENTER)                                    ;  
-            text(player.Name, xBound + width*(.375), yBound + height*(.66));
         }//end if(menu)
         // Displays INV (Inventory) sceen
         else if(menu == 2)
