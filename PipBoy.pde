@@ -25,7 +25,7 @@ void setup()
     // fullScreen()    ;
     
     //Loads the fonts used in the sketch
-    globalFont = loadFont("AgencyFB-Bold-48.vlw");
+    globalFont = loadFont("AgencyFB-Bold-48.vlw")           ;
     PipBoy     = loadFont("BodoniMTCondensed-Italic-48.vlw");
     
     //Loads the images used in the sketch
