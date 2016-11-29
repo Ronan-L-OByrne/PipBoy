@@ -1,7 +1,7 @@
 // Function to draw the graphical outliner of the program
 void Outliner()
 {
-    float Ventx, Venty     ; // Used to position the vents
+    float Ventx, Venty; // Used to position the vents
     
     // Background
     background(135, 92, 42);
@@ -121,8 +121,8 @@ void Light()
     fill(135, 92, 42)                                            ;
     rect(width*(.675), height*(.931), width*(.05), height*(.065));
     
-    stroke(0)                                                                 ;
     // Red Light
+    stroke(0)                                                                 ;
     fill(70, 70, 70)                                                          ;
     ellipse(width*(.7), height*(.964285714), width*(.04), height*(.057142857));
     fill(Light, 0, 0)                                                         ;
@@ -170,19 +170,18 @@ void GeigerCount()
     rect(width*(.841), height*(.252857142), width*(.019), height*(.371428571));
     stroke(0,0,0)                                                             ;
         
-    fill(0, 0, 0)                                                                                  ;
-    arc(width*(.9), height*(.448571428),   width*(.12) , height*(.171428571), HALF_PI*3, HALF_PI*5);
-    
-    fill(135, 92, 42)                                                                              ;
-    arc(width*(.9), height*(.438571428),   width*(.12) , height*(.171428571), HALF_PI*3, HALF_PI*5);
-    fill(255, 255, 255)                                                                            ;
-    stroke(135, 92, 42)                                                                            ;
-    arc(width*(.9), height*(.438571428),   width*(.1)  , height*(.142857142), HALF_PI*3, HALF_PI*5);
-    fill(255, 0, 0)                                                                                ;
-    stroke(255, 0, 0)                                                                              ;
-    arc(width*(.9), height*(.438571428),   width*(.075), height*(.107142857), HALF_PI*3, HALF_PI*5);
-    fill(255, 255, 255)                                                                            ;
-    arc(width*(.9), height*(.438571428),   width*(.075), height*(.107142857), map(40, 0, 100, HALF_PI*3, HALF_PI*5), map(100, 0, 100, HALF_PI*3, HALF_PI*5));
+    fill(0, 0, 0)                                                                                ;
+    arc(width*(.9), height*(.448571428), width*(.12) , height*(.171428571), HALF_PI*3, HALF_PI*5);
+    fill(135, 92, 42)                                                                            ;
+    arc(width*(.9), height*(.438571428), width*(.12) , height*(.171428571), HALF_PI*3, HALF_PI*5);
+    fill(255, 255, 255)                                                                          ;
+    stroke(135, 92, 42)                                                                          ;
+    arc(width*(.9), height*(.438571428), width*(.1)  , height*(.142857142), HALF_PI*3, HALF_PI*5);
+    fill(255, 0, 0)                                                                              ;
+    stroke(255, 0, 0)                                                                            ;
+    arc(width*(.9), height*(.438571428), width*(.075), height*(.107142857), HALF_PI*3, HALF_PI*5);
+    fill(255, 255, 255)                                                                          ;
+    arc(width*(.9), height*(.438571428), width*(.075), height*(.107142857), map(40, 0, 100, HALF_PI*3, HALF_PI*5), map(100, 0, 100, HALF_PI*3, HALF_PI*5));
     
     stroke(0)                         ;
     fill(0)                           ;

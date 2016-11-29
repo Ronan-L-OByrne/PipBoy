@@ -15,8 +15,8 @@ void menu4(float xBound, float yBound)
     // Checks if the mouse is over the Map
     if((mouseX > xBound+width*(.03) && mouseY > yBound+height*(.055) && mouseX < xBound+width*(.03)+width*(.6) && mouseY < yBound+height*(.055)+height*(.645)))
     {
-        noCursor();
         //Changes the Zoom location to the mouse pointer
+        noCursor()                           ;
         Zoom.x = mouseX-(width*(.025))       ;
         Zoom.y = mouseY-(height*(.035714285));
         

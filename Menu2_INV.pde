@@ -57,7 +57,7 @@ void subMenu2_1(float xBound, float yBound)
             
             textAlign(RIGHT, CENTER)                                                             ;
             text(Ranged_Weapons.get(subNav-1).damage  , xBound+width*(.695), yBound+height*(.32));
-            text("0"                           , xBound+width*(.695), yBound+height*(.37))       ;
+            text("0"                                  , xBound+width*(.695), yBound+height*(.37));
             text(Ranged_Weapons.get(subNav-1).fireRate, xBound+width*(.695), yBound+height*(.42));
             text(Ranged_Weapons.get(subNav-1).range   , xBound+width*(.695), yBound+height*(.47));
             text(Ranged_Weapons.get(subNav-1).accuracy, xBound+width*(.695), yBound+height*(.52));
@@ -68,9 +68,10 @@ void subMenu2_1(float xBound, float yBound)
     }//end if
     else
     {
-        rect(width*(.14), height*(.225+(.05*(subNav-1))), width*(.2575), height*(.05))                                                                                                               ;
-        fill(0, 0, 0)                                                                                                                                                                                ;
-        text(Melee_Weapons.get(subNav-1-Ranged_Weapons.size()).name +" ("+ Melee_Weapons.get(subNav-1-Ranged_Weapons.size()).qty+")", xBound + width*(.075), yBound + height*(.175+(.05*(subNav-1))));
+        rect(width*(.14), height*(.225+(.05*(subNav-1))), width*(.2575), height*(.05))                                              ;
+        fill(0, 0, 0)                                                                                                               ;
+        text(Melee_Weapons.get(subNav-1-Ranged_Weapons.size()).name +" ("+ Melee_Weapons.get(subNav-1-Ranged_Weapons.size()).qty+")",
+        xBound + width*(.075), yBound + height*(.175+(.05*(subNav-1))))                                                             ;
         
         //Displays the data associated with the currently selected Melee weapon
         if(Melee_Weapons.get(subNav-1-Ranged_Weapons.size()).type.equals("M"))
@@ -173,7 +174,7 @@ void subMenu2_3(float xBound, float yBound)
     textAlign(LEFT, CENTER);
     for(int i=0; i<Miscellaneous.size(); i++)
     {
-        text(Miscellaneous.get(i).name + " (" + Miscellaneous.get(i).qty + ")", xBound + width*(.075), yBound + height*(.175+(.05*i)));
+        text(Miscellaneous.get(i).name + " (" + Miscellaneous.get(i).qty + ")", xBound + width*(.075), yBound + height*(.175+(.05*i)))                   ;
     }//end for
     
     rect(width*(.14), height*(.225+(.05*(subNav-1))), width*(.2575), height*(.05))                                                                       ;

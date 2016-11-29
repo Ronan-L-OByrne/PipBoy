@@ -312,7 +312,7 @@ void keyPressed()
                     if(curEquipW >= 0 && curEquipW < Ranged_Weapons.size())
                     {
                         Ranged_Weapons.get(curEquipW).equipped = false;
-                        Effects[1].play()                      ;
+                        Effects[1].play()                             ;
                     }//end if
                     else if(curEquipW >= 0 && curEquipW > Ranged_Weapons.size()-1)
                     {

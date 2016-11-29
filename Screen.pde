@@ -115,11 +115,11 @@ void Screen(float xBound, float yBound)
             {
                 if(curEquipW < Ranged_Weapons.size())
                 {
-                    text(Ranged_Weapons.get(curEquipW).damage,   xBound + width*(.718), yBound + height*(.72));
+                    text(Ranged_Weapons.get(curEquipW).damage                     , xBound + width*(.718), yBound + height*(.72));
                 }//end if
                 else
                 {
-                    text(Melee_Weapons.get(curEquipW-Ranged_Weapons.size()).damage,   xBound + width*(.718), yBound + height*(.72));
+                    text(Melee_Weapons.get(curEquipW-Ranged_Weapons.size()).damage, xBound + width*(.718), yBound + height*(.72));
                 }//end if
             }//end if
             else
@@ -152,7 +152,7 @@ void Screen(float xBound, float yBound)
             //Displays the MAP screen
             else if(menu == 4)
             {
-                menu4(xBound, yBound);
+                menu4(xBound, yBound)                         ;
                 textFont(globalFont, ((width+height)/2)*(.03));
             }//end else if
             
@@ -178,12 +178,11 @@ void Screen(float xBound, float yBound)
             text(nf(month(), 2) +"."+ nf(day(),2 ) +"."+ (year()+271), xBound + width*(.028), yBound + height*(.72))   ;
             
             text(nf((hour()%12), 2) +":"+ nf(minute(),2) +" "+ period,    xBound + width*(.205), yBound + height*(.72));
-            //fill(0, 100, 0)                                                                                            ;
         }//end else if
         // Displays the RADIO Screen
         else if(menu == 5)
         {
-            menu5(xBound, yBound);
+            menu5(xBound, yBound)                                                            ;
             fill(0, 100, 0)                                                                  ;
             rect(xBound + width*(.02), yBound + height*(.7),  width*(.715), height*(.040714));
         }//end else if
@@ -197,13 +196,13 @@ void SplashScrn(float xBound, float yBound)
     fill(0, 0, 0)                                                                          ;
     rect(xBound, yBound, width*(.75), height*(.785714285), ((width+height)/2)*(.058823529));
     
-    fill(40, 255, 40)                                                                      ;
-    textFont(globalFont, ((width+height)/2)*(.05))                                         ;
-    textAlign(CENTER,CENTER)                                                               ;
-    text("Welcome to your very own PipBoy 4000!", xBound+width*(.75)/2, yBound+height*(.1));
-    rect(xBound+width*(.05), yBound+height*(.135), width*(.65), height*(.005))             ;
-    fill(0, 215, 0)                                                                        ;
-    rect(xBound+width*(.06), yBound+height*(.145), width*(.63), height*(.0025))            ;
+    fill(40, 255, 40)                                                                                   ;
+    textFont(globalFont, ((width+height)/2)*(.05))                                                      ;
+    textAlign(CENTER,CENTER)                                                                            ;
+    text("Welcome to your very own PipBoy 4000!", xBound+width*(.75)/2, yBound+height*(.1))             ;
+    rect(xBound+width*(.05), yBound+height*(.135), width*(.65), height*(.005))                          ;
+    fill(0, 215, 0)                                                                                     ;
+    rect(xBound+width*(.06), yBound+height*(.145), width*(.63), height*(.0025))                         ;
     
     fill(40, 255, 40)                                                                                   ;
     textSize(((width+height)/2)*(.04))                                                                  ;
@@ -212,7 +211,7 @@ void SplashScrn(float xBound, float yBound)
     text("Press UP and DOWN to navigate within the submenus", xBound+width*(.75)/2, yBound+height*(.45));
     text("Press ENTER to interact with certain things", xBound+width*(.75)/2, yBound+height*(.55))      ;
     
-    text("Press ENTER to continue", xBound+width*(.75)/2, yBound+height*(.7));
+    text("Press ENTER to continue", xBound+width*(.75)/2, yBound+height*(.7))                           ;
 
 }//end Splash()
 
