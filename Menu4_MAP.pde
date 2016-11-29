@@ -2,7 +2,7 @@
 void menu4(float xBound, float yBound)
 {
     // Displaye the map PNG
-    Map.display(xBound+width*(.03), yBound+height*(.055))                                   ;
+    Map.display(xBound+width*(.03), yBound+height*(.055))                                  ;
     //Sets the default position of the Zoom
     PVector Zoom = new PVector(width*(.5)+(width*(.025)), height*(.35)+height*(.035714285));
     float tempX, tempY;
@@ -28,10 +28,7 @@ void menu4(float xBound, float yBound)
         //copy(cx, cy, cw, ch, rx, ry, rw, rh);
         copy((int)(Zoom.x)             , (int)(Zoom.y)             , (int)(width*(.05)), (int)(height*(.071428571)) ,
              (int)(xBound+width*(.642)), (int)(yBound+height*(.25)), (int)(width*(.1)) , (int)(height*(.142857142)));
-             
-        //float tempX = map(mouseX, xBound+width*(.03)  , xBound+ width*(.03 )+width* (.6  ), 0, 100);
-        //float tempY = map(mouseY, yBound+height*(.055), yBound+height*(.055)+height*(.645), 0, 100);
-           
+        
         tempX = map(mouseX, xBound+width *(.03) , xBound+width *(.03) +width*(.6)   , 0, 100);
         tempY = map(mouseY, yBound+height*(.055), yBound+height*(.055)+height*(.645), 0, 100);
     }//end if
@@ -52,10 +49,10 @@ void menu4(float xBound, float yBound)
         tempY = map(height*(.35)+height*(.035714285), yBound+height*(.055), yBound+height*(.055)+height*(.645), 0, 100);
     }//end else
 
-    textSize(((width+height)/2)*(.025));
-    textAlign(LEFT, CENTER);
-    text(tempX, (int)(width*(.7075)), (int)(height*(.5)));
-    text(tempY, (int)(width*(.7625)), (int)(height*(.5)));
+    textSize(((width+height)/2)*(.025))                          ;
+    textAlign(LEFT, CENTER)                                      ;
+    text("X: " + tempX, (int)(width*(.72)), (int)(height*(.5)))  ;
+    text("Y: " + tempY, (int)(width*(.72)), (int)(height*(.535)));
     
     noFill()                                                                                     ;
     rect((int)(xBound+width*(.642)), (int)(yBound+height*(.25)), width*(.1), height*(.142857142));

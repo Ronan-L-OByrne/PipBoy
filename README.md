@@ -18,10 +18,11 @@ Processing Foundation.
 
 I am most proud of my implementation of Polymorphism, altough it was implemented late in 
 development i believe it was done rather well and was ultimately good for the overall 
-program. I am also proud of my use of animation and music in the program and the zoom 
-functionality of the map.
+program. I am also proud of my use of animation and music in the program, the zoom 
+functionality of the map and the Geiger counter to the right of the screen.
 
-Link to video of the sketch running: 
+Link to video of the sketch running:
+ 
 [![Video](http://img.youtube.com/vi/rrI7ruHb1ws/0.jpg)](http://www.youtube.com/watch?v=rrI7ruHb1ws)
 
 # Contents
