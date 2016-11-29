@@ -52,6 +52,7 @@ void keyPressed()
         // Navigating the Main tabs
         else if(key == 'z' || key == 'Z')
         {
+            cursor();
             Effects[3].play();
             if(menu > 1)
             {
@@ -69,6 +70,7 @@ void keyPressed()
         }//end else if
         else if(key == 'x' || key == 'X')
         {
+            cursor();
             Effects[3].play();
             if(menu < 5)
             {

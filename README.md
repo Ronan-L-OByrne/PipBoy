@@ -21,7 +21,8 @@ development i believe it was done rather well and was ultimately good for the ov
 program. I am also proud of my use of animation and music in the program and the zoom 
 functionality of the map.
 
-Link to video of the sketch running: https://youtu.be/rrI7ruHb1ws
+Link to video of the sketch running: 
+[![Video](http://img.youtube.com/vi/rrI7ruHb1ws/0.jpg)](http://www.youtube.com/watch?v=rrI7ruHb1ws)
 
 # Contents
 The project contains most of the functionality of the PipBoy in the game with minor changes to 

@@ -91,7 +91,7 @@ void Screen(float xBound, float yBound)
             
             // Constant throughout all sub menus
             // Weight/Caps/Damage
-            textAlign(LEFT, CENTER)                                                        ;
+            textAlign(LEFT, CENTER)                                                          ;
             fill(0, 100, 0)                                                                  ;
             rect(xBound + width*(.02), yBound + height*(.7),  width*(.175), height*(.040714));
             rect(xBound + width*(.2) , yBound + height*(.7),  width*(.355), height*(.040714));
@@ -153,6 +153,7 @@ void Screen(float xBound, float yBound)
             else if(menu == 4)
             {
                 menu4(xBound, yBound);
+                textFont(globalFont, ((width+height)/2)*(.03));
             }//end else if
             
             // Constant throughout all sub menus
@@ -177,12 +178,14 @@ void Screen(float xBound, float yBound)
             text(nf(month(), 2) +"."+ nf(day(),2 ) +"."+ (year()+271), xBound + width*(.028), yBound + height*(.72))   ;
             
             text(nf((hour()%12), 2) +":"+ nf(minute(),2) +" "+ period,    xBound + width*(.205), yBound + height*(.72));
-            fill(0, 100, 0)                                                                                            ;
+            //fill(0, 100, 0)                                                                                            ;
         }//end else if
         // Displays the RADIO Screen
         else if(menu == 5)
         {
             menu5(xBound, yBound);
+            fill(0, 100, 0)                                                                  ;
+            rect(xBound + width*(.02), yBound + height*(.7),  width*(.715), height*(.040714));
         }//end else if
     }//end else
 }//end Screen()

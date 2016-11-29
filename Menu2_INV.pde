@@ -9,7 +9,7 @@ void subMenu2_1(float xBound, float yBound)
     text("MISC"   , xBound + (width*(.88)/9)*4, yBound + height*(.07));
     
     // Displayes the names of various Weapons
-    fill(40, 255, 40);
+    fill(40, 255, 40)      ;
     textAlign(LEFT, CENTER);
     for(int i=0; i<Ranged_Weapons.size(); i++)
     {
@@ -27,8 +27,8 @@ void subMenu2_1(float xBound, float yBound)
     
     if(subNav-1 < Ranged_Weapons.size())
     {
-        rect(width*(.14), height*(.225+(.05*(subNav-1))), width*(.2575), height*(.05));
-        fill(0, 0, 0);
+        rect(width*(.14), height*(.225+(.05*(subNav-1))), width*(.2575), height*(.05))                                                                     ;
+        fill(0, 0, 0)                                                                                                                                      ;
         text(Ranged_Weapons.get(subNav-1).name +" ("+ Ranged_Weapons.get(subNav-1).qty+")", xBound + width*(.075), yBound + height*(.175+(.05*(subNav-1))));
         
         //Displays the data associated with the currently selected Ranged weapon
@@ -68,8 +68,8 @@ void subMenu2_1(float xBound, float yBound)
     }//end if
     else
     {
-        rect(width*(.14), height*(.225+(.05*(subNav-1))), width*(.2575), height*(.05));
-        fill(0, 0, 0);
+        rect(width*(.14), height*(.225+(.05*(subNav-1))), width*(.2575), height*(.05))                                                                                                               ;
+        fill(0, 0, 0)                                                                                                                                                                                ;
         text(Melee_Weapons.get(subNav-1-Ranged_Weapons.size()).name +" ("+ Melee_Weapons.get(subNav-1-Ranged_Weapons.size()).qty+")", xBound + width*(.075), yBound + height*(.175+(.05*(subNav-1))));
         
         //Displays the data associated with the currently selected Melee weapon
@@ -98,10 +98,6 @@ void subMenu2_1(float xBound, float yBound)
             drawCrosshair(.715, .545)                                                                               ;
         }//end else if
   }//end else
-    
-    
-
-    
 }//end subMenu2_1()
 
 // Draws the contents of menu 2 sub-menu 2
@@ -128,8 +124,8 @@ void subMenu2_2(float xBound, float yBound)
         }//end if
     }//end for
     
-    rect(width*(.14), height*(.225+(.05*(subNav-1))), width*(.2575), height*(.05));
-    fill(0, 0, 0);
+    rect(width*(.14), height*(.225+(.05*(subNav-1))), width*(.2575), height*(.05))                                                           ;
+    fill(0, 0, 0)                                                                                                                            ;
     text(Apparel.get(subNav-1).name + " (" + Apparel.get(subNav-1).qty + ")", xBound + width*(.075), yBound + height*(.175+(.05*(subNav-1))));
     
     fill(0, 100, 0)                                                               ;
